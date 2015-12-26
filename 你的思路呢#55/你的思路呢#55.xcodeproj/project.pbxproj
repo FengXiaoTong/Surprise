@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC8C19761C2D21330090BB34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19751C2D21330090BB34 /* main.m */; };
+		CC8C19791C2D21330090BB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19781C2D21330090BB34 /* AppDelegate.m */; };
+		CC8C197C1C2D21330090BB34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C197B1C2D21330090BB34 /* ViewController.m */; };
+		CC8C197F1C2D21330090BB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8C197D1C2D21330090BB34 /* Main.storyboard */; };
+		CC8C19811C2D21330090BB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19801C2D21330090BB34 /* Assets.xcassets */; };
+		CC8C19841C2D21330090BB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19821C2D21330090BB34 /* LaunchScreen.storyboard */; };
+		CC8C198F1C2D21330090BB34 /* ______55Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C198E1C2D21330090BB34 /* ______55Tests.m */; };
+		CC8C199A1C2D21330090BB34 /* ______55UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19991C2D21330090BB34 /* ______55UITests.m */; };
+		CC8C19AF1C2D239A0090BB34 /* SongWordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19AD1C2D239A0090BB34 /* SongWordsViewController.m */; };
+		CC8C19B01C2D239A0090BB34 /* SongWordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19AE1C2D239A0090BB34 /* SongWordsViewController.xib */; };
+		CC8C19B21C2D32DD0090BB34 /* SongsInfos.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19B11C2D32DD0090BB34 /* SongsInfos.plist */; };
+		CC8C19B51C2D333C0090BB34 /* SongListSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19B41C2D333C0090BB34 /* SongListSingle.m */; };
+		CC8C19B81C2D38180090BB34 /* SongNameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19B71C2D38180090BB34 /* SongNameModel.m */; };
+		CC8C19BB1C2D67F10090BB34 /* SongPlayerSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19BA1C2D67F10090BB34 /* SongPlayerSingle.m */; };
+		CC8C19C51C2D716D0090BB34 /* 当你老了.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19BC1C2D716D0090BB34 /* 当你老了.jpg */; };
+		CC8C19C61C2D716D0090BB34 /* 当你老了.lrc in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19BD1C2D716D0090BB34 /* 当你老了.lrc */; };
+		CC8C19C71C2D716D0090BB34 /* 当你老了.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19BE1C2D716D0090BB34 /* 当你老了.mp3 */; };
+		CC8C19C81C2D716D0090BB34 /* 红颜劫.lrc in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19BF1C2D716D0090BB34 /* 红颜劫.lrc */; };
+		CC8C19C91C2D716D0090BB34 /* 红颜劫.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19C01C2D716D0090BB34 /* 红颜劫.mp3 */; };
+		CC8C19CA1C2D716D0090BB34 /* 时间都去哪儿了.lrc in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19C11C2D716D0090BB34 /* 时间都去哪儿了.lrc */; };
+		CC8C19CB1C2D716D0090BB34 /* 时间都去哪儿了.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19C21C2D716D0090BB34 /* 时间都去哪儿了.mp3 */; };
+		CC8C19CC1C2D716D0090BB34 /* 演员.lrc in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19C31C2D716D0090BB34 /* 演员.lrc */; };
+		CC8C19CD1C2D716D0090BB34 /* 演员.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC8C19C41C2D716D0090BB34 /* 演员.mp3 */; };
+		CC8C19D01C2D88200090BB34 /* geciModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8C19CF1C2D88200090BB34 /* geciModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC8C198B1C2D21330090BB34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC8C19691C2D21330090BB34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC8C19701C2D21330090BB34;
+			remoteInfo = "你的思路呢#55";
+		};
+		CC8C19961C2D21330090BB34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC8C19691C2D21330090BB34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC8C19701C2D21330090BB34;
+			remoteInfo = "你的思路呢#55";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC8C19711C2D21330090BB34 /* 你的思路呢#55.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "你的思路呢#55.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8C19751C2D21330090BB34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC8C19771C2D21330090BB34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "你的思路呢#55/AppDelegate.h"; sourceTree = "<group>"; };
+		CC8C19781C2D21330090BB34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "你的思路呢#55/AppDelegate.m"; sourceTree = "<group>"; };
+		CC8C197A1C2D21330090BB34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "你的思路呢#55/ViewController.h"; sourceTree = "<group>"; };
+		CC8C197B1C2D21330090BB34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "你的思路呢#55/ViewController.m"; sourceTree = "<group>"; };
+		CC8C197E1C2D21330090BB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC8C19801C2D21330090BB34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC8C19831C2D21330090BB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC8C19851C2D21330090BB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8C198A1C2D21330090BB34 /* 你的思路呢#55Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "你的思路呢#55Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8C198E1C2D21330090BB34 /* ______55Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______55Tests.m"; sourceTree = "<group>"; };
+		CC8C19901C2D21330090BB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8C19951C2D21330090BB34 /* 你的思路呢#55UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "你的思路呢#55UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC8C19991C2D21330090BB34 /* ______55UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______55UITests.m"; sourceTree = "<group>"; };
+		CC8C199B1C2D21330090BB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC8C19AC1C2D239A0090BB34 /* SongWordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongWordsViewController.h; sourceTree = "<group>"; };
+		CC8C19AD1C2D239A0090BB34 /* SongWordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongWordsViewController.m; sourceTree = "<group>"; };
+		CC8C19AE1C2D239A0090BB34 /* SongWordsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongWordsViewController.xib; sourceTree = "<group>"; };
+		CC8C19B11C2D32DD0090BB34 /* SongsInfos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SongsInfos.plist; sourceTree = "<group>"; };
+		CC8C19B31C2D333C0090BB34 /* SongListSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListSingle.h; sourceTree = "<group>"; };
+		CC8C19B41C2D333C0090BB34 /* SongListSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListSingle.m; sourceTree = "<group>"; };
+		CC8C19B61C2D38180090BB34 /* SongNameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongNameModel.h; sourceTree = "<group>"; };
+		CC8C19B71C2D38180090BB34 /* SongNameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongNameModel.m; sourceTree = "<group>"; };
+		CC8C19B91C2D67F10090BB34 /* SongPlayerSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPlayerSingle.h; sourceTree = "<group>"; };
+		CC8C19BA1C2D67F10090BB34 /* SongPlayerSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPlayerSingle.m; sourceTree = "<group>"; };
+		CC8C19BC1C2D716D0090BB34 /* 当你老了.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "当你老了.jpg"; sourceTree = "<group>"; };
+		CC8C19BD1C2D716D0090BB34 /* 当你老了.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "当你老了.lrc"; sourceTree = "<group>"; };
+		CC8C19BE1C2D716D0090BB34 /* 当你老了.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "当你老了.mp3"; sourceTree = "<group>"; };
+		CC8C19BF1C2D716D0090BB34 /* 红颜劫.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "红颜劫.lrc"; sourceTree = "<group>"; };
+		CC8C19C01C2D716D0090BB34 /* 红颜劫.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "红颜劫.mp3"; sourceTree = "<group>"; };
+		CC8C19C11C2D716D0090BB34 /* 时间都去哪儿了.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "时间都去哪儿了.lrc"; sourceTree = "<group>"; };
+		CC8C19C21C2D716D0090BB34 /* 时间都去哪儿了.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "时间都去哪儿了.mp3"; sourceTree = "<group>"; };
+		CC8C19C31C2D716D0090BB34 /* 演员.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "演员.lrc"; sourceTree = "<group>"; };
+		CC8C19C41C2D716D0090BB34 /* 演员.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "演员.mp3"; sourceTree = "<group>"; };
+		CC8C19CE1C2D881F0090BB34 /* geciModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geciModel.h; sourceTree = "<group>"; };
+		CC8C19CF1C2D88200090BB34 /* geciModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = geciModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC8C196E1C2D21330090BB34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8C19871C2D21330090BB34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8C19921C2D21330090BB34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC8C19681C2D21330090BB34 = {
+			isa = PBXGroup;
+			children = (
+				CC8C19AB1C2D21830090BB34 /* Others */,
+				CC8C19AA1C2D21740090BB34 /* Resource */,
+				CC8C19A91C2D216B0090BB34 /* Models */,
+				CC8C19A81C2D215D0090BB34 /* Views */,
+				CC8C19A71C2D21510090BB34 /* Controllers */,
+				CC8C19731C2D21330090BB34 /* 你的思路呢#55 */,
+				CC8C198D1C2D21330090BB34 /* 你的思路呢#55Tests */,
+				CC8C19981C2D21330090BB34 /* 你的思路呢#55UITests */,
+				CC8C19721C2D21330090BB34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC8C19721C2D21330090BB34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C19711C2D21330090BB34 /* 你的思路呢#55.app */,
+				CC8C198A1C2D21330090BB34 /* 你的思路呢#55Tests.xctest */,
+				CC8C19951C2D21330090BB34 /* 你的思路呢#55UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC8C19731C2D21330090BB34 /* 你的思路呢#55 */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C197D1C2D21330090BB34 /* Main.storyboard */,
+				CC8C19801C2D21330090BB34 /* Assets.xcassets */,
+				CC8C19821C2D21330090BB34 /* LaunchScreen.storyboard */,
+				CC8C19851C2D21330090BB34 /* Info.plist */,
+				CC8C19741C2D21330090BB34 /* Supporting Files */,
+			);
+			path = "你的思路呢#55";
+			sourceTree = "<group>";
+		};
+		CC8C19741C2D21330090BB34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C19751C2D21330090BB34 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC8C198D1C2D21330090BB34 /* 你的思路呢#55Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C198E1C2D21330090BB34 /* ______55Tests.m */,
+				CC8C19901C2D21330090BB34 /* Info.plist */,
+			);
+			path = "你的思路呢#55Tests";
+			sourceTree = "<group>";
+		};
+		CC8C19981C2D21330090BB34 /* 你的思路呢#55UITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C19991C2D21330090BB34 /* ______55UITests.m */,
+				CC8C199B1C2D21330090BB34 /* Info.plist */,
+			);
+			path = "你的思路呢#55UITests";
+			sourceTree = "<group>";
+		};
+		CC8C19A71C2D21510090BB34 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C197A1C2D21330090BB34 /* ViewController.h */,
+				CC8C197B1C2D21330090BB34 /* ViewController.m */,
+				CC8C19AC1C2D239A0090BB34 /* SongWordsViewController.h */,
+				CC8C19AD1C2D239A0090BB34 /* SongWordsViewController.m */,
+				CC8C19AE1C2D239A0090BB34 /* SongWordsViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CC8C19A81C2D215D0090BB34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C19771C2D21330090BB34 /* AppDelegate.h */,
+				CC8C19781C2D21330090BB34 /* AppDelegate.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CC8C19A91C2D216B0090BB34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C19B61C2D38180090BB34 /* SongNameModel.h */,
+				CC8C19B71C2D38180090BB34 /* SongNameModel.m */,
+				CC8C19CE1C2D881F0090BB34 /* geciModel.h */,
+				CC8C19CF1C2D88200090BB34 /* geciModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CC8C19AA1C2D21740090BB34 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C19B11C2D32DD0090BB34 /* SongsInfos.plist */,
+				CC8C19BC1C2D716D0090BB34 /* 当你老了.jpg */,
+				CC8C19BD1C2D716D0090BB34 /* 当你老了.lrc */,
+				CC8C19BE1C2D716D0090BB34 /* 当你老了.mp3 */,
+				CC8C19BF1C2D716D0090BB34 /* 红颜劫.lrc */,
+				CC8C19C01C2D716D0090BB34 /* 红颜劫.mp3 */,
+				CC8C19C11C2D716D0090BB34 /* 时间都去哪儿了.lrc */,
+				CC8C19C21C2D716D0090BB34 /* 时间都去哪儿了.mp3 */,
+				CC8C19C31C2D716D0090BB34 /* 演员.lrc */,
+				CC8C19C41C2D716D0090BB34 /* 演员.mp3 */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		CC8C19AB1C2D21830090BB34 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				CC8C19B31C2D333C0090BB34 /* SongListSingle.h */,
+				CC8C19B41C2D333C0090BB34 /* SongListSingle.m */,
+				CC8C19B91C2D67F10090BB34 /* SongPlayerSingle.h */,
+				CC8C19BA1C2D67F10090BB34 /* SongPlayerSingle.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC8C19701C2D21330090BB34 /* 你的思路呢#55 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8C199E1C2D21330090BB34 /* Build configuration list for PBXNativeTarget "你的思路呢#55" */;
+			buildPhases = (
+				CC8C196D1C2D21330090BB34 /* Sources */,
+				CC8C196E1C2D21330090BB34 /* Frameworks */,
+				CC8C196F1C2D21330090BB34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "你的思路呢#55";
+			productName = "你的思路呢#55";
+			productReference = CC8C19711C2D21330090BB34 /* 你的思路呢#55.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC8C19891C2D21330090BB34 /* 你的思路呢#55Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8C19A11C2D21330090BB34 /* Build configuration list for PBXNativeTarget "你的思路呢#55Tests" */;
+			buildPhases = (
+				CC8C19861C2D21330090BB34 /* Sources */,
+				CC8C19871C2D21330090BB34 /* Frameworks */,
+				CC8C19881C2D21330090BB34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC8C198C1C2D21330090BB34 /* PBXTargetDependency */,
+			);
+			name = "你的思路呢#55Tests";
+			productName = "你的思路呢#55Tests";
+			productReference = CC8C198A1C2D21330090BB34 /* 你的思路呢#55Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC8C19941C2D21330090BB34 /* 你的思路呢#55UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC8C19A41C2D21330090BB34 /* Build configuration list for PBXNativeTarget "你的思路呢#55UITests" */;
+			buildPhases = (
+				CC8C19911C2D21330090BB34 /* Sources */,
+				CC8C19921C2D21330090BB34 /* Frameworks */,
+				CC8C19931C2D21330090BB34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC8C19971C2D21330090BB34 /* PBXTargetDependency */,
+			);
+			name = "你的思路呢#55UITests";
+			productName = "你的思路呢#55UITests";
+			productReference = CC8C19951C2D21330090BB34 /* 你的思路呢#55UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC8C19691C2D21330090BB34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = com.qingyun;
+				TargetAttributes = {
+					CC8C19701C2D21330090BB34 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CC8C19891C2D21330090BB34 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CC8C19701C2D21330090BB34;
+					};
+					CC8C19941C2D21330090BB34 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CC8C19701C2D21330090BB34;
+					};
+				};
+			};
+			buildConfigurationList = CC8C196C1C2D21330090BB34 /* Build configuration list for PBXProject "你的思路呢#55" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC8C19681C2D21330090BB34;
+			productRefGroup = CC8C19721C2D21330090BB34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC8C19701C2D21330090BB34 /* 你的思路呢#55 */,
+				CC8C19891C2D21330090BB34 /* 你的思路呢#55Tests */,
+				CC8C19941C2D21330090BB34 /* 你的思路呢#55UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC8C196F1C2D21330090BB34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8C19CC1C2D716D0090BB34 /* 演员.lrc in Resources */,
+				CC8C19C81C2D716D0090BB34 /* 红颜劫.lrc in Resources */,
+				CC8C19CD1C2D716D0090BB34 /* 演员.mp3 in Resources */,
+				CC8C19C71C2D716D0090BB34 /* 当你老了.mp3 in Resources */,
+				CC8C19CB1C2D716D0090BB34 /* 时间都去哪儿了.mp3 in Resources */,
+				CC8C19841C2D21330090BB34 /* LaunchScreen.storyboard in Resources */,
+				CC8C19B21C2D32DD0090BB34 /* SongsInfos.plist in Resources */,
+				CC8C19C91C2D716D0090BB34 /* 红颜劫.mp3 in Resources */,
+				CC8C19B01C2D239A0090BB34 /* SongWordsViewController.xib in Resources */,
+				CC8C19CA1C2D716D0090BB34 /* 时间都去哪儿了.lrc in Resources */,
+				CC8C19C51C2D716D0090BB34 /* 当你老了.jpg in Resources */,
+				CC8C19811C2D21330090BB34 /* Assets.xcassets in Resources */,
+				CC8C197F1C2D21330090BB34 /* Main.storyboard in Resources */,
+				CC8C19C61C2D716D0090BB34 /* 当你老了.lrc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8C19881C2D21330090BB34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8C19931C2D21330090BB34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC8C196D1C2D21330090BB34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8C197C1C2D21330090BB34 /* ViewController.m in Sources */,
+				CC8C19B81C2D38180090BB34 /* SongNameModel.m in Sources */,
+				CC8C19AF1C2D239A0090BB34 /* SongWordsViewController.m in Sources */,
+				CC8C19791C2D21330090BB34 /* AppDelegate.m in Sources */,
+				CC8C19761C2D21330090BB34 /* main.m in Sources */,
+				CC8C19BB1C2D67F10090BB34 /* SongPlayerSingle.m in Sources */,
+				CC8C19B51C2D333C0090BB34 /* SongListSingle.m in Sources */,
+				CC8C19D01C2D88200090BB34 /* geciModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8C19861C2D21330090BB34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8C198F1C2D21330090BB34 /* ______55Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC8C19911C2D21330090BB34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC8C199A1C2D21330090BB34 /* ______55UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC8C198C1C2D21330090BB34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC8C19701C2D21330090BB34 /* 你的思路呢#55 */;
+			targetProxy = CC8C198B1C2D21330090BB34 /* PBXContainerItemProxy */;
+		};
+		CC8C19971C2D21330090BB34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC8C19701C2D21330090BB34 /* 你的思路呢#55 */;
+			targetProxy = CC8C19961C2D21330090BB34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC8C197D1C2D21330090BB34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC8C197E1C2D21330090BB34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC8C19821C2D21330090BB34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC8C19831C2D21330090BB34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC8C199C1C2D21330090BB34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC8C199D1C2D21330090BB34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC8C199F1C2D21330090BB34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "你的思路呢#55/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.------55";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC8C19A01C2D21330090BB34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "你的思路呢#55/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.------55";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC8C19A21C2D21330090BB34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "你的思路呢#55Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.------55Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/你的思路呢#55.app/你的思路呢#55";
+			};
+			name = Debug;
+		};
+		CC8C19A31C2D21330090BB34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "你的思路呢#55Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.------55Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/你的思路呢#55.app/你的思路呢#55";
+			};
+			name = Release;
+		};
+		CC8C19A51C2D21330090BB34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "你的思路呢#55UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.------55UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "你的思路呢#55";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CC8C19A61C2D21330090BB34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "你的思路呢#55UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.------55UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "你的思路呢#55";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC8C196C1C2D21330090BB34 /* Build configuration list for PBXProject "你的思路呢#55" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8C199C1C2D21330090BB34 /* Debug */,
+				CC8C199D1C2D21330090BB34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC8C199E1C2D21330090BB34 /* Build configuration list for PBXNativeTarget "你的思路呢#55" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8C199F1C2D21330090BB34 /* Debug */,
+				CC8C19A01C2D21330090BB34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC8C19A11C2D21330090BB34 /* Build configuration list for PBXNativeTarget "你的思路呢#55Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8C19A21C2D21330090BB34 /* Debug */,
+				CC8C19A31C2D21330090BB34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC8C19A41C2D21330090BB34 /* Build configuration list for PBXNativeTarget "你的思路呢#55UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8C19A51C2D21330090BB34 /* Debug */,
+				CC8C19A61C2D21330090BB34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC8C19691C2D21330090BB34 /* Project object */;
+}

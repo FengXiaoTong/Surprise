@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC9ED8861C2E7E7500225379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8851C2E7E7500225379 /* main.m */; };
+		CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8881C2E7E7500225379 /* AppDelegate.m */; };
+		CC9ED88C1C2E7E7500225379 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED88B1C2E7E7500225379 /* ViewController.m */; };
+		CC9ED88F1C2E7E7500225379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED88D1C2E7E7500225379 /* Main.storyboard */; };
+		CC9ED8911C2E7E7500225379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED8901C2E7E7500225379 /* Assets.xcassets */; };
+		CC9ED8941C2E7E7500225379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED8921C2E7E7500225379 /* LaunchScreen.storyboard */; };
+		CC9ED89F1C2E7E7500225379 /* __MQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED89E1C2E7E7500225379 /* __MQTests.m */; };
+		CC9ED8AA1C2E7E7500225379 /* __MQUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8A91C2E7E7500225379 /* __MQUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC9ED89B1C2E7E7500225379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9ED8791C2E7E7500225379 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9ED8801C2E7E7500225379;
+			remoteInfo = "微博MQ";
+		};
+		CC9ED8A61C2E7E7500225379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9ED8791C2E7E7500225379 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC9ED8801C2E7E7500225379;
+			remoteInfo = "微博MQ";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC9ED8811C2E7E7500225379 /* 微博MQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博MQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9ED8851C2E7E7500225379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC9ED8871C2E7E7500225379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CC9ED8881C2E7E7500225379 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CC9ED88A1C2E7E7500225379 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CC9ED88B1C2E7E7500225379 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CC9ED88E1C2E7E7500225379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC9ED8901C2E7E7500225379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC9ED8931C2E7E7500225379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC9ED8951C2E7E7500225379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9ED89A1C2E7E7500225379 /* 微博MQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博MQTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9ED89E1C2E7E7500225379 /* __MQTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __MQTests.m; sourceTree = "<group>"; };
+		CC9ED8A01C2E7E7500225379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9ED8A51C2E7E7500225379 /* 微博MQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博MQUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9ED8A91C2E7E7500225379 /* __MQUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __MQUITests.m; sourceTree = "<group>"; };
+		CC9ED8AB1C2E7E7500225379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC9ED87E1C2E7E7500225379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9ED8971C2E7E7500225379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9ED8A21C2E7E7500225379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC9ED8781C2E7E7500225379 = {
+			isa = PBXGroup;
+			children = (
+				CC9ED8831C2E7E7500225379 /* 微博MQ */,
+				CC9ED89D1C2E7E7500225379 /* 微博MQTests */,
+				CC9ED8A81C2E7E7500225379 /* 微博MQUITests */,
+				CC9ED8821C2E7E7500225379 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC9ED8821C2E7E7500225379 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC9ED8811C2E7E7500225379 /* 微博MQ.app */,
+				CC9ED89A1C2E7E7500225379 /* 微博MQTests.xctest */,
+				CC9ED8A51C2E7E7500225379 /* 微博MQUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC9ED8831C2E7E7500225379 /* 微博MQ */ = {
+			isa = PBXGroup;
+			children = (
+				CC9ED8871C2E7E7500225379 /* AppDelegate.h */,
+				CC9ED8881C2E7E7500225379 /* AppDelegate.m */,
+				CC9ED88A1C2E7E7500225379 /* ViewController.h */,
+				CC9ED88B1C2E7E7500225379 /* ViewController.m */,
+				CC9ED88D1C2E7E7500225379 /* Main.storyboard */,
+				CC9ED8901C2E7E7500225379 /* Assets.xcassets */,
+				CC9ED8921C2E7E7500225379 /* LaunchScreen.storyboard */,
+				CC9ED8951C2E7E7500225379 /* Info.plist */,
+				CC9ED8841C2E7E7500225379 /* Supporting Files */,
+			);
+			path = "微博MQ";
+			sourceTree = "<group>";
+		};
+		CC9ED8841C2E7E7500225379 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC9ED8851C2E7E7500225379 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC9ED89D1C2E7E7500225379 /* 微博MQTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9ED89E1C2E7E7500225379 /* __MQTests.m */,
+				CC9ED8A01C2E7E7500225379 /* Info.plist */,
+			);
+			path = "微博MQTests";
+			sourceTree = "<group>";
+		};
+		CC9ED8A81C2E7E7500225379 /* 微博MQUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9ED8A91C2E7E7500225379 /* __MQUITests.m */,
+				CC9ED8AB1C2E7E7500225379 /* Info.plist */,
+			);
+			path = "微博MQUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC9ED8801C2E7E7500225379 /* 微博MQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9ED8AE1C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQ" */;
+			buildPhases = (
+				CC9ED87D1C2E7E7500225379 /* Sources */,
+				CC9ED87E1C2E7E7500225379 /* Frameworks */,
+				CC9ED87F1C2E7E7500225379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "微博MQ";
+			productName = "微博MQ";
+			productReference = CC9ED8811C2E7E7500225379 /* 微博MQ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC9ED8991C2E7E7500225379 /* 微博MQTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9ED8B11C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQTests" */;
+			buildPhases = (
+				CC9ED8961C2E7E7500225379 /* Sources */,
+				CC9ED8971C2E7E7500225379 /* Frameworks */,
+				CC9ED8981C2E7E7500225379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9ED89C1C2E7E7500225379 /* PBXTargetDependency */,
+			);
+			name = "微博MQTests";
+			productName = "微博MQTests";
+			productReference = CC9ED89A1C2E7E7500225379 /* 微博MQTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC9ED8A41C2E7E7500225379 /* 微博MQUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9ED8B41C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQUITests" */;
+			buildPhases = (
+				CC9ED8A11C2E7E7500225379 /* Sources */,
+				CC9ED8A21C2E7E7500225379 /* Frameworks */,
+				CC9ED8A31C2E7E7500225379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9ED8A71C2E7E7500225379 /* PBXTargetDependency */,
+			);
+			name = "微博MQUITests";
+			productName = "微博MQUITests";
+			productReference = CC9ED8A51C2E7E7500225379 /* 微博MQUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC9ED8791C2E7E7500225379 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = com.qingyun;
+				TargetAttributes = {
+					CC9ED8801C2E7E7500225379 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CC9ED8991C2E7E7500225379 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CC9ED8801C2E7E7500225379;
+					};
+					CC9ED8A41C2E7E7500225379 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CC9ED8801C2E7E7500225379;
+					};
+				};
+			};
+			buildConfigurationList = CC9ED87C1C2E7E7500225379 /* Build configuration list for PBXProject "微博MQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC9ED8781C2E7E7500225379;
+			productRefGroup = CC9ED8821C2E7E7500225379 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC9ED8801C2E7E7500225379 /* 微博MQ */,
+				CC9ED8991C2E7E7500225379 /* 微博MQTests */,
+				CC9ED8A41C2E7E7500225379 /* 微博MQUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC9ED87F1C2E7E7500225379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9ED8941C2E7E7500225379 /* LaunchScreen.storyboard in Resources */,
+				CC9ED8911C2E7E7500225379 /* Assets.xcassets in Resources */,
+				CC9ED88F1C2E7E7500225379 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9ED8981C2E7E7500225379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9ED8A31C2E7E7500225379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC9ED87D1C2E7E7500225379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9ED88C1C2E7E7500225379 /* ViewController.m in Sources */,
+				CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */,
+				CC9ED8861C2E7E7500225379 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9ED8961C2E7E7500225379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9ED89F1C2E7E7500225379 /* __MQTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9ED8A11C2E7E7500225379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9ED8AA1C2E7E7500225379 /* __MQUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC9ED89C1C2E7E7500225379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9ED8801C2E7E7500225379 /* 微博MQ */;
+			targetProxy = CC9ED89B1C2E7E7500225379 /* PBXContainerItemProxy */;
+		};
+		CC9ED8A71C2E7E7500225379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC9ED8801C2E7E7500225379 /* 微博MQ */;
+			targetProxy = CC9ED8A61C2E7E7500225379 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC9ED88D1C2E7E7500225379 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9ED88E1C2E7E7500225379 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC9ED8921C2E7E7500225379 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9ED8931C2E7E7500225379 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC9ED8AC1C2E7E7500225379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC9ED8AD1C2E7E7500225379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC9ED8AF1C2E7E7500225379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "微博MQ/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQ";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CC9ED8B01C2E7E7500225379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "微博MQ/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQ";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CC9ED8B21C2E7E7500225379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "微博MQTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/微博MQ.app/微博MQ";
+			};
+			name = Debug;
+		};
+		CC9ED8B31C2E7E7500225379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "微博MQTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/微博MQ.app/微博MQ";
+			};
+			name = Release;
+		};
+		CC9ED8B51C2E7E7500225379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "微博MQUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "微博MQ";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CC9ED8B61C2E7E7500225379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "微博MQUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "微博MQ";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC9ED87C1C2E7E7500225379 /* Build configuration list for PBXProject "微博MQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9ED8AC1C2E7E7500225379 /* Debug */,
+				CC9ED8AD1C2E7E7500225379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9ED8AE1C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9ED8AF1C2E7E7500225379 /* Debug */,
+				CC9ED8B01C2E7E7500225379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC9ED8B11C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9ED8B21C2E7E7500225379 /* Debug */,
+				CC9ED8B31C2E7E7500225379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC9ED8B41C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9ED8B51C2E7E7500225379 /* Debug */,
+				CC9ED8B61C2E7E7500225379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC9ED8791C2E7E7500225379 /* Project object */;
+}

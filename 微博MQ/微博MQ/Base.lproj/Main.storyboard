@@ -217,6 +217,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="pageControl" destination="yPm-Nf-iuY" id="78D-lM-mjG"/>
                         <outlet property="scrollView" destination="0tC-TJ-4tH" id="Fyj-H8-2nC"/>
                     </connections>
                 </viewController>

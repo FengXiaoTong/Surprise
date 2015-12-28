@@ -8,9 +8,11 @@
 
 #import "GuideViewController.h"
 #import "AppDelegate.h"
+#import "Common.h"
 
-@interface GuideViewController ()
+@interface GuideViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 
@@ -37,7 +39,41 @@
     
         [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.pageControl addTarget:self action:@selector(leftOrRight:) forControlEvents:UIControlEventValueChanged];
 }
+
+
+
+-(void)leftOrRight:(UIPageControl *)page
+{
+    self.scrollView.contentOffset = CGPointMake(page.currentPage * kAppSCreenBounds.size.width, 0);
+}
+
+
+#pragma mark scrollView delegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"滚动");
+}
+
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        //如果减速了，那么scrollView滚动结束
+        self.pageControl.currentPage = self.scrollView.contentOffset.x / kAppSCreenBounds.size.width ;
+    }else{
+        //decelerate 减速完成，滚动才结束
+    }
+}
+
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.pageControl.currentPage = self.scrollView.contentOffset.x / kAppSCreenBounds.size.width ;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

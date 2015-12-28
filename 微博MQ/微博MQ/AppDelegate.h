@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+//引导结束的时候调用
+-(void)guide;
 
 @end
 

@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		CC9ED8861C2E7E7500225379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8851C2E7E7500225379 /* main.m */; };
 		CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8881C2E7E7500225379 /* AppDelegate.m */; };
-		CC9ED88C1C2E7E7500225379 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED88B1C2E7E7500225379 /* ViewController.m */; };
 		CC9ED88F1C2E7E7500225379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED88D1C2E7E7500225379 /* Main.storyboard */; };
 		CC9ED8911C2E7E7500225379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED8901C2E7E7500225379 /* Assets.xcassets */; };
 		CC9ED8941C2E7E7500225379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED8921C2E7E7500225379 /* LaunchScreen.storyboard */; };
 		CC9ED89F1C2E7E7500225379 /* __MQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED89E1C2E7E7500225379 /* __MQTests.m */; };
 		CC9ED8AA1C2E7E7500225379 /* __MQUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8A91C2E7E7500225379 /* __MQUITests.m */; };
+		CCCB7E421C30107D00C634A2 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCB7E411C30107D00C634A2 /* GuideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		CC9ED8851C2E7E7500225379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9ED8871C2E7E7500225379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC9ED8881C2E7E7500225379 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC9ED88A1C2E7E7500225379 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC9ED88B1C2E7E7500225379 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC9ED88E1C2E7E7500225379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9ED8901C2E7E7500225379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9ED8931C2E7E7500225379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,9 @@
 		CC9ED8A51C2E7E7500225379 /* 微博MQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博MQUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9ED8A91C2E7E7500225379 /* __MQUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __MQUITests.m; sourceTree = "<group>"; };
 		CC9ED8AB1C2E7E7500225379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCCB7E401C30107D00C634A2 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		CCCB7E411C30107D00C634A2 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		CCCB7E431C30152200C634A2 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +102,14 @@
 		CC9ED8831C2E7E7500225379 /* 微博MQ */ = {
 			isa = PBXGroup;
 			children = (
-				CC9ED8871C2E7E7500225379 /* AppDelegate.h */,
-				CC9ED8881C2E7E7500225379 /* AppDelegate.m */,
-				CC9ED88A1C2E7E7500225379 /* ViewController.h */,
-				CC9ED88B1C2E7E7500225379 /* ViewController.m */,
-				CC9ED88D1C2E7E7500225379 /* Main.storyboard */,
-				CC9ED8901C2E7E7500225379 /* Assets.xcassets */,
-				CC9ED8921C2E7E7500225379 /* LaunchScreen.storyboard */,
-				CC9ED8951C2E7E7500225379 /* Info.plist */,
+				CCCB7E3B1C300BC700C634A2 /* Others */,
+				CCCB7E3A1C300B8500C634A2 /* Tools */,
+				CCCB7E391C300B6D00C634A2 /* Views */,
+				CCCB7E381C300B3F00C634A2 /* Models */,
+				CCCB7E371C300B1E00C634A2 /* ViewControllers */,
+				CCCB7E361C300AED00C634A2 /* Open Source */,
 				CC9ED8841C2E7E7500225379 /* Supporting Files */,
+				CCCB7E431C30152200C634A2 /* Common.h */,
 			);
 			path = "微博MQ";
 			sourceTree = "<group>";
@@ -117,6 +117,9 @@
 		CC9ED8841C2E7E7500225379 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC9ED8901C2E7E7500225379 /* Assets.xcassets */,
+				CC9ED8921C2E7E7500225379 /* LaunchScreen.storyboard */,
+				CC9ED8951C2E7E7500225379 /* Info.plist */,
 				CC9ED8851C2E7E7500225379 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +141,61 @@
 				CC9ED8AB1C2E7E7500225379 /* Info.plist */,
 			);
 			path = "微博MQUITests";
+			sourceTree = "<group>";
+		};
+		CCCB7E361C300AED00C634A2 /* Open Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Open Source";
+			sourceTree = "<group>";
+		};
+		CCCB7E371C300B1E00C634A2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CCCB7E3F1C300D3F00C634A2 /* Guide */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CCCB7E381C300B3F00C634A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CCCB7E391C300B6D00C634A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC9ED88D1C2E7E7500225379 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CCCB7E3A1C300B8500C634A2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		CCCB7E3B1C300BC700C634A2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				CC9ED8871C2E7E7500225379 /* AppDelegate.h */,
+				CC9ED8881C2E7E7500225379 /* AppDelegate.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		CCCB7E3F1C300D3F00C634A2 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				CCCB7E401C30107D00C634A2 /* GuideViewController.h */,
+				CCCB7E411C30107D00C634A2 /* GuideViewController.m */,
+			);
+			name = Guide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9ED88C1C2E7E7500225379 /* ViewController.m in Sources */,
 				CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */,
 				CC9ED8861C2E7E7500225379 /* main.m in Sources */,
+				CCCB7E421C30107D00C634A2 /* GuideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +471,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/微博MQ/S4课件/20151218/cods/BaiduMap_IOSSDK_v2.9.1_Lib",
+					"$(PROJECT_DIR)/微博MQ/S4课件/20151218/cods/BaiduMap_IOSSDK_v2.9.1_Sample/BaiduMapAPI",
+					"$(PROJECT_DIR)/微博MQ/S4课件/20151218/cods/RunPath",
+				);
 				INFOPLIST_FILE = "微博MQ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQ";
@@ -424,6 +488,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/微博MQ/S4课件/20151218/cods/BaiduMap_IOSSDK_v2.9.1_Lib",
+					"$(PROJECT_DIR)/微博MQ/S4课件/20151218/cods/BaiduMap_IOSSDK_v2.9.1_Sample/BaiduMapAPI",
+					"$(PROJECT_DIR)/微博MQ/S4课件/20151218/cods/RunPath",
+				);
 				INFOPLIST_FILE = "微博MQ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hnqingyun.--MQ";
@@ -498,6 +568,7 @@
 				CC9ED8B01C2E7E7500225379 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC9ED8B11C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +577,7 @@
 				CC9ED8B31C2E7E7500225379 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC9ED8B41C2E7E7500225379 /* Build configuration list for PBXNativeTarget "微博MQUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +586,7 @@
 				CC9ED8B61C2E7E7500225379 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

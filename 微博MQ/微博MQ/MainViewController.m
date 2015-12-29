@@ -38,6 +38,15 @@
     self.selectedIndex = 0;
 }
 
+-(void)logout
+{
+    self.selectedIndex = 3;
+    
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -66,7 +66,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KyJ-u2-jjm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KyJ-u2-jjm">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -100,19 +100,13 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="KyJ-u2-jjm" secondAttribute="trailing" id="btY-tS-Sw8"/>
-                            <constraint firstItem="KyJ-u2-jjm" firstAttribute="leading" secondItem="kqy-2a-icX" secondAttribute="leading" id="dhy-G1-AF7"/>
-                            <constraint firstItem="8le-Na-fwH" firstAttribute="top" secondItem="KyJ-u2-jjm" secondAttribute="bottom" id="kVj-He-tgl"/>
-                            <constraint firstItem="KyJ-u2-jjm" firstAttribute="top" secondItem="qfO-da-OAH" secondAttribute="bottom" id="yuG-bG-sib"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="设置" id="sHV-BD-a3s"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gh-uZ-mfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193.5" y="2419.5"/>
+            <point key="canvasLocation" x="187.5" y="2437.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fjp-1U-8qz">
@@ -381,7 +375,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mgW-ac-OHw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZX1-LN-xU8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="login" automaticallyAdjustsScrollViewInsets="NO" id="ZX1-LN-xU8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OiD-hu-Ifh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -6,7 +6,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--消息-->
         <scene sceneID="OK3-gF-1hg">
             <objects>
                 <viewController id="r1y-oV-v08" sceneMemberID="viewController">
@@ -20,14 +20,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="4s6-ZM-lxt"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="tabbar_message_center" id="4s6-ZM-lxt"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nmc-wV-ucI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672.5" y="5.5"/>
         </scene>
-        <!--Item-->
+        <!--我-->
         <scene sceneID="i4d-2j-4Eh">
             <objects>
                 <viewController id="IWq-nI-PGv" sceneMemberID="viewController">
@@ -41,14 +41,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="kMF-Od-CUw"/>
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_profile" id="kMF-Od-CUw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFI-LX-XaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="187.5" y="850.5"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="Fjp-1U-8qz">
             <objects>
                 <viewController id="mXr-HY-M9g" sceneMemberID="viewController">
@@ -62,14 +62,57 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Dc3-sR-OwR"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabbar_compose_icon_add" id="Dc3-sR-OwR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thU-NK-95f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="672.5" y="850.5"/>
         </scene>
-        <!--Item-->
+        <!--Login View Controller-->
+        <scene sceneID="WUJ-TT-GNx">
+            <objects>
+                <viewController id="72H-ac-iyb" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wK2-Pl-bvs"/>
+                        <viewControllerLayoutGuide type="bottom" id="q0h-iD-VYH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dIk-mI-mrg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE0-OZ-Cbq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q0h-iD-VYH" firstAttribute="top" secondItem="FE0-OZ-Cbq" secondAttribute="bottom" id="7kJ-Xd-tfy"/>
+                            <constraint firstItem="FE0-OZ-Cbq" firstAttribute="leading" secondItem="dIk-mI-mrg" secondAttribute="leading" id="TuZ-o0-Ab0"/>
+                            <constraint firstItem="FE0-OZ-Cbq" firstAttribute="top" secondItem="wK2-Pl-bvs" secondAttribute="bottom" id="eB3-eW-DrK"/>
+                            <constraint firstAttribute="trailing" secondItem="FE0-OZ-Cbq" secondAttribute="trailing" id="tIt-Da-27j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sDA-Li-wyc">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="5EA-Lw-uO8">
+                            <connections>
+                                <action selector="cancel:" destination="72H-ac-iyb" id="CK0-Jo-abm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="FE0-OZ-Cbq" id="6wx-lo-YqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSm-xs-1kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1259.5" y="-1613.5"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="BpH-zR-P0v">
             <objects>
                 <viewController id="FKg-2V-ati" sceneMemberID="viewController">
@@ -83,14 +126,20 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hX5-Va-k92"/>
+                    <navigationItem key="navigationItem" id="Ctl-jf-8ZC">
+                        <barButtonItem key="rightBarButtonItem" title="登录" id="hmT-Ju-mw8">
+                            <connections>
+                                <segue destination="ZX1-LN-xU8" kind="presentation" id="5NH-wR-FzF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbR-6Y-0bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187.5" y="-746.5"/>
+            <point key="canvasLocation" x="193.5" y="-1613.5"/>
         </scene>
-        <!--Item 1-->
+        <!--首页-->
         <scene sceneID="fFs-xx-wOX">
             <objects>
                 <viewController id="1wv-As-3A8" sceneMemberID="viewController">
@@ -104,12 +153,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="kDK-Zp-kOj"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="kDK-Zp-kOj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4w-ba-Tl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672.5" y="-788.5"/>
+            <point key="canvasLocation" x="672.5" y="-746.5"/>
         </scene>
         <!--Guide View Controller-->
         <scene sceneID="eui-Yu-hUq">
@@ -149,6 +198,9 @@
                                                 <rect key="frame" x="1282" y="587" width="60" height="30"/>
                                                 <animations/>
                                                 <state key="normal" title="体验一下"/>
+                                                <connections>
+                                                    <action selector="guide:" destination="rfx-lQ-I2t" eventType="touchUpInside" id="rub-za-kiu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -192,14 +244,6 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="0.21015244406698363" blue="0.25791479775739801" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe6-F1-k0H">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
-                                <animations/>
-                                <state key="normal" title="引导结束"/>
-                                <connections>
-                                    <action selector="guide:" destination="rfx-lQ-I2t" eventType="touchUpInside" id="Pha-SO-rNx"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -225,10 +269,10 @@
             </objects>
             <point key="canvasLocation" x="-408.5" y="-65.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="N7y-YH-uqn">
             <objects>
-                <tabBarController storyboardIdentifier="main" id="yMQ-Pa-MI3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="main" id="yMQ-Pa-MI3" customClass="MainViewController" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="G8Y-q2-lTJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -240,7 +284,7 @@
                         <segue destination="1wv-As-3A8" kind="relationship" relationship="viewControllers" id="WR1-Ca-ceu"/>
                         <segue destination="r1y-oV-v08" kind="relationship" relationship="viewControllers" id="g7A-u5-O4j"/>
                         <segue destination="mXr-HY-M9g" kind="relationship" relationship="viewControllers" id="8dp-c4-sib"/>
-                        <segue destination="FKg-2V-ati" kind="relationship" relationship="viewControllers" id="2i7-fQ-Gik"/>
+                        <segue destination="ihn-wo-ObJ" kind="relationship" relationship="viewControllers" id="2i7-fQ-Gik"/>
                         <segue destination="IWq-nI-PGv" kind="relationship" relationship="viewControllers" id="67n-f6-nl6"/>
                     </connections>
                 </tabBarController>
@@ -248,11 +292,55 @@
             </objects>
             <point key="canvasLocation" x="187.5" y="5.5"/>
         </scene>
+        <!--发现-->
+        <scene sceneID="6C6-NS-zMh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ihn-wo-ObJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="tabbar_discover" id="hX5-Va-k92"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xF7-1V-GVR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FKg-2V-ati" kind="relationship" relationship="rootViewController" id="S9A-N0-xQ3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PnX-OK-wS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187.5" y="-746.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mgW-ac-OHw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZX1-LN-xU8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OiD-hu-Ifh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="72H-ac-iyb" kind="relationship" relationship="rootViewController" id="unA-5o-5lm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJX-aJ-QfG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681.5" y="-1613.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="helper_authority_miaopai_guide" width="251" height="321"/>
         <image name="helper_authority_notice_guide" width="252" height="356"/>
         <image name="helper_authority_place_guide" width="252" height="356"/>
         <image name="helper_authority_weibocamera_guide" width="252" height="321"/>
+        <image name="tabbar_compose_icon_add" width="25" height="25"/>
+        <image name="tabbar_discover" width="30" height="30"/>
+        <image name="tabbar_home" width="30" height="30"/>
+        <image name="tabbar_message_center" width="30" height="30"/>
+        <image name="tabbar_profile" width="30" height="30"/>
     </resources>
 </document>

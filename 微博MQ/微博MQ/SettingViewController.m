@@ -81,12 +81,14 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
             UIAlertAction *action = [UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
                    //退出当前账号
-                [self.navigationController popViewControllerAnimated:YES];
-//                [[Account currentAccount] logout];
+                [self.navigationController popViewControllerAnimated:YES];//默认退出到上一界面  如果需要跳转到指定页面，就需要另外的方法，需要给它一个指定的跳转控制器
+                
+                //清理物理文件中保存的账号信息和内存  先清理数据，再修改UI
+                [[Account currentAccount] logout];
                 
                 UIWindow *window = [[[UIApplication sharedApplication]delegate]window];
                 MainViewController *main = (MainViewController *)window.rootViewController;
-                [main logout];
+                [main logout];//退出账号，跳转到登录界面
             }];
             
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];

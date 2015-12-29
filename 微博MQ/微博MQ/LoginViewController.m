@@ -70,6 +70,13 @@
             [self dismissViewControllerAnimated:YES completion:nil];
             
             [[NSNotificationCenter defaultCenter]postNotificationName:kLoginSuccess object:nil];
+            
+            //退出当前账号后，需要消除第一次进去时保存的设备令牌等信息
+            NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+            [storage.cookies enumerateObjectsUsingBlock:^(NSHTTPCookie * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                
+                [storage deleteCookie:obj];
+            }];
         
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             

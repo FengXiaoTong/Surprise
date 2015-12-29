@@ -18,4 +18,7 @@
 
 -(BOOL)isLogin;
 
+//清楚登录信息（令牌失效，或者时间失效）
+-(void)logout;
+
 @end

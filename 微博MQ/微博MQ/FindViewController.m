@@ -11,6 +11,8 @@
 
 @interface FindViewController ()
 
+@property(nonatomic, strong)UIBarButtonItem *right;
+
 @end
 
 @implementation FindViewController
@@ -20,7 +22,16 @@
 {
     [super viewWillAppear:animated];
     if ([[Account currentAccount]isLogin]) {
-        self.navigationItem.rightBarButtonItem = nil;
+        
+        self.right = self.navigationItem.rightBarButtonItem;//先给它一个指针地址，否则为空，直接炸
+        self.navigationItem.rightBarButtonItem = nil;//登陆状态下，登陆barButtonItem 消失
+    }else{
+        //没有账号登陆
+        if (self.right) {
+            //那就让self.navigationItem.rightBarButtonItem 显示出来“登录”俩字
+            self.navigationItem.rightBarButtonItem = self.right;
+        }
+        
     }
     
 }

@@ -67,6 +67,16 @@
     return NO;
 }
 
+-(void)logout
+{
+    self.accessToken = nil;
+    self.uid = nil;
+    self.expiresIn = nil;  //这三个是清理内存中的
+    
+    //这是清理物理文件里的
+    NSString *strPath = [NSString filePathInDocumentsWithFileName:kAccountFileName];
+    [[NSFileManager defaultManager]removeItemAtPath:strPath error:nil];
+}
 
 #pragma mark --归档解档
 -(void)encodeWithCoder:(NSCoder *)aCoder

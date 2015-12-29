@@ -28,6 +28,7 @@
 		CCCB7E421C30107D00C634A2 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCB7E411C30107D00C634A2 /* GuideViewController.m */; };
 		CCE01B5D1C3225C7007CF40B /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE01B5C1C3225C7007CF40B /* Account.m */; };
 		CCE01B601C3232F2007CF40B /* NSString+filePath.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE01B5F1C3232F2007CF40B /* NSString+filePath.m */; };
+		CCE01B631C323AAC007CF40B /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE01B621C323AAC007CF40B /* FindViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		CCE01B5C1C3225C7007CF40B /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 		CCE01B5E1C3232F2007CF40B /* NSString+filePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+filePath.h"; sourceTree = "<group>"; };
 		CCE01B5F1C3232F2007CF40B /* NSString+filePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+filePath.m"; sourceTree = "<group>"; };
+		CCE01B611C323AAC007CF40B /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		CCE01B621C323AAC007CF40B /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 		CC79CE3D1C3125EC00FEB53B /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				CCE01B611C323AAC007CF40B /* FindViewController.h */,
+				CCE01B621C323AAC007CF40B /* FindViewController.m */,
 			);
 			name = Find;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC79CE611C31746800FEB53B /* AFURLConnectionOperation.m in Sources */,
+				CCE01B631C323AAC007CF40B /* FindViewController.m in Sources */,
 				CC79CE5C1C31746800FEB53B /* AFHTTPRequestOperation.m in Sources */,
 				CC79CE5F1C31746800FEB53B /* AFNetworkReachabilityManager.m in Sources */,
 				CCE01B5D1C3225C7007CF40B /* Account.m in Sources */,

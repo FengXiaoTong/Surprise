@@ -24,4 +24,7 @@
 #define expires_in @"expires_in"
 #define userId @"uid"
 
+//注册通知
+#define kLoginSuccess @"kLoginSuccess"
+
 #endif /* Common_h */

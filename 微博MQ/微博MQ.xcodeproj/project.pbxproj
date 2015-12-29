@@ -29,6 +29,7 @@
 		CCE01B5D1C3225C7007CF40B /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE01B5C1C3225C7007CF40B /* Account.m */; };
 		CCE01B601C3232F2007CF40B /* NSString+filePath.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE01B5F1C3232F2007CF40B /* NSString+filePath.m */; };
 		CCE01B631C323AAC007CF40B /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE01B621C323AAC007CF40B /* FindViewController.m */; };
+		CCE01B671C326FDD007CF40B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE01B661C326FDD007CF40B /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		CCE01B5F1C3232F2007CF40B /* NSString+filePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+filePath.m"; sourceTree = "<group>"; };
 		CCE01B611C323AAC007CF40B /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
 		CCE01B621C323AAC007CF40B /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		CCE01B651C326FDD007CF40B /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		CCE01B661C326FDD007CF40B /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +259,7 @@
 		CCCB7E371C300B1E00C634A2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CCE01B641C326FAA007CF40B /* Set */,
 				CC79CE3E1C3125F100FEB53B /* Me */,
 				CC79CE3D1C3125EC00FEB53B /* Find */,
 				CC79CE3C1C3125E800FEB53B /* Login */,
@@ -308,6 +312,15 @@
 				CCCB7E411C30107D00C634A2 /* GuideViewController.m */,
 			);
 			name = Guide;
+			sourceTree = "<group>";
+		};
+		CCE01B641C326FAA007CF40B /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				CCE01B651C326FDD007CF40B /* SettingViewController.h */,
+				CCE01B661C326FDD007CF40B /* SettingViewController.m */,
+			);
+			name = Set;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +458,7 @@
 				CC79CE5C1C31746800FEB53B /* AFHTTPRequestOperation.m in Sources */,
 				CC79CE5F1C31746800FEB53B /* AFNetworkReachabilityManager.m in Sources */,
 				CCE01B5D1C3225C7007CF40B /* Account.m in Sources */,
+				CCE01B671C326FDD007CF40B /* SettingViewController.m in Sources */,
 				CC79CE641C31746800FEB53B /* AFURLSessionManager.m in Sources */,
 				CC79CE621C31746800FEB53B /* AFURLRequestSerialization.m in Sources */,
 				CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */,

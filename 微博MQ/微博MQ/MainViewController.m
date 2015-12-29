@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "Account.h"
+#import "Common.h"
 
 @interface MainViewController ()
 
@@ -26,7 +27,17 @@
     
     self.tabBar.tintColor = [UIColor orangeColor];
     
+    //注册登录成功的通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loginSuccess:) name:kLoginSuccess object:nil];
+    
 }
+
+-(void)loginSuccess:(NSNotification *)notification
+{
+    //登录成功后，切换控制器的选择
+    self.selectedIndex = 0;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

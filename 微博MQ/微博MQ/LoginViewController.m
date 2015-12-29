@@ -68,6 +68,8 @@
             [[Account currentAccount ]saveLogin:responseObject];
         
             [self dismissViewControllerAnimated:YES completion:nil];
+            
+            [[NSNotificationCenter defaultCenter]postNotificationName:kLoginSuccess object:nil];
         
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             

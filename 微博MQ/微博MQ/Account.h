@@ -21,4 +21,6 @@
 //清楚登录信息（令牌失效，或者时间失效）
 -(void)logout;
 
+//返回根据请求open API  所需要的参数 
+-(NSMutableDictionary *)requests;
 @end

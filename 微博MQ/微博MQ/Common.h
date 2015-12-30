@@ -27,4 +27,6 @@
 //注册通知
 #define kLoginSuccess @"kLoginSuccess"
 
+#define kBaseUrl @"https://api.weibo.com/2"
+
 #endif /* Common_h */

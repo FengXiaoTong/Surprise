@@ -78,6 +78,16 @@
     [[NSFileManager defaultManager]removeItemAtPath:strPath error:nil];
 }
 
+-(NSMutableDictionary *)requests
+{
+    if ([self isLogin]) {
+        
+        return [NSMutableDictionary dictionaryWithObject:self.accessToken forKey:access_token];
+    }
+    return nil;
+}
+
+
 #pragma mark --归档解档
 -(void)encodeWithCoder:(NSCoder *)aCoder
 {

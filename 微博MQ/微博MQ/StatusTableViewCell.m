@@ -27,9 +27,9 @@
     NSDictionary *use = info[@"user"];
     NSString *urlString = use[@"profile_image_url"];
     
-//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
-//    self.icon.image = [UIImage imageWithData:data];
-//    
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+    self.icons.image = [UIImage imageWithData:data];
+//
 //    //
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //        
@@ -40,13 +40,12 @@
 //        });
 //    });
     
-    [self.icon sd_setImageWithURL:[NSURL URLWithString:urlString]];
-    self.name.text = use[@"name"];
-    self.time.text = use[@"created_at"];
-    self.source.text = use[@"source"];
-    self.content.text = use[@"text"];
+//    [self.icon sd_setImageWithURL:[NSURL URLWithString:urlString]];
+    self.names.text = use[@"name"];
+    self.times.text = info[@"created_at"];
+    self.sources.text = info[@"source"];
+    self.contents.text = info[@"text"];
     
 }
-
 
 @end

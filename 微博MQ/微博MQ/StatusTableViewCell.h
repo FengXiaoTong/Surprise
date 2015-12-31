@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface StatusTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *icon;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *time;
-@property (weak, nonatomic) IBOutlet UILabel *source;
-@property (weak, nonatomic) IBOutlet UILabel *content;
+
+@property (weak, nonatomic) IBOutlet UIImageView *icons;
+@property (weak, nonatomic) IBOutlet UILabel *names;
+
+@property (weak, nonatomic) IBOutlet UILabel *times;
+
+@property (weak, nonatomic) IBOutlet UILabel *sources;
+
+@property (weak, nonatomic) IBOutlet UILabel *contents;
 
 -(void)bandingStatus:(NSDictionary *)info;
 

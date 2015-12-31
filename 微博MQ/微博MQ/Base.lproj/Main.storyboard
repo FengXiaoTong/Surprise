@@ -211,16 +211,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g2M-Y7-vcR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g2M-Y7-vcR">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="statusCell" rowHeight="91" id="9XF-3t-2cg" customClass="StatusTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="91"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="statusCell" rowHeight="100" id="9XF-3t-2cg" customClass="StatusTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9XF-3t-2cg" id="tAL-Iw-pY3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvZ-ji-Ovw">
@@ -228,7 +228,7 @@
                                                     <animations/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-4Q-jGw">
-                                                    <rect key="frame" x="74" y="8" width="42" height="21"/>
+                                                    <rect key="frame" x="74" y="8" width="51" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -241,7 +241,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-ie-eag">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-ie-eag">
                                                     <rect key="frame" x="12" y="61" width="228" height="29.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -249,7 +249,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAS-Ya-R5D">
-                                                    <rect key="frame" x="180" y="35" width="70" height="21"/>
+                                                    <rect key="frame" x="180" y="35" width="77" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -259,12 +259,13 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <color key="backgroundColor" red="1" green="0.25929992326159779" blue="0.24437808380460568" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="content" destination="6cG-ie-eag" id="0dx-SE-RUh"/>
-                                            <outlet property="icon" destination="jvZ-ji-Ovw" id="RDm-PQ-b2r"/>
-                                            <outlet property="name" destination="BvM-4Q-jGw" id="OFZ-az-bDh"/>
-                                            <outlet property="source" destination="wAS-Ya-R5D" id="ad4-C4-qFu"/>
-                                            <outlet property="time" destination="cuR-cO-X7P" id="XJi-zQ-WyZ"/>
+                                            <outlet property="contents" destination="6cG-ie-eag" id="2Da-J4-OgC"/>
+                                            <outlet property="icons" destination="jvZ-ji-Ovw" id="e2h-Zm-0Bx"/>
+                                            <outlet property="names" destination="BvM-4Q-jGw" id="Rve-u7-XZq"/>
+                                            <outlet property="sources" destination="wAS-Ya-R5D" id="cmT-aO-zIE"/>
+                                            <outlet property="times" destination="cuR-cO-X7P" id="LDO-8N-2o7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

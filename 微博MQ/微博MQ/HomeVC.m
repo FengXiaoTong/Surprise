@@ -48,7 +48,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:urlString parameters:mdictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSLog(@"%@",responseObject);
+        // NSLog(@"%@",responseObject);
         self.statuses = responseObject[@"statuses"];
         [self.tableView reloadData];
         
@@ -79,7 +79,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *identifier = @"statusCell";
      StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statusCell" forIndexPath:indexPath];
     
     [cell bandingStatus:self.statuses[indexPath.row]];

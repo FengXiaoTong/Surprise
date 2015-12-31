@@ -78,9 +78,9 @@
     [[NSFileManager defaultManager]removeItemAtPath:strPath error:nil];
 }
 
--(NSMutableDictionary *)requests
+-(NSMutableDictionary *)requests 
 {
-    if ([self isLogin]) {
+    if (self.isLogin) {
         
         return [NSMutableDictionary dictionaryWithObject:self.accessToken forKey:access_token];
     }

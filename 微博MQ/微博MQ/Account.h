@@ -23,4 +23,6 @@
 
 //返回根据请求open API  所需要的参数 
 -(NSMutableDictionary *)requests;
+
+
 @end

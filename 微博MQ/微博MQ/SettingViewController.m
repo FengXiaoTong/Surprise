@@ -10,6 +10,7 @@
 #import "Account.h"
 #import "UITableView+index.h"
 #import "MainViewController.h"
+#import "SDImageCache.h"
 
 @interface SettingViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong)NSArray *cellTitle;
@@ -98,8 +99,15 @@
             [self presentViewController:alert animated:YES completion:nil];
             
         }
+        
+            break;
             
-            
+        case 4:
+        {
+            //清除缓存的工作
+            [[SDImageCache sharedImageCache] clearDisk];
+            [tableView reloadData];
+        }
             break;
             
         default:

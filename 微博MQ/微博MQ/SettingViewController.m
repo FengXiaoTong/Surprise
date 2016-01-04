@@ -61,8 +61,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = self.cellTitle[indexPath.section][indexPath.row];
     
+    if (indexPath.section == 2 && indexPath.row == 0) {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f M",[[SDImageCache sharedImageCache]getSize]/1024.f/1024.f];
+    }else{
+        cell.detailTextLabel.text = nil;
+    }
+    
     if (indexPath.section == 3 && indexPath.row == 0) {
-//        UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+//        UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];m
         
         cell.textLabel.text = @"退出当前登录";
         cell.textLabel.textAlignment = NSTextAlignmentCenter;

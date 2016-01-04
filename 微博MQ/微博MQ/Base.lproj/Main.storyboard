@@ -231,33 +231,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvZ-ji-Ovw">
-                                                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jvZ-ji-Ovw">
+                                                    <rect key="frame" x="8" y="4" width="50" height="50"/>
                                                     <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="7rr-LA-TG8"/>
+                                                        <constraint firstAttribute="width" constant="50" id="NBG-M3-R9F"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-4Q-jGw">
-                                                    <rect key="frame" x="74" y="8" width="51" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-4Q-jGw">
+                                                    <rect key="frame" x="66" y="4" width="42" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuR-cO-X7P">
-                                                    <rect key="frame" x="74" y="35" width="70" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuR-cO-X7P">
+                                                    <rect key="frame" x="66" y="32" width="42" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-ie-eag">
-                                                    <rect key="frame" x="12" y="61" width="228" height="29.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAS-Ya-R5D">
+                                                    <rect key="frame" x="142" y="32" width="42" height="20.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAS-Ya-R5D">
-                                                    <rect key="frame" x="180" y="35" width="77" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-ie-eag">
+                                                    <rect key="frame" x="12" y="62" width="355" height="36.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -265,6 +269,22 @@
                                                 </label>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="cuR-cO-X7P" firstAttribute="leading" secondItem="jvZ-ji-Ovw" secondAttribute="trailing" constant="8" id="110-EV-WgN"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BvM-4Q-jGw" secondAttribute="trailing" constant="8" id="4xu-df-LMl"/>
+                                                <constraint firstItem="jvZ-ji-Ovw" firstAttribute="leading" secondItem="tAL-Iw-pY3" secondAttribute="leading" constant="8" id="BUO-fz-ahR"/>
+                                                <constraint firstItem="BvM-4Q-jGw" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="4" id="DeX-IZ-RKO"/>
+                                                <constraint firstItem="wAS-Ya-R5D" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="32" id="E0Y-pZ-cWP"/>
+                                                <constraint firstItem="6cG-ie-eag" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="62" id="IDZ-W3-Z8h"/>
+                                                <constraint firstItem="jvZ-ji-Ovw" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="4" id="SSv-23-enD"/>
+                                                <constraint firstAttribute="bottom" secondItem="6cG-ie-eag" secondAttribute="bottom" constant="1" id="UxL-ik-hfZ"/>
+                                                <constraint firstItem="BvM-4Q-jGw" firstAttribute="leading" secondItem="jvZ-ji-Ovw" secondAttribute="trailing" constant="8" id="YEJ-ln-7h3"/>
+                                                <constraint firstItem="wAS-Ya-R5D" firstAttribute="leading" secondItem="cuR-cO-X7P" secondAttribute="trailing" constant="34" id="bDO-SU-8ci"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wAS-Ya-R5D" secondAttribute="trailing" constant="8" id="cbH-wS-Nzp"/>
+                                                <constraint firstAttribute="trailing" secondItem="6cG-ie-eag" secondAttribute="trailing" constant="8" id="dzO-Wt-zUa"/>
+                                                <constraint firstItem="6cG-ie-eag" firstAttribute="leading" secondItem="tAL-Iw-pY3" secondAttribute="leading" constant="12" id="ual-kq-zRh"/>
+                                                <constraint firstItem="cuR-cO-X7P" firstAttribute="top" secondItem="BvM-4Q-jGw" secondAttribute="bottom" constant="8" id="w0P-2F-u77"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" red="1" green="0.25929992326159779" blue="0.24437808380460568" alpha="1" colorSpace="calibratedRGB"/>

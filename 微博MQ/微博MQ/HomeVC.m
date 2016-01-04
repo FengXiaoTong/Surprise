@@ -12,7 +12,7 @@
 #import "Common.h"
 #import "StatusTableViewCell.h"
 
-@interface HomeVC ()
+@interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic, strong)NSArray *statuses;//请求到的微博数据
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -86,6 +86,20 @@
     return cell;
 }
 
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //计算出cell的高度
+    StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statusCell"];
+    
+    [cell bandingStatus:self.statuses[indexPath.row]];
+    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    
+    return size.width +1;
+//    NSDictionary *info = self.statuses[indexPath.row];
+//    return [StatusTableViewCell heightWithStatus:info];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

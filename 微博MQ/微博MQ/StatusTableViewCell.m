@@ -8,11 +8,16 @@
 
 #import "StatusTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "Common.h"
+#import "NSString+StringSize.h"
 
 @implementation StatusTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    //label预计显示的最大宽度
+    self.contents.preferredMaxLayoutWidth = kAppSCreenBounds.size.width -20;
+    
 }
 
 
@@ -20,6 +25,18 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+
++(CGFloat)heightWithStatus:(NSDictionary *)info
+{
+    //计算出文字显示需要的高度
+    NSString *text = info[@"text"];
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:17] With:kAppSCreenBounds.size.width - 16];
+    
+    //再加上上下高度的约束，就是cell的总高度
+    return size.height +62+1+1;
+    
 }
 
 -(void)bandingStatus:(NSDictionary *)info

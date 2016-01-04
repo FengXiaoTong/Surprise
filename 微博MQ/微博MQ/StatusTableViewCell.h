@@ -21,4 +21,6 @@
 
 -(void)bandingStatus:(NSDictionary *)info;
 
++(CGFloat)heightWithStatus:(NSDictionary *)info;
+
 @end

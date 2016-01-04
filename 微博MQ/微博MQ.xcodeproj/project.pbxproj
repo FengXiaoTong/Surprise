@@ -36,6 +36,7 @@
 		CC79CE631C31746800FEB53B /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = CC79CE591C31746800FEB53B /* AFURLResponseSerialization.m */; };
 		CC79CE641C31746800FEB53B /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC79CE5B1C31746800FEB53B /* AFURLSessionManager.m */; };
 		CC7EB8141C33811C00AAF26D /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB8131C33811C00AAF26D /* HomeVC.m */; };
+		CC86B7E51C3A5A4D004063AC /* NSString+StringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = CC86B7E41C3A5A4D004063AC /* NSString+StringSize.m */; };
 		CC9ED8861C2E7E7500225379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8851C2E7E7500225379 /* main.m */; };
 		CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8881C2E7E7500225379 /* AppDelegate.m */; };
 		CC9ED88F1C2E7E7500225379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED88D1C2E7E7500225379 /* Main.storyboard */; };
@@ -129,6 +130,8 @@
 		CC79CE5B1C31746800FEB53B /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		CC7EB8121C33811C00AAF26D /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		CC7EB8131C33811C00AAF26D /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		CC86B7E31C3A5A4D004063AC /* NSString+StringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringSize.h"; sourceTree = "<group>"; };
+		CC86B7E41C3A5A4D004063AC /* NSString+StringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringSize.m"; sourceTree = "<group>"; };
 		CC9ED8811C2E7E7500225379 /* 微博MQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博MQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9ED8851C2E7E7500225379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9ED8871C2E7E7500225379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				CCCB7E431C30152200C634A2 /* Common.h */,
 				CCE01B681C328BF9007CF40B /* UITableView+index.h */,
 				CCE01B691C328BF9007CF40B /* UITableView+index.m */,
+				CC86B7E31C3A5A4D004063AC /* NSString+StringSize.h */,
+				CC86B7E41C3A5A4D004063AC /* NSString+StringSize.m */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -589,6 +594,7 @@
 				CC79CE631C31746800FEB53B /* AFURLResponseSerialization.m in Sources */,
 				CC1D84901C33E0CD00EA877E /* StatusTableViewCell.m in Sources */,
 				CC1D84BA1C33FF5600EA877E /* SDWebImageDownloaderOperation.m in Sources */,
+				CC86B7E51C3A5A4D004063AC /* NSString+StringSize.m in Sources */,
 				CC9ED8861C2E7E7500225379 /* main.m in Sources */,
 				CCCB7E421C30107D00C634A2 /* GuideViewController.m in Sources */,
 				CC1D84BC1C33FF5600EA877E /* SDWebImagePrefetcher.m in Sources */,

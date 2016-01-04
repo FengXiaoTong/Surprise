@@ -90,14 +90,14 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //计算出cell的高度
-    StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statusCell"];
-    
-    [cell bandingStatus:self.statuses[indexPath.row]];
-    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    
-    return size.width +1;
-//    NSDictionary *info = self.statuses[indexPath.row];
-//    return [StatusTableViewCell heightWithStatus:info];
+//    StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statusCell"];
+//    
+//    [cell bandingStatus:self.statuses[indexPath.row]];
+//    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    
+//    return size.width +1;
+    NSDictionary *info = self.statuses[indexPath.row];
+    return [StatusTableViewCell heightWithStatus:info];
     
 }
 

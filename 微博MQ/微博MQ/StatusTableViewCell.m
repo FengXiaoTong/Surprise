@@ -57,7 +57,11 @@
 //        });
 //    });
     
-//    [self.icon sd_setImageWithURL:[NSURL URLWithString:urlString]];
+    [self.icons sd_setImageWithURL:[NSURL URLWithString:urlString]];
+    self.icons.layer.cornerRadius = self.icons.bounds.size.width / 2;
+    self.icons.layer.masksToBounds = YES;
+    
+    
     self.names.text = use[@"name"];
     self.times.text = info[@"created_at"];
     self.sources.text = info[@"source"];

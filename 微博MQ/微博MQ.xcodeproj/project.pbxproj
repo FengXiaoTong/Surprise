@@ -37,6 +37,8 @@
 		CC79CE641C31746800FEB53B /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC79CE5B1C31746800FEB53B /* AFURLSessionManager.m */; };
 		CC7EB8141C33811C00AAF26D /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7EB8131C33811C00AAF26D /* HomeVC.m */; };
 		CC86B7E51C3A5A4D004063AC /* NSString+StringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = CC86B7E41C3A5A4D004063AC /* NSString+StringSize.m */; };
+		CC86B7E81C3A7990004063AC /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = CC86B7E71C3A7990004063AC /* Status.m */; };
+		CC86B7EB1C3A79A1004063AC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = CC86B7EA1C3A79A1004063AC /* User.m */; };
 		CC9ED8861C2E7E7500225379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8851C2E7E7500225379 /* main.m */; };
 		CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8881C2E7E7500225379 /* AppDelegate.m */; };
 		CC9ED88F1C2E7E7500225379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED88D1C2E7E7500225379 /* Main.storyboard */; };
@@ -132,6 +134,10 @@
 		CC7EB8131C33811C00AAF26D /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		CC86B7E31C3A5A4D004063AC /* NSString+StringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringSize.h"; sourceTree = "<group>"; };
 		CC86B7E41C3A5A4D004063AC /* NSString+StringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringSize.m"; sourceTree = "<group>"; };
+		CC86B7E61C3A7990004063AC /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		CC86B7E71C3A7990004063AC /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		CC86B7E91C3A79A1004063AC /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		CC86B7EA1C3A79A1004063AC /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		CC9ED8811C2E7E7500225379 /* 微博MQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博MQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9ED8851C2E7E7500225379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9ED8871C2E7E7500225379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -310,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				CCCB7E3B1C300BC700C634A2 /* Others */,
-				CCCB7E3A1C300B8500C634A2 /* Tools */,
 				CCCB7E391C300B6D00C634A2 /* Views */,
 				CCCB7E381C300B3F00C634A2 /* Models */,
 				CCCB7E371C300B1E00C634A2 /* ViewControllers */,
@@ -377,6 +382,10 @@
 			children = (
 				CCE01B5B1C3225C7007CF40B /* Account.h */,
 				CCE01B5C1C3225C7007CF40B /* Account.m */,
+				CC86B7E61C3A7990004063AC /* Status.h */,
+				CC86B7E71C3A7990004063AC /* Status.m */,
+				CC86B7E91C3A79A1004063AC /* User.h */,
+				CC86B7EA1C3A79A1004063AC /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -389,13 +398,6 @@
 				CC1D848F1C33E0CD00EA877E /* StatusTableViewCell.m */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		CCCB7E3A1C300B8500C634A2 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tools;
 			sourceTree = "<group>";
 		};
 		CCCB7E3B1C300BC700C634A2 /* Others */ = {
@@ -571,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC86B7EB1C3A79A1004063AC /* User.m in Sources */,
 				CC1D84B81C33FF5600EA877E /* SDWebImageDecoder.m in Sources */,
 				CC79CE611C31746800FEB53B /* AFURLConnectionOperation.m in Sources */,
 				CC1D84B41C33FF5600EA877E /* MKAnnotationView+WebCache.m in Sources */,
@@ -590,6 +593,7 @@
 				CCE01B6A1C328BF9007CF40B /* UITableView+index.m in Sources */,
 				CC79CE641C31746800FEB53B /* AFURLSessionManager.m in Sources */,
 				CC79CE621C31746800FEB53B /* AFURLRequestSerialization.m in Sources */,
+				CC86B7E81C3A7990004063AC /* Status.m in Sources */,
 				CC9ED8891C2E7E7500225379 /* AppDelegate.m in Sources */,
 				CC79CE631C31746800FEB53B /* AFURLResponseSerialization.m in Sources */,
 				CC1D84901C33E0CD00EA877E /* StatusTableViewCell.m in Sources */,

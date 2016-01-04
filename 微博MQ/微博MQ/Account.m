@@ -52,7 +52,7 @@
     //当前时间 加上生命周期 ，就等于失效时间
     self.expiresIn = [[NSDate date] dateByAddingTimeInterval:number.integerValue];
     
-    self.uid = dic[userId];
+    self.uid = dic[kUserId];
    
     [NSKeyedArchiver archiveRootObject:self toFile:[NSString filePathInDocumentsWithFileName:kAccountFileName]];
     
@@ -93,7 +93,7 @@
 {
     [aCoder encodeObject:self.accessToken forKey:access_token];
     [aCoder encodeObject:self.expiresIn forKey:expires_in];
-    [aCoder encodeObject:self.uid forKey:userId];
+    [aCoder encodeObject:self.uid forKey:kUserId];
 }
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -102,7 +102,7 @@
     if (self) {
         self.accessToken = [aDecoder decodeObjectForKey:access_token];
         self.expiresIn = [aDecoder decodeObjectForKey:expires_in];
-        self.uid = [aDecoder decodeObjectForKey:userId];
+        self.uid = [aDecoder decodeObjectForKey:kUserId];
     }
     return self;
 }

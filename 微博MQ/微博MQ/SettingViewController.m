@@ -58,6 +58,18 @@
 //            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 //        }
     
+    if (indexPath.section == 3 && indexPath.row == 0) {
+        
+        UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        
+        cell.textLabel.text = @"退出当前登录";
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.textColor = [UIColor redColor];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        return cell;
+    }
+    
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = self.cellTitle[indexPath.section][indexPath.row];
     
@@ -66,16 +78,8 @@
     }else{
         cell.detailTextLabel.text = nil;
     }
-    
-    if (indexPath.section == 3 && indexPath.row == 0) {
-//        UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];m
-        
-        cell.textLabel.text = @"退出当前登录";
-        cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.textLabel.textColor = [UIColor redColor];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-        return cell;
+    return cell;
+
 }
 
 //点击cell可以做的事

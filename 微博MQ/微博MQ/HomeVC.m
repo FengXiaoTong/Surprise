@@ -12,6 +12,7 @@
 #import "Common.h"
 #import "StatusTableViewCell.h"
 #import "Status.h"
+#import "dataBase.h" 
 
 @interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -67,6 +68,9 @@
             
         }];
         [self.tableView reloadData];
+        
+//        NSLog(@"%@",[dataBase class]);
+        [dataBase saveStatus:result];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);

@@ -30,7 +30,8 @@
         
         self.statusId = dictionary[kStatusID];
         self.text = dictionary[kStatusText];
-        self.source = dictionary[kStatusSource];
+//        self.source = dictionary[kStatusSource];
+        self.source = [self sourceWithString:dictionary[kStatusSource]];
         NSDictionary *userinfo = dictionary[kStatusUserInfo];
         self.user = [[User alloc]initUserWithDictionary:userinfo];
         NSDictionary *re_status = dictionary[kStatusRetweetStatus];
@@ -70,6 +71,29 @@
         return [NSDateFormatter localizedStringFromDate:self.created_at dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
     }
     return _timeAgo;
+}
+
+-(NSString *)sourceWithString:(NSString *)string{
+    //排除无效的字符串
+    if ([string isKindOfClass:[NSNull class]] || [string isEqualToString:@""] || !string ) {
+        return nil;
+    }
+    //正则表达式的条件
+    NSString *regStr = @">.*<";
+    NSError *error;
+    //初始化一个正则表达式的对象
+    NSRegularExpression *expressoin = [NSRegularExpression regularExpressionWithPattern:regStr options:0 error:&error];
+    //用正则表达式取字符串中查找满足条件的结果
+    NSTextCheckingResult *result = [expressoin firstMatchInString:string options:0 range:NSMakeRange(0, string.length)];
+    if (result) {
+        //根据结果取出满足条件的子字符串
+        NSRange range = result.range;
+        NSString *source = [string substringWithRange:NSMakeRange(range.location +1, range.length -2)];
+        //追加字符串
+        source = [@"来自"stringByAppendingString:source];
+        return source;
+    }
+    return nil;
 }
 
 @end

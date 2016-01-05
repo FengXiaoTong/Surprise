@@ -88,7 +88,6 @@ static NSArray *statusTableColumn;//保存status表中的所有字段
             NSArray *contentkey = [dataBase contentKeyWith:statusTableColumn key2:allkey];
             
             //删除字典中多余的键值
-           
             NSMutableDictionary *resultDic = [NSMutableDictionary dictionaryWithDictionary:status];
              //将微博字典status(不可变)转换为可变字典K
             [allkey enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -136,6 +135,44 @@ static NSArray *statusTableColumn;//保存status表中的所有字段
     values = [@":" stringByAppendingString:values];
     return [NSString stringWithFormat:@"insert into status (%@) values(%@)",columns, values];
     
+}
+
++(NSArray *)getStatusFromDB{
+    
+    //创建数据库
+    FMDatabase *db = [FMDatabase databaseWithPath:[NSString filePathInDocumentsWithFileName:kDBFileName]];
+    //打开数据库
+    [db open];
+    
+    //查询语句
+    NSString *sqlString = @"select * from status order by id desc limit 20";
+    
+    //执行查询并输出结果
+    FMResultSet *result = [db executeQuery:sqlString];
+    
+    NSMutableArray *statusArray = [NSMutableArray array];
+    while ([result next]) {
+        //将一条记录转化为一个字典
+        NSDictionary *dic = [result resultDictionary];
+        
+        NSMutableDictionary *mudic = [NSMutableDictionary dictionaryWithDictionary:dic];//将不可变字典转化为可变字典
+        
+        [dic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            
+            if ([obj isKindOfClass:[NSData class]]) {
+                id value = [NSKeyedUnarchiver unarchiveObjectWithData:obj];
+                [mudic setObject:value forKey:key];
+                //排除掉空字符的情况
+                if ([value isKindOfClass:[NSNull class]]) {
+                    [mudic removeObjectForKey:key];
+                }
+            }
+            
+        }];
+        Status *status = [[Status alloc]initStatusWithDictionary:mudic];//将字典转换为模型
+        [statusArray addObject:status];
+    }
+    return statusArray;
 }
 
 @end

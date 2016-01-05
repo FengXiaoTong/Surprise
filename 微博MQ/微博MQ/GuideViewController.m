@@ -41,6 +41,7 @@
     // Do any additional setup after loading the view.
     
     [self.pageControl addTarget:self action:@selector(leftOrRight:) forControlEvents:UIControlEventValueChanged];
+    self.scrollView.delegate = self;
 }
 
 
@@ -52,10 +53,10 @@
 
 
 #pragma mark scrollView delegate
--(void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    NSLog(@"滚动");
-}
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+//{
+//    NSLog(@"滚动");
+//}
 
 
 

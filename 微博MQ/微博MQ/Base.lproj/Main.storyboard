@@ -260,13 +260,18 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-ie-eag">
-                                                    <rect key="frame" x="12" y="62" width="355" height="36.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cG-ie-eag">
+                                                    <rect key="frame" x="12" y="62" width="355" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZg-QG-v58">
+                                                    <rect key="frame" x="12" y="83" width="355" height="0.0"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.2335434847" green="1" blue="0.3412785156" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                             </subviews>
                                             <animations/>
                                             <constraints>
@@ -275,19 +280,22 @@
                                                 <constraint firstItem="jvZ-ji-Ovw" firstAttribute="leading" secondItem="tAL-Iw-pY3" secondAttribute="leading" constant="8" id="BUO-fz-ahR"/>
                                                 <constraint firstItem="BvM-4Q-jGw" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="4" id="DeX-IZ-RKO"/>
                                                 <constraint firstItem="wAS-Ya-R5D" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="32" id="E0Y-pZ-cWP"/>
+                                                <constraint firstAttribute="trailing" secondItem="IZg-QG-v58" secondAttribute="trailing" constant="8" id="GCC-hU-LKx"/>
                                                 <constraint firstItem="6cG-ie-eag" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="62" id="IDZ-W3-Z8h"/>
+                                                <constraint firstItem="IZg-QG-v58" firstAttribute="leading" secondItem="tAL-Iw-pY3" secondAttribute="leading" constant="12" id="RMV-iv-Wv7"/>
                                                 <constraint firstItem="jvZ-ji-Ovw" firstAttribute="top" secondItem="tAL-Iw-pY3" secondAttribute="top" constant="4" id="SSv-23-enD"/>
                                                 <constraint firstAttribute="bottom" secondItem="6cG-ie-eag" secondAttribute="bottom" constant="1" id="UxL-ik-hfZ"/>
                                                 <constraint firstItem="BvM-4Q-jGw" firstAttribute="leading" secondItem="jvZ-ji-Ovw" secondAttribute="trailing" constant="8" id="YEJ-ln-7h3"/>
                                                 <constraint firstItem="wAS-Ya-R5D" firstAttribute="leading" secondItem="cuR-cO-X7P" secondAttribute="trailing" constant="34" id="bDO-SU-8ci"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wAS-Ya-R5D" secondAttribute="trailing" constant="8" id="cbH-wS-Nzp"/>
                                                 <constraint firstAttribute="trailing" secondItem="6cG-ie-eag" secondAttribute="trailing" constant="8" id="dzO-Wt-zUa"/>
+                                                <constraint firstAttribute="bottom" secondItem="IZg-QG-v58" secondAttribute="bottom" constant="1" id="eGr-Qd-YXh"/>
+                                                <constraint firstItem="IZg-QG-v58" firstAttribute="top" secondItem="6cG-ie-eag" secondAttribute="bottom" id="fDC-kI-fqG"/>
                                                 <constraint firstItem="6cG-ie-eag" firstAttribute="leading" secondItem="tAL-Iw-pY3" secondAttribute="leading" constant="12" id="ual-kq-zRh"/>
                                                 <constraint firstItem="cuR-cO-X7P" firstAttribute="top" secondItem="BvM-4Q-jGw" secondAttribute="bottom" constant="8" id="w0P-2F-u77"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="1" green="0.25929992326159779" blue="0.24437808380460568" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="contents" destination="6cG-ie-eag" id="2Da-J4-OgC"/>
                                             <outlet property="icons" destination="jvZ-ji-Ovw" id="e2h-Zm-0Bx"/>

@@ -33,7 +33,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self loadData];
+    [self loadData];//有数据库后，就直接取数据库中的内容就好。不用去刷新数据
+    self.statuses = [NSMutableArray arrayWithArray:[dataBase getStatusFromDB]]; //直接从本地取数据，更快！
 }
 
 -(NSMutableArray *)statuses

@@ -13,6 +13,10 @@
 #import "Status.h"
 #import "User.h"
 
+#define kImageWidth  90 //定义图片的宽
+#define kImageHeight 90 //定义图片的高
+#define kImageMarge  5  //图片之间的间隔
+
 @implementation StatusTableViewCell
 
 - (void)awakeFromNib {
@@ -36,9 +40,28 @@
     NSString *text = info.text;
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:17] With:kAppSCreenBounds.size.width - 16];
     
-    //再加上上下高度的约束，就是cell的总高度
-    return size.height +62+1+1;
+    //计算出图片显示需要的高度
+    CGFloat imageHeight = [StatusTableViewCell imageSuperHeightWith:info.pic_urls];
     
+    //再加上上下高度的约束，就是cell的总高度
+    return size.height +imageHeight +62+1+1;
+    
+    
+    
+}
+
+
++(CGFloat)imageSuperHeightWith:(NSArray *)pic_urls{
+    NSInteger count = pic_urls.count;
+    if (count == 0) {
+        return 0;
+    }
+    if (count > 9) {
+        count = 9;
+    }
+    NSInteger line = (count-1)/3  + 1;//计算出行数
+    CGFloat height = line * kImageHeight +(line -1) * kImageMarge;
+    return height;
 }
 
 -(void)bandingStatus:(Status *)info

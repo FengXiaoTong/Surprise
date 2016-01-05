@@ -22,7 +22,9 @@
 @property (nonatomic, strong)NSNumber *comments_count;//comments_count	int	评论数
 @property (nonatomic, strong)NSNumber *attitudes_count;//attitudes_count	int	表态数
 
-@property(nonatomic)NSString *timeAgo; 
+@property(nonatomic)NSString *timeAgo;
+
+@property(nonatomic, strong)NSArray *pic_urls;//微博缩略配图
 
 -(instancetype)initStatusWithDictionary:(NSDictionary *)dictionary;
 

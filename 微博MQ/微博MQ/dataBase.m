@@ -160,18 +160,23 @@ static NSArray *statusTableColumn;//保存status表中的所有字段
         [dic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             
             if ([obj isKindOfClass:[NSData class]]) {
+                //解档后更新可变字典
                 id value = [NSKeyedUnarchiver unarchiveObjectWithData:obj];
                 [mudic setObject:value forKey:key];
-                //排除掉空字符的情况
-                if ([value isKindOfClass:[NSNull class]]) {
-                    [mudic removeObjectForKey:key];
-                }
+            
+            }
+            
+            //排除掉空字符的情况
+            if ([obj isKindOfClass:[NSNull class]]) {
+                [mudic removeObjectForKey:key];
             }
             
         }];
         Status *status = [[Status alloc]initStatusWithDictionary:mudic];//将字典转换为模型
         [statusArray addObject:status];
     }
+    //释放资源
+    [db close];
     return statusArray;
 }
 

@@ -42,6 +42,7 @@
         self.reposts_count = dictionary[kStatusRepostsCount];
         self.attitudes_count = dictionary[kStatusAttitudesCount];
         self.comments_count = dictionary[kStatusCommentsCount];
+        self.pic_urls = dictionary[kStatusPicUrls];
     }
     return self;
 }

@@ -10,6 +10,8 @@
 #import "UIImageView+WebCache.h"
 #import "Common.h"
 #import "NSString+StringSize.h"
+#import "Status.h"
+#import "User.h"
 
 @implementation StatusTableViewCell
 
@@ -28,10 +30,10 @@
 }
 
 
-+(CGFloat)heightWithStatus:(NSDictionary *)info
++(CGFloat)heightWithStatus:(Status *)info
 {
     //计算出文字显示需要的高度
-    NSString *text = info[@"text"];
+    NSString *text = info.text;
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:17] With:kAppSCreenBounds.size.width - 16];
     
     //再加上上下高度的约束，就是cell的总高度
@@ -39,11 +41,12 @@
     
 }
 
--(void)bandingStatus:(NSDictionary *)info
+-(void)bandingStatus:(Status *)info
 {
-    NSDictionary *use = info[@"user"];
-    NSString *urlString = use[@"profile_image_url"];
+//    NSDictionary *use = info[@"user"];
+//    NSString *urlString = use[@"profile_image_url"];
     
+    NSString *urlString = info.user.profile_image_url;
     NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
     self.icons.image = [UIImage imageWithData:data];
 //
@@ -62,10 +65,10 @@
     self.icons.layer.masksToBounds = YES;
     
     
-    self.names.text = use[@"name"];
-    self.times.text = info[@"created_at"];
-    self.sources.text = info[@"source"];
-    self.contents.text = info[@"text"];
+    self.names.text = info.user.name;
+    self.times.text = info.created_at;
+    self.sources.text = info.source;
+    self.contents.text = info.text;
     
 }
 

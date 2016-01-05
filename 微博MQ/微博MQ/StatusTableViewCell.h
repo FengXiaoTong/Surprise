@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class Status;
 @interface StatusTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *icons;
@@ -19,8 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *contents;
 
--(void)bandingStatus:(NSDictionary *)info;
+-(void)bandingStatus:(Status *)info;
 
-+(CGFloat)heightWithStatus:(NSDictionary *)info;
++(CGFloat)heightWithStatus:(Status *)info;
 
 @end

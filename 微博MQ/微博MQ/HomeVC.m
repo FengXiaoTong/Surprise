@@ -11,10 +11,12 @@
 #import "Account.h"
 #import "Common.h"
 #import "StatusTableViewCell.h"
+#import "Status.h"
 
 @interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic, strong)NSArray *statuses;//请求到的微博数据
+//@property(nonatomic, strong)NSArray *statuses;//请求到的微博数据
+@property (nonatomic, strong)NSMutableArray *statuses;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -33,6 +35,13 @@
     [self loadData];
 }
 
+-(NSMutableArray *)statuses
+{
+    if (!_statuses) {
+        _statuses = [NSMutableArray array];
+    }
+    return _statuses;
+}
 
 -(void)loadData
 {
@@ -49,7 +58,14 @@
     [manager GET:urlString parameters:mdictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         // NSLog(@"%@",responseObject);
-        self.statuses = responseObject[@"statuses"];
+//        self.statuses = responseObject[@"statuses"];
+        NSArray *result = responseObject[@"statuses"];
+        [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            Status *status = [[Status alloc]initStatusWithDictionary:obj];
+            [self.statuses addObject:status];
+            
+        }];
         [self.tableView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

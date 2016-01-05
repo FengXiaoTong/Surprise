@@ -66,7 +66,7 @@
     
     
     self.names.text = info.user.name;
-    self.times.text = info.created_at;
+    self.times.text = info.timeAgo;
     self.sources.text = info.source;
     self.contents.text = info.text;
     

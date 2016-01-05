@@ -16,6 +16,18 @@
 {
     if (self = [super init]) {
         self.created_at = dictionary[kStatusCreateTime];
+        
+        // NSdate 转换成NSString
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        //定义一个转换的标准
+        NSString *dateFormatterString = @"EEE MMM dd HH:mm:ss zzz yyyy";
+        formatter.dateFormat = dateFormatterString;
+        //我们处在的时区
+//        NSLocale *usLocale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_us"];//这个是例子，不知道是那个国家的时区
+        NSLocale *usLocale = [NSLocale currentLocale];
+        formatter.locale = usLocale;
+        self.created_at = [formatter dateFromString:dictionary[kStatusCreateTime]];
+        
         self.statusId = dictionary[kStatusID];
         self.text = dictionary[kStatusText];
         self.source = dictionary[kStatusSource];
@@ -31,6 +43,33 @@
         self.comments_count = dictionary[kStatusCommentsCount];
     }
     return self;
+}
+
+
+-(NSString *)timeAgo
+{
+    //动态的计算出属性的值
+    //计算出当前时间和create_at的时间差，然后再返回对应的显示方式
+    NSTimeInterval interval = [[NSDate date]timeIntervalSinceDate:self.created_at];
+    //这个时间差单位是秒 s
+    if (interval < 60) {
+        return @"刚刚";
+    }else if (interval < 3600){
+        
+        return [NSString stringWithFormat:@"% ld分钟前",(NSInteger)interval/60];
+        
+    }else if (interval < 60 * 60 *24){
+        
+        return [NSString stringWithFormat:@"%ld 小时前",(NSInteger)interval/(60 * 60)];
+        
+    }else if (interval < 60 *60 *24 *30){
+        
+        return [NSString stringWithFormat:@"%ld 天前",(NSInteger)interval / (60 *60 *24)];
+        
+    }else{
+        return [NSDateFormatter localizedStringFromDate:self.created_at dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+    }
+    return _timeAgo;
 }
 
 @end

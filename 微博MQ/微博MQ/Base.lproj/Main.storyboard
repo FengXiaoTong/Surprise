@@ -304,6 +304,7 @@
                                         <connections>
                                             <outlet property="contents" destination="6cG-ie-eag" id="2Da-J4-OgC"/>
                                             <outlet property="icons" destination="jvZ-ji-Ovw" id="e2h-Zm-0Bx"/>
+                                            <outlet property="imagesView" destination="wDe-SB-Opr" id="09q-fz-6a7"/>
                                             <outlet property="names" destination="BvM-4Q-jGw" id="Rve-u7-XZq"/>
                                             <outlet property="sources" destination="wAS-Ya-R5D" id="cmT-aO-zIE"/>
                                             <outlet property="times" destination="cuR-cO-X7P" id="LDO-8N-2o7"/>

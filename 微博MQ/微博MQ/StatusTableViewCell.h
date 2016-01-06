@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *sources;
 
 @property (weak, nonatomic) IBOutlet UILabel *contents;
+@property (weak, nonatomic) IBOutlet UIView *imagesView;
 
 -(void)bandingStatus:(Status *)info;
 

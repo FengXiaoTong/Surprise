@@ -12,6 +12,7 @@
 #import "NSString+StringSize.h"
 #import "Status.h"
 #import "User.h"
+#import "UIImageView+WebCache.h"
 
 #define kImageWidth  90 //定义图片的宽
 #define kImageHeight 90 //定义图片的高
@@ -50,7 +51,7 @@
     
 }
 
-// 方法，在图片下面加一层试图，作为父试图，从而好进行自动布局约束
+// 方法，在图片下面加一层试图，作为父试图，从而好进行自动布局约束,算出高度
 +(CGFloat)imageSuperHeightWith:(NSArray *)pic_urls{
     NSInteger count = pic_urls.count;
     if (count == 0) {//如果没图片
@@ -95,7 +96,31 @@
     self.times.text = info.timeAgo;
     self.sources.text = info.source;
     self.contents.text = info.text;
+    //布局微博图片
+    [self layoutImage:info.pic_urls forView:self.imagesView];
     
+}
+
+
+-(void)layoutImage:(NSArray *)images forView:(UIView *)view
+{
+    //清空父试图（view）上面的子试图
+    NSArray *subView = view.subviews;
+    [subView makeObjectsPerformSelector:@selector(removeFromSuperview)];//make方法意思是数组中的每一个对象都执行@selector方法！
+    
+    [images enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        //取出图片
+        NSString *urlString = obj[@"thumbnail_pic"];
+        //初始化imageView
+        UIImageView *imageView = [[UIImageView alloc]init];
+        //计算出每张图片所在的行数和列数
+        CGFloat imageX = idx%3 * (kImageWidth + kImageMarge);
+        CGFloat imageY = idx/3 *(kImageHeight + kImageMarge);
+        imageView.frame = CGRectMake(imageX, imageY, kImageWidth, kImageHeight);
+        [view addSubview:imageView];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:urlString]];
+    }];
 }
 
 @end

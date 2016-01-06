@@ -13,10 +13,14 @@
 #import "Status.h"
 #import "User.h"
 #import "UIImageView+WebCache.h"
+#import "SDPhotoBrowser.h"
 
 #define kImageWidth  90 //定义图片的宽
 #define kImageHeight 90 //定义图片的高
 #define kImageMarge  5  //图片之间的间隔
+@interface StatusTableViewCell ()<SDPhotoBrowserDelegate>
+
+@end
 
 @implementation StatusTableViewCell
 
@@ -142,9 +146,50 @@
         CGFloat imageX = idx%3 * (kImageWidth + kImageMarge);
         CGFloat imageY = idx/3 *(kImageHeight + kImageMarge);
         imageView.frame = CGRectMake(imageX, imageY, kImageWidth, kImageHeight);
+        
+        imageView.userInteractionEnabled = YES;
+        //添加响应
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageShow:)];
+        [imageView addGestureRecognizer:tap];
+        imageView.tag = idx;
+        
         [view addSubview:imageView];
         [imageView sd_setImageWithURL:[NSURL URLWithString:urlString]];
     }];
 }
+
+-(void)imageShow:(UITapGestureRecognizer *)gesture{
+    
+    UIView *view = gesture.view;
+    NSLog(@"view.tag:%ld",view.tag);
+    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc]init];
+    browser.sourceImagesContainerView = view.superview;
+    browser.imageCount = view.superview.subviews.count;
+    browser.currentImageIndex = (int)view.tag;
+    browser.delegate =self;
+    [browser show];
+    
+}
+
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index{
+    //返回的是原图--占位图（缩略图）
+    UIView *spView = self.imagesView.subviews.count != 0 ?self.imagesView : self.rewritterSuperView;
+    UIImageView *imgView = spView.subviews[index];
+    return imgView.image;
+}
+
+
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index{
+    //返回的是高质量图片的url
+    UIView *spView = self.imagesView.subviews.count != 0 ?self.imagesView : self.rewritterSuperView;
+    UIImageView *imgView = spView.subviews[index];
+    //找到图片绑定的url
+    NSString *urlStr = imgView.sd_imageURL.absoluteString;
+    //组合大图的url ，大图和缩略图的url只有参数改变了一点，替换下即可
+    urlStr = [urlStr stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"large"];
+    return [NSURL URLWithString:urlStr];
+}
+
+
 
 @end

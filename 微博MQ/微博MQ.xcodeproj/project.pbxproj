@@ -24,6 +24,9 @@
 		CC1D84C11C33FF5600EA877E /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D84AF1C33FF5600EA877E /* UIImageView+HighlightedWebCache.m */; };
 		CC1D84C21C33FF5600EA877E /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D84B11C33FF5600EA877E /* UIImageView+WebCache.m */; };
 		CC1D84C31C33FF5600EA877E /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D84B31C33FF5600EA877E /* UIView+WebCacheOperation.m */; };
+		CC76FD331C3D0864004B8846 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76FD2D1C3D0864004B8846 /* SDBrowserImageView.m */; };
+		CC76FD341C3D0864004B8846 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76FD2F1C3D0864004B8846 /* SDPhotoBrowser.m */; };
+		CC76FD351C3D0864004B8846 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76FD321C3D0864004B8846 /* SDWaitingView.m */; };
 		CC79CE411C3126B300FEB53B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC79CE401C3126B300FEB53B /* MainViewController.m */; };
 		CC79CE471C312F5E00FEB53B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC79CE461C312F5E00FEB53B /* LoginViewController.m */; };
 		CC79CE5C1C31746800FEB53B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC79CE4A1C31746800FEB53B /* AFHTTPRequestOperation.m */; };
@@ -115,6 +118,13 @@
 		CC1D84B11C33FF5600EA877E /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		CC1D84B21C33FF5600EA877E /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		CC1D84B31C33FF5600EA877E /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		CC76FD2C1C3D0864004B8846 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		CC76FD2D1C3D0864004B8846 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		CC76FD2E1C3D0864004B8846 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		CC76FD2F1C3D0864004B8846 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		CC76FD301C3D0864004B8846 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		CC76FD311C3D0864004B8846 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		CC76FD321C3D0864004B8846 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		CC79CE3F1C3126B300FEB53B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		CC79CE401C3126B300FEB53B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		CC79CE451C312F5E00FEB53B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -254,6 +264,21 @@
 				CC1D84B31C33FF5600EA877E /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		CC76FD2B1C3D0864004B8846 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				CC76FD2C1C3D0864004B8846 /* SDBrowserImageView.h */,
+				CC76FD2D1C3D0864004B8846 /* SDBrowserImageView.m */,
+				CC76FD2E1C3D0864004B8846 /* SDPhotoBrowser.h */,
+				CC76FD2F1C3D0864004B8846 /* SDPhotoBrowser.m */,
+				CC76FD301C3D0864004B8846 /* SDPhotoBrowserConfig.h */,
+				CC76FD311C3D0864004B8846 /* SDWaitingView.h */,
+				CC76FD321C3D0864004B8846 /* SDWaitingView.m */,
+			);
+			name = SDPhotoBrowser;
+			path = ../../../../../Downloads/SDPhotoBrowser/SDPhotoBrowser/SDPhotoBrowser;
 			sourceTree = "<group>";
 		};
 		CC79CE3B1C3125E400FEB53B /* Main */ = {
@@ -400,6 +425,7 @@
 		CCCB7E361C300AED00C634A2 /* Open Source */ = {
 			isa = PBXGroup;
 			children = (
+				CC76FD2B1C3D0864004B8846 /* SDPhotoBrowser */,
 				CCCADAA61C3B9A1C00C26D62 /* fmdb */,
 				CC1D84921C33FF5600EA877E /* SDWebImage */,
 				CC79CE481C31746800FEB53B /* AFNetworking */,
@@ -621,6 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC76FD341C3D0864004B8846 /* SDPhotoBrowser.m in Sources */,
 				CC86B7EB1C3A79A1004063AC /* User.m in Sources */,
 				CC1D84B81C33FF5600EA877E /* SDWebImageDecoder.m in Sources */,
 				CC79CE611C31746800FEB53B /* AFURLConnectionOperation.m in Sources */,
@@ -652,6 +679,7 @@
 				CC9ED8861C2E7E7500225379 /* main.m in Sources */,
 				CCCB7E421C30107D00C634A2 /* GuideViewController.m in Sources */,
 				CC1D84BC1C33FF5600EA877E /* SDWebImagePrefetcher.m in Sources */,
+				CC76FD351C3D0864004B8846 /* SDWaitingView.m in Sources */,
 				CC1D84C01C33FF5600EA877E /* UIImage+WebP.m in Sources */,
 				CC1D84BB1C33FF5600EA877E /* SDWebImageManager.m in Sources */,
 				CC1D84B51C33FF5600EA877E /* NSData+ImageContentType.m in Sources */,
@@ -663,6 +691,7 @@
 				CC79CE471C312F5E00FEB53B /* LoginViewController.m in Sources */,
 				CCCADAB61C3B9A6C00C26D62 /* FMResultSet.m in Sources */,
 				CCE01B601C3232F2007CF40B /* NSString+filePath.m in Sources */,
+				CC76FD331C3D0864004B8846 /* SDBrowserImageView.m in Sources */,
 				CC1D84C31C33FF5600EA877E /* UIView+WebCacheOperation.m in Sources */,
 				CC1D84C11C33FF5600EA877E /* UIImageView+HighlightedWebCache.m in Sources */,
 				CC79CE5E1C31746800FEB53B /* AFHTTPSessionManager.m in Sources */,

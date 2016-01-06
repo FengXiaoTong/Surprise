@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contents;
 @property (weak, nonatomic) IBOutlet UIView *imagesView;
 @property (weak, nonatomic) IBOutlet UILabel *rewrittrer;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *ImageSuperHeiCon;
 @property (weak, nonatomic) IBOutlet UIView *rewritterSuperView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *reImageSuperHeightConstraint;
 

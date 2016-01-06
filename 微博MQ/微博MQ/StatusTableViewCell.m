@@ -107,16 +107,16 @@
     Status *retweeted = info.retweeted_status; //转发微博
     if (retweeted) {
         //清空微博配图
-        [self layoutImage:nil forView:self.imagesView HeightContients:nil];
+        [self layoutImage:nil forView:self.imagesView HeightContients:self.ImageSuperHeiCon];
         self.rewrittrer.text = retweeted.text;
         [self layoutImage:retweeted.pic_urls forView:self.rewritterSuperView HeightContients:self.reImageSuperHeightConstraint];
         
     }else{
         //布局微博图片
-        [self layoutImage:info.pic_urls forView:self.imagesView HeightContients:self.reImageSuperHeightConstraint];
+        [self layoutImage:info.pic_urls forView:self.imagesView HeightContients:self.ImageSuperHeiCon];
         self.rewrittrer.text = nil;
+        [self layoutImage:nil forView:self.rewritterSuperView HeightContients:self.reImageSuperHeightConstraint];
     }
-   
     
 }
 

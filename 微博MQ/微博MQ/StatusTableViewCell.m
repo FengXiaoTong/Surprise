@@ -41,29 +41,32 @@
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:17] With:kAppSCreenBounds.size.width - 16];
     
     //计算出图片显示需要的高度
-    CGFloat imageHeight = [StatusTableViewCell imageSuperHeightWith:info.pic_urls];
+    CGFloat imageHeight = [StatusTableViewCell  imageSuperHeightWith:info.pic_urls];
     
     //再加上上下高度的约束，就是cell的总高度
-    return size.height +imageHeight +62+1+1;
+    return size.height + imageHeight +62+1+1;
     
     
     
 }
 
-
+// 方法，在图片下面加一层试图，作为父试图，从而好进行自动布局约束
 +(CGFloat)imageSuperHeightWith:(NSArray *)pic_urls{
     NSInteger count = pic_urls.count;
-    if (count == 0) {
-        return 0;
+    if (count == 0) {//如果没图片
+        return 0;//返回图片高度为0！
     }
-    if (count > 9) {
+    if (count > 9) {//微博最多是九宫格，表面最多显示9张图片！
         count = 9;
     }
-    NSInteger line = (count-1)/3  + 1;//计算出行数
+    NSInteger line = (count-1)/3  + 1;//计算出（需要）行数，程序员都是从0开始数的！
     CGFloat height = line * kImageHeight +(line -1) * kImageMarge;
     return height;
 }
 
+
+
+//绑定参数
 -(void)bandingStatus:(Status *)info
 {
 //    NSDictionary *use = info[@"user"];

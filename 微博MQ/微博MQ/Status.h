@@ -24,7 +24,7 @@
 
 @property(nonatomic)NSString *timeAgo;
 
-@property(nonatomic, strong)NSArray *pic_urls;//微博缩略配图
+@property(nonatomic, strong)NSArray *pic_urls;//微博(缩略)配图
 
 -(instancetype)initStatusWithDictionary:(NSDictionary *)dictionary;
 

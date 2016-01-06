@@ -41,14 +41,22 @@
     NSString *text = info.text;
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:17] With:kAppSCreenBounds.size.width - 16];
     
-    //计算出图片显示需要的高度
-    CGFloat imageHeight = [StatusTableViewCell  imageSuperHeightWith:info.pic_urls];
-    
-    //再加上上下高度的约束，就是cell的总高度
-    return size.height + imageHeight +62+1+1;
-    
-    
-    
+    Status *reStatus = info.retweeted_status;
+    if (reStatus) {
+        //加上转发微博需要的高度
+        CGSize reStitterSize = [reStatus.text sizeWithFont:[UIFont systemFontOfSize:17] With:kAppSCreenBounds.size.width - 20];
+        //计算出图片显示需要的高度
+        CGFloat imageHeight = [StatusTableViewCell  imageSuperHeightWith:reStatus.pic_urls];
+        
+        //再加上上下高度的约束，就是cell的总高度
+        return size.height + reStitterSize.height + imageHeight +62+1;
+    }else{
+        //没有转发微博的时候，加上正文图片的高度
+        //计算出图片显示需要的高度
+        CGFloat imageHeight = [StatusTableViewCell  imageSuperHeightWith:info.pic_urls];
+        return size.height + imageHeight + 62 +1 +1 ;
+    }
+
 }
 
 // 方法，在图片下面加一层试图，作为父试图，从而好进行自动布局约束,算出高度
@@ -96,17 +104,33 @@
     self.times.text = info.timeAgo;
     self.sources.text = info.source;
     self.contents.text = info.text;
-    //布局微博图片
-    [self layoutImage:info.pic_urls forView:self.imagesView];
+    Status *retweeted = info.retweeted_status; //转发微博
+    if (retweeted) {
+        //清空微博配图
+        [self layoutImage:nil forView:self.imagesView HeightContients:nil];
+        self.rewrittrer.text = retweeted.text;
+        [self layoutImage:retweeted.pic_urls forView:self.rewritterSuperView HeightContients:self.reImageSuperHeightConstraint];
+        
+    }else{
+        //布局微博图片
+        [self layoutImage:info.pic_urls forView:self.imagesView HeightContients:self.reImageSuperHeightConstraint];
+        self.rewrittrer.text = nil;
+    }
+   
     
 }
 
 
--(void)layoutImage:(NSArray *)images forView:(UIView *)view
+-(void)layoutImage:(NSArray *)images forView:(UIView *)view HeightContients:(NSLayoutConstraint *)heightConstraint
 {
     //清空父试图（view）上面的子试图
     NSArray *subView = view.subviews;
     [subView makeObjectsPerformSelector:@selector(removeFromSuperview)];//make方法意思是数组中的每一个对象都执行@selector方法！
+    
+    
+    //将view调整到合适的高度
+    CGFloat height = [StatusTableViewCell imageSuperHeightWith:images];
+    heightConstraint.constant = height;//修改的是高度上的高度
     
     [images enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         

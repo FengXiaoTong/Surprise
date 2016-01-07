@@ -354,7 +354,10 @@ typedef enum :  NSUInteger{
     return footerView;
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 30.f;
+}
 
 
 

@@ -6,6 +6,8 @@
 //  Copyright © 2015年 com.qingyun. All rights reserved.
 //
 
+
+
 #import "HomeVC.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "Account.h"
@@ -14,6 +16,12 @@
 #import "Status.h"
 #import "dataBase.h" 
 #import "UINavigationController+notification.h"
+
+typedef enum :  NSUInteger{
+    kLoadDefault,//基本的加载
+    kLoadNew,//加载更新的数据
+    kLoadMore//加载更多的数据
+}StatusLoadType;
 
 
 @interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
@@ -59,36 +67,41 @@
 //从服务器加载数据
 -(void)loadData
 {
-    NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
     
-    NSMutableDictionary *mdictionary = [[Account currentAccount]requests];
-    if (!mdictionary) {
-        return;
-    }
+    [self loadDataWithType:kLoadDefault];
     
-    [mdictionary setObject:@100 forKey:@"count"];
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:urlString parameters:mdictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        // NSLog(@"%@",responseObject);
-//        self.statuses = responseObject[@"statuses"];
-        NSArray *result = responseObject[@"statuses"];
-        [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            
-            Status *status = [[Status alloc]initStatusWithDictionary:obj];
-            [self.statuses addObject:status];
-            
-        }];
-        [self.tableView reloadData];
-        
-//        NSLog(@"%@",[dataBase class]);
-        [dataBase saveStatus:result];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@",error);
-        
-    }];
+//    NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
+//    
+//    NSMutableDictionary *mdictionary = [[Account currentAccount]requests];
+//    if (!mdictionary) {
+//        return;
+//    }
+//    
+//    [mdictionary setObject:@100 forKey:@"count"];
+//    
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    [manager GET:urlString parameters:mdictionary success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        
+//        // NSLog(@"%@",responseObject);
+////        self.statuses = responseObject[@"statuses"];
+//        NSArray *result = responseObject[@"statuses"];
+//        
+//        [self.statuses removeAllObjects];//清楚掉从数据库中缓存（查询到）的数据
+//        [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            
+//            Status *status = [[Status alloc]initStatusWithDictionary:obj];
+//            [self.statuses addObject:status];
+//            
+//        }];
+//        [self.tableView reloadData];
+//        
+////        NSLog(@"%@",[dataBase class]);
+//        [dataBase saveStatus:result];
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"%@",error);
+//        
+//    }];
 }
 
 #pragma mark - custom
@@ -101,29 +114,41 @@
 }
 
 
-
--(void)loadNew:(UIRefreshControl *)sender{
+//三和一加载方法
+-(void)loadDataWithType:(StatusLoadType )loadType{
     
-    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"正在刷新"];
-    
-    //加载更新的方法
-    NSMutableDictionary *dic = [[Account currentAccount]requests];
-    if (!dic) {
-        //未登陆
-        [self endrefresh];//在return之前刷新
-        return;
+    //1.url地址
+    NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
+    //2.基本请求参数
+    NSMutableDictionary *params = [[Account currentAccount]requests];
+    switch (loadType) {
+        case kLoadNew:
+        {
+            [params setObject:[self.statuses.firstObject statusId] forKey:@"since_id"];
+        }
+            break;
+        case kLoadMore:
+        {
+            [params setObject:[self.statuses.lastObject statusId] forKey:@"max_id"];
+        }
+            break;
         
+        default:
+            break;
     }
-    //请求参数
-    [dic setObject:[self.statuses.firstObject statusId] forKey:@"since_id"];
-    //url地址
-    NSString *urlStr = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
-    
-    //数据请求
+    //加载更多完成
+    if (loadType == kLoadMore && self.loadMoreEnd) {
+        return;
+    }
+    //正在进行加载，不进行新的加载
+    if (self.loading) {
+        return;
+    }
+    self.loading = YES;
+    //进行网络请求
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
-    [manger GET:urlStr parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"刷新了%ld条数据",[responseObject[@"statuses"]count]);
-        
+    [manger GET:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
         //model数组
         NSMutableArray *result = [NSMutableArray array];
         //json数组
@@ -133,72 +158,140 @@
             Status *status = [[Status alloc]initStatusWithDictionary:obj];
             [result addObject:status];
         }];
-        //将转化的模型，整体插入到数组的最前面
-        [self.statuses insertObjects:result atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.count)]];
         
+        if (loadType == kLoadNew) {
+            
+            //将转化的模型，整体插入到数组的最前面
+            [self.statuses insertObjects:result atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.count)]];
+            
+            //通知用户刷新了多少条数据
+            [self.navigationController showNotification:[NSString stringWithFormat:@"更新了%ld条微博",result.count]];
+            
+            [self endrefresh];//刷新完tableView后，结束刷新（菊花）
+            
+        }else{
+            [self.statuses addObjectsFromArray:result];
+        }
         [self.tableView reloadData];//刷新tableView
         
-        //通知用户刷新了多少条数据
-        [self.navigationController showNotification:[NSString stringWithFormat:@"更新了%ld条微博",result.count]];
-        
-        [self endrefresh];//刷新完tableView后，结束刷新（菊花）
-       
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        NSLog(@"%@",error);
-        
-        [self endrefresh];
-        
-    }];
-    
-}
-
-
--(void)loadMore
-{
-    //提交参数
-    NSMutableDictionary *params =[[Account currentAccount]requests];
-    [params setObject:[self.statuses.lastObject statusId] forKey:@"max_id"];
-    
-    NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
-    
-    if (self.loading || self.loadMoreEnd) {
-        return;
-    }
-     self.loading = YES;
-    
-    AFHTTPRequestOperationManager *manger =[AFHTTPRequestOperationManager manager];
-    [manger GET:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *statusArray = responseObject[@"statuses"];
-        
-        //默认加载20条,如果上滑加载的不够20条，说明到底了。
-        if (statusArray.count < 20) {
+        //默认加载20条,如果上滑加载的不够20条，说明到底了,加载更多完成
+        if (loadType == kLoadMore && statusArray.count < 20) {
             self.loadMoreEnd = YES;
         }
-        NSLog(@"加载了%ld条数据",statusArray.count);
-        [statusArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            
-            Status *status = [[Status alloc]initStatusWithDictionary:obj];
-            //加载到现有的数据源的最后
-            [self.statuses addObject:status];
-        }];
-        //先更新数据，在刷新UI
-        [self.tableView reloadData];
         
         self.loading = NO;
-    
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         
         self.loading = NO;
     }];
 }
 
+
+
+-(void)loadNew:(UIRefreshControl *)sender{
+    
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"正在刷新"];
+    
+    [self loadDataWithType:kLoadNew];
+//
+//    //加载更新的方法
+//    NSMutableDictionary *dic = [[Account currentAccount]requests];
+//    if (!dic) {
+//        //未登陆
+//        [self endrefresh];//在return之前刷新
+//        return;
+//        
+//    }
+//    //请求参数
+//    [dic setObject:[self.statuses.firstObject statusId] forKey:@"since_id"];
+//    //url地址
+//    NSString *urlStr = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
+//    
+//    //数据请求
+//    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
+//    [manger GET:urlStr parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"刷新了%ld条数据",[responseObject[@"statuses"]count]);
+//        
+//        //model数组
+//        NSMutableArray *result = [NSMutableArray array];
+//        //json数组
+//        NSArray *statusArray = responseObject[@"statuses"];
+//        [statusArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            
+//            Status *status = [[Status alloc]initStatusWithDictionary:obj];
+//            [result addObject:status];
+//        }];
+//        //将转化的模型，整体插入到数组的最前面
+//        [self.statuses insertObjects:result atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.count)]];
+//        
+//        [self.tableView reloadData];//刷新tableView
+//        
+//        //通知用户刷新了多少条数据
+//        [self.navigationController showNotification:[NSString stringWithFormat:@"更新了%ld条微博",result.count]];
+//        
+//        [self endrefresh];//刷新完tableView后，结束刷新（菊花）
+//       
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//        NSLog(@"%@",error);
+//        
+//        [self endrefresh];
+//        
+//    }];
+//    
+}
 
 //单独抽出一个停止刷新的方法
 -(void)endrefresh{
     [self.refreshControl endRefreshing];
     self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"还在刷新中"];
 }
+
+-(void)loadMore
+{
+    
+    [self loadDataWithType:kLoadMore];
+//    //提交参数
+//    NSMutableDictionary *params =[[Account currentAccount]requests];
+//    [params setObject:[self.statuses.lastObject statusId] forKey:@"max_id"];
+//    
+//    NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
+//    
+//    if (self.loading || self.loadMoreEnd) {
+//        return;
+//    }
+//     self.loading = YES;
+//    
+//    AFHTTPRequestOperationManager *manger =[AFHTTPRequestOperationManager manager];
+//    [manger GET:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSArray *statusArray = responseObject[@"statuses"];
+//        
+//        //默认加载20条,如果上滑加载的不够20条，说明到底了。
+//        if (statusArray.count < 20) {
+//            self.loadMoreEnd = YES;
+//        }
+//        NSLog(@"加载了%ld条数据",statusArray.count);
+//        [statusArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            
+//            Status *status = [[Status alloc]initStatusWithDictionary:obj];
+//            //加载到现有的数据源的最后
+//            [self.statuses addObject:status];
+//        }];
+//        //先更新数据，在刷新UI
+//        [self.tableView reloadData];
+//        
+//        self.loading = NO;
+//    
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//        self.loading = NO;
+//    }];
+}
+
+
+
 
 
 

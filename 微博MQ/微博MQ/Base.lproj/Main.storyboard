@@ -343,14 +343,14 @@
         <scene sceneID="SKi-A5-X0e">
             <objects>
                 <tableViewController id="hYz-tb-igI" customClass="StatusDetailViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" id="ynr-ZE-wHk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="105" sectionHeaderHeight="18" sectionFooterHeight="18" id="ynr-ZE-wHk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="statusCell" rowHeight="105" id="IMI-qW-L9t" customClass="StatusTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="375" height="105"/>
+                                <rect key="frame" x="0.0" y="113.5" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IMI-qW-L9t" id="CCl-iz-jHd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
@@ -457,7 +457,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="retwritterCell" rowHeight="72" id="FrE-fb-QHb">
-                                <rect key="frame" x="0.0" y="197" width="375" height="72"/>
+                                <rect key="frame" x="0.0" y="218.5" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FrE-fb-QHb" id="A4m-7n-8Ll">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>

@@ -437,7 +437,7 @@ typedef enum :  NSUInteger{
     //找到将要跳转的微博
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     Status *status = [self.statuses objectAtIndex:indexPath.section];
-    [vc setValue:status forKey:@"status"];
+    [vc setValue:status forKey:@"status"];//这个方法先走，然后才走的代理的selectforRow方法
 }
 
 

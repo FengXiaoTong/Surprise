@@ -12,6 +12,8 @@
 
 -(void)awakeFromNib{
     
+    self.backgroundView = [[UIView alloc]init];
+    self.backgroundView.backgroundColor = [UIColor whiteColor];
 }
 
 @end

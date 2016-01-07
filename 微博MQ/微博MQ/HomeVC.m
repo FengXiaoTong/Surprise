@@ -13,6 +13,7 @@
 #import "StatusTableViewCell.h"
 #import "Status.h"
 #import "dataBase.h" 
+#import "UINavigationController+notification.h"
 
 
 @interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
@@ -125,7 +126,7 @@
         //model数组
         NSMutableArray *result = [NSMutableArray array];
         //json数组
-        NSArray *statusArray = responseObject[@"status"];
+        NSArray *statusArray = responseObject[@"statuses"];
         [statusArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
             Status *status = [[Status alloc]initStatusWithDictionary:obj];
@@ -135,6 +136,11 @@
         [self.statuses insertObjects:result atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.count)]];
         
         [self.tableView reloadData];//刷新tableView
+        
+        //通知用户刷新了多少条数据
+        [self.navigationController showNotification:[NSString stringWithFormat:@"更新了%ld条微博",result.count]];
+        
+        [self endrefresh];//刷新完tableView后，结束刷新（菊花）
         
        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -151,7 +157,7 @@
 //单独抽出一个停止刷新的方法
 -(void)endrefresh{
     [self.refreshControl endRefreshing];
-    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"下拉刷新"];
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"刷新完成"];
 }
 
 

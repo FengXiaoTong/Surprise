@@ -29,6 +29,7 @@
     self.window.rootViewController = [self instantiateRootViewController];
     
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -38,7 +39,7 @@
 }
 
 
--(instancetype)instantiateRootViewController
+-(id)instantiateRootViewController
 {
     //首先取出当前运行的版本号，然后取出之前保存的版本，判断如果版本号一样，说明这个版本之前已经运行过了，反正，当前运行的是一个全新的版本
     

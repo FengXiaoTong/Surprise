@@ -14,11 +14,13 @@
 #import "Status.h"
 #import "dataBase.h" 
 
+
 @interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
 //@property(nonatomic, strong)NSArray *statuses;//请求到的微博数据
 @property (nonatomic, strong)NSMutableArray *statuses;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+//@property (weak, nonatomic) IBOutlet UITableView *tabView;
 
 @end
 
@@ -35,6 +37,12 @@
     
     [self loadData];//有数据库后，就直接取数据库中的内容就好。不用去刷新数据
     self.statuses = [NSMutableArray arrayWithArray:[dataBase getStatusFromDB]]; //直接从本地取数据，更快！
+    
+    //添加下来刷新的控件
+    self.refreshControl = [[UIRefreshControl alloc]init];
+    [self.refreshControl addTarget:self action:@selector(loadNew:) forControlEvents:UIControlEventValueChanged];
+
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"下拉刷新"];//设置refreshControl的标题为 下拉刷新
 }
 
 -(NSMutableArray *)statuses
@@ -45,6 +53,8 @@
     return _statuses;
 }
 
+
+//从服务器加载数据
 -(void)loadData
 {
     NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
@@ -78,6 +88,72 @@
         
     }];
 }
+
+#pragma mark - custom
+
+-(NSAttributedString *)refreshControlTitleIWithString:(NSString *)title{
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName : [UIColor grayColor]};
+    
+    NSAttributedString *string = [[NSAttributedString alloc] initWithString:title attributes:attributes];
+    return string;
+}
+
+
+
+-(void)loadNew:(UIRefreshControl *)sender{
+    
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"正在刷新"];
+    
+    //加载更新的方法
+    NSMutableDictionary *dic = [[Account currentAccount]requests];
+    if (!dic) {
+        //未登陆
+        [self endrefresh];//在return之前刷新
+        return;
+        
+    }
+    //请求参数
+    [dic setObject:[self.statuses.firstObject statusId] forKey:@"since_id"];
+    //url地址
+    NSString *urlStr = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
+    
+    //数据请求
+    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
+    [manger GET:urlStr parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"刷新了%ld条数据",[responseObject[@"statuses"]count]);
+        
+        //model数组
+        NSMutableArray *result = [NSMutableArray array];
+        //json数组
+        NSArray *statusArray = responseObject[@"status"];
+        [statusArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            Status *status = [[Status alloc]initStatusWithDictionary:obj];
+            [result addObject:status];
+        }];
+        //将转化的模型，整体插入到数组的最前面
+        [self.statuses insertObjects:result atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, result.count)]];
+        
+        [self.tableView reloadData];//刷新tableView
+        
+       
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@",error);
+        
+        [self endrefresh];
+    }];
+    
+    
+    
+}
+
+//单独抽出一个停止刷新的方法
+-(void)endrefresh{
+    [self.refreshControl endRefreshing];
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"下拉刷新"];
+}
+
 
 
 
@@ -117,7 +193,7 @@
 //    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 //    
 //    return size.width +1;
-    NSDictionary *info = self.statuses[indexPath.row];
+    Status *info = self.statuses[indexPath.row];
     return [StatusTableViewCell heightWithStatus:info];
     
 }

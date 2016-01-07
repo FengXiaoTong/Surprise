@@ -383,13 +383,13 @@ typedef enum :  NSUInteger{
     return 30.f;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //点击cell的响应方法
-    UITableViewController *tvc = [[UITableViewController alloc]initWithStyle:UITableViewStyleGrouped];
-    
-    [self.navigationController pushViewController:tvc animated:YES];//代码实现storyboard拖出来的show功能！
-}
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    //点击cell的响应方法
+//    UITableViewController *tvc = [[UITableViewController alloc]initWithStyle:UITableViewStyleGrouped];
+//    
+//    [self.navigationController pushViewController:tvc animated:YES];//代码实现storyboard拖出来的show功能！
+//}
 
 
 /*

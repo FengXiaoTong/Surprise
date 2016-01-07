@@ -304,12 +304,13 @@ typedef enum :  NSUInteger{
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    //用section区分微博
+    return self.statuses.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.statuses.count;
+    //一个section下只有一条微博
+    return 1;
 }
 
 
@@ -317,7 +318,7 @@ typedef enum :  NSUInteger{
     
      StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statusCell" forIndexPath:indexPath];
     
-    [cell bandingStatus:self.statuses[indexPath.row]];
+    [cell bandingStatus:self.statuses[indexPath.section]];
     
     return cell;
 }
@@ -332,7 +333,7 @@ typedef enum :  NSUInteger{
 //    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 //    
 //    return size.width +1;
-    Status *info = self.statuses[indexPath.row];
+    Status *info = self.statuses[indexPath.section];
     return [StatusTableViewCell heightWithStatus:info];
     
 }
@@ -341,7 +342,7 @@ typedef enum :  NSUInteger{
 {
     //index那行将要显示
     //进行加载更多的操作,条件（下拉滑到倒数第五条，可以进行加载更多）
-    if (self.statuses.count - indexPath.row <= 5) {
+    if (self.statuses.count - indexPath.section <= 5) {
         [self loadMore];
     }
 }

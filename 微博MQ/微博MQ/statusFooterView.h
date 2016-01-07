@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class Status;
 @interface statusFooterView : UITableViewHeaderFooterView
+@property (weak, nonatomic) IBOutlet UIButton *retwitterBtn;
+@property (weak, nonatomic) IBOutlet UIButton *comment;
+@property (weak, nonatomic) IBOutlet UIButton *likeBtn;
+
+-(void)bangingStatus:(Status *)status;
 
 @end

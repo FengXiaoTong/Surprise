@@ -49,7 +49,12 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="836.5" y="94.5"/>
+            <connections>
+                <outlet property="comment" destination="VsC-ra-TcP" id="1Ib-cm-Ljm"/>
+                <outlet property="likeBtn" destination="W8o-7y-ZA9" id="tnl-gE-sJj"/>
+                <outlet property="retwitterBtn" destination="bvI-D9-BoM" id="m9W-jn-YRW"/>
+            </connections>
+            <point key="canvasLocation" x="730.5" y="94.5"/>
         </view>
     </objects>
     <resources>

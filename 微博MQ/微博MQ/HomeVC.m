@@ -348,9 +348,33 @@ typedef enum :  NSUInteger{
 }
 
 
+-(void)retwitter:(UIButton *)button{
+//    UITableViewCell *cell = (UITableViewCell *)button.superview.superview;
+//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+//   不能用 NSLog(@"%ld",indexPath.section);
+    
+    
+}
+
+-(void)comment:(UIButton *)button{
+    
+}
+
+-(void)like:(UIButton *)button{
+    
+}
+
+
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    statusFooterView *footerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerView"];
+    statusFooterView *footerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerView"];//绑定赞，转发，评论内容
+    [footerView bangingStatus:self.statuses[section]];
+    //在返回footView之前添加事件，每个cell都要有转发功能（转发就跳转到另一个控制器页面）
+    [footerView.retwitterBtn addTarget:self action:@selector(retwitter:) forControlEvents:UIControlEventTouchUpInside];
+    footerView.retwitterBtn.tag = section;
+    [footerView.comment addTarget:self action:@selector(comment:) forControlEvents:UIControlEventTouchUpInside];
+    [footerView.likeBtn addTarget:self action:@selector(like:) forControlEvents:UIControlEventTouchUpInside];
+    
     return footerView;
 }
 
@@ -359,6 +383,13 @@ typedef enum :  NSUInteger{
     return 30.f;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //点击cell的响应方法
+    UITableViewController *tvc = [[UITableViewController alloc]initWithStyle:UITableViewStyleGrouped];
+    
+    [self.navigationController pushViewController:tvc animated:YES];//代码实现storyboard拖出来的show功能！
+}
 
 
 /*
@@ -395,14 +426,19 @@ typedef enum :  NSUInteger{
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    //将要跳转的下一个控制器
+    UIViewController *vc = segue.destinationViewController;
+    
+    //找到将要跳转的微博
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    Status *status = [self.statuses objectAtIndex:indexPath.section];
+    [vc setValue:status forKey:@"status"];
 }
-*/
+
 
 @end

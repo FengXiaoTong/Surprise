@@ -52,6 +52,7 @@
 		CC9ED8AA1C2E7E7500225379 /* __MQUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8A91C2E7E7500225379 /* __MQUITests.m */; };
 		CCC2157D1C3E6A68009FE983 /* statusFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2157B1C3E6A68009FE983 /* statusFooterView.m */; };
 		CCC2157E1C3E6A68009FE983 /* statusFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */; };
+		CCC215811C3E96F4009FE983 /* StatusDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC215801C3E96F4009FE983 /* StatusDetailViewController.m */; };
 		CCCADAA21C3B72DB00C26D62 /* status.db in Resources */ = {isa = PBXBuildFile; fileRef = CCCADAA11C3B72DB00C26D62 /* status.db */; };
 		CCCADAA51C3B734400C26D62 /* dataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCADAA41C3B734400C26D62 /* dataBase.m */; };
 		CCCADAB21C3B9A6C00C26D62 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCADAA81C3B9A6C00C26D62 /* FMDatabase.m */; };
@@ -178,6 +179,8 @@
 		CCC2157A1C3E6A5A009FE983 /* statusFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = statusFooterView.h; sourceTree = "<group>"; };
 		CCC2157B1C3E6A68009FE983 /* statusFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statusFooterView.m; sourceTree = "<group>"; };
 		CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusFooterView.xib; sourceTree = "<group>"; };
+		CCC2157F1C3E96F4009FE983 /* StatusDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusDetailViewController.h; sourceTree = "<group>"; };
+		CCC215801C3E96F4009FE983 /* StatusDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusDetailViewController.m; sourceTree = "<group>"; };
 		CCCADAA11C3B72DB00C26D62 /* status.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = status.db; sourceTree = SOURCE_ROOT; };
 		CCCADAA31C3B734400C26D62 /* dataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataBase.h; sourceTree = "<group>"; };
 		CCCADAA41C3B734400C26D62 /* dataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataBase.m; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 			children = (
 				CC7EB8121C33811C00AAF26D /* HomeVC.h */,
 				CC7EB8131C33811C00AAF26D /* HomeVC.m */,
+				CCC2157F1C3E96F4009FE983 /* StatusDetailViewController.h */,
+				CCC215801C3E96F4009FE983 /* StatusDetailViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				CC1D84B61C33FF5600EA877E /* SDImageCache.m in Sources */,
 				CC1D84BF1C33FF5600EA877E /* UIImage+MultiFormat.m in Sources */,
 				CC1D84BE1C33FF5600EA877E /* UIImage+GIF.m in Sources */,
+				CCC215811C3E96F4009FE983 /* StatusDetailViewController.m in Sources */,
 				CC1D84B91C33FF5600EA877E /* SDWebImageDownloader.m in Sources */,
 				CCE01B671C326FDD007CF40B /* SettingViewController.m in Sources */,
 				CC1D84C21C33FF5600EA877E /* UIImageView+WebCache.m in Sources */,

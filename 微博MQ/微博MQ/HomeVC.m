@@ -154,10 +154,39 @@
     
 }
 
+
+-(void)loadMore
+{
+    //提交参数
+    NSMutableDictionary *params =[[Account currentAccount]requests];
+    [params setObject:[self.statuses.lastObject statusId] forKey:@"max_id"];
+    
+    NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
+    
+    AFHTTPRequestOperationManager *manger =[AFHTTPRequestOperationManager manager];
+    [manger GET:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *statusArray = responseObject[@"statuses"];
+        NSLog(@"加载了%ld条数据",statusArray.count);
+        [statusArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            Status *status = [[Status alloc]initStatusWithDictionary:obj];
+            //加载到现有的数据源的最后
+            [self.statuses addObject:status];
+        }];
+        //先更新数据，在刷新UI
+        [self.tableView reloadData];
+    
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        
+    }];
+}
+
+
 //单独抽出一个停止刷新的方法
 -(void)endrefresh{
     [self.refreshControl endRefreshing];
-    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"刷新完成"];
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"还在刷新中"];
 }
 
 
@@ -203,6 +232,16 @@
     return [StatusTableViewCell heightWithStatus:info];
     
 }
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //index那行将要显示
+    //进行加载更多的操作,条件（下拉滑到倒数第五条，可以进行加载更多）
+    if (self.statuses.count - indexPath.row <= 5) {
+        [self loadMore];
+    }
+}
+
 
 /*
 // Override to support conditional editing of the table view.

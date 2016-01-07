@@ -26,17 +26,15 @@
         label1.frame = CGRectOffset(label1.frame, 0, 44);
     } completion:^(BOOL finished) {
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [UIView animateWithDuration:0.3 animations:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.65 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:0.44 animations:^{
                 
                 label1.frame = CGRectOffset(label1.frame, 0, -44);
             } completion:^(BOOL finished) {
                 [label1 removeFromSuperview];
-            }];
-
-            
+           }];
         });
-            }];
+    }];
 }
 
 @end

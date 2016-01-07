@@ -22,7 +22,8 @@
 @property (nonatomic, strong)NSMutableArray *statuses;
 
 //@property (weak, nonatomic) IBOutlet UITableView *tabView;
-
+@property(nonatomic )BOOL loading;//判断是否正在加载的状态
+@property(nonatomic )BOOL loadMoreEnd;//加载更多结束的判断
 @end
 
 @implementation HomeVC
@@ -141,16 +142,14 @@
         [self.navigationController showNotification:[NSString stringWithFormat:@"更新了%ld条微博",result.count]];
         
         [self endrefresh];//刷新完tableView后，结束刷新（菊花）
-        
        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         NSLog(@"%@",error);
         
         [self endrefresh];
+        
     }];
-    
-    
     
 }
 
@@ -163,9 +162,19 @@
     
     NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/home_timeline.json"];
     
+    if (self.loading || self.loadMoreEnd) {
+        return;
+    }
+     self.loading = YES;
+    
     AFHTTPRequestOperationManager *manger =[AFHTTPRequestOperationManager manager];
     [manger GET:urlString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSArray *statusArray = responseObject[@"statuses"];
+        
+        //默认加载20条,如果上滑加载的不够20条，说明到底了。
+        if (statusArray.count < 20) {
+            self.loadMoreEnd = YES;
+        }
         NSLog(@"加载了%ld条数据",statusArray.count);
         [statusArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
@@ -175,10 +184,12 @@
         }];
         //先更新数据，在刷新UI
         [self.tableView reloadData];
+        
+        self.loading = NO;
     
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-        
+        self.loading = NO;
     }];
 }
 

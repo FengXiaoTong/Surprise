@@ -50,6 +50,8 @@
 		CC9ED8941C2E7E7500225379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9ED8921C2E7E7500225379 /* LaunchScreen.storyboard */; };
 		CC9ED89F1C2E7E7500225379 /* __MQTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED89E1C2E7E7500225379 /* __MQTests.m */; };
 		CC9ED8AA1C2E7E7500225379 /* __MQUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9ED8A91C2E7E7500225379 /* __MQUITests.m */; };
+		CCC2157D1C3E6A68009FE983 /* statusFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2157B1C3E6A68009FE983 /* statusFooterView.m */; };
+		CCC2157E1C3E6A68009FE983 /* statusFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */; };
 		CCCADAA21C3B72DB00C26D62 /* status.db in Resources */ = {isa = PBXBuildFile; fileRef = CCCADAA11C3B72DB00C26D62 /* status.db */; };
 		CCCADAA51C3B734400C26D62 /* dataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCADAA41C3B734400C26D62 /* dataBase.m */; };
 		CCCADAB21C3B9A6C00C26D62 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCADAA81C3B9A6C00C26D62 /* FMDatabase.m */; };
@@ -173,6 +175,9 @@
 		CC9ED8A51C2E7E7500225379 /* 微博MQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "微博MQUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9ED8A91C2E7E7500225379 /* __MQUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __MQUITests.m; sourceTree = "<group>"; };
 		CC9ED8AB1C2E7E7500225379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC2157A1C3E6A5A009FE983 /* statusFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = statusFooterView.h; sourceTree = "<group>"; };
+		CCC2157B1C3E6A68009FE983 /* statusFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = statusFooterView.m; sourceTree = "<group>"; };
+		CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusFooterView.xib; sourceTree = "<group>"; };
 		CCCADAA11C3B72DB00C26D62 /* status.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = status.db; sourceTree = SOURCE_ROOT; };
 		CCCADAA31C3B734400C26D62 /* dataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataBase.h; sourceTree = "<group>"; };
 		CCCADAA41C3B734400C26D62 /* dataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataBase.m; sourceTree = "<group>"; };
@@ -469,6 +474,9 @@
 				CC9ED88D1C2E7E7500225379 /* Main.storyboard */,
 				CC1D848E1C33E0CD00EA877E /* StatusTableViewCell.h */,
 				CC1D848F1C33E0CD00EA877E /* StatusTableViewCell.m */,
+				CCC2157A1C3E6A5A009FE983 /* statusFooterView.h */,
+				CCC2157B1C3E6A68009FE983 /* statusFooterView.m */,
+				CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -624,6 +632,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC2157E1C3E6A68009FE983 /* statusFooterView.xib in Resources */,
 				CC9ED8941C2E7E7500225379 /* LaunchScreen.storyboard in Resources */,
 				CC9ED8911C2E7E7500225379 /* Assets.xcassets in Resources */,
 				CC9ED88F1C2E7E7500225379 /* Main.storyboard in Resources */,
@@ -665,6 +674,7 @@
 				CC79CE5F1C31746800FEB53B /* AFNetworkReachabilityManager.m in Sources */,
 				CCE01B5D1C3225C7007CF40B /* Account.m in Sources */,
 				CC1D84B71C33FF5600EA877E /* SDWebImageCompat.m in Sources */,
+				CCC2157D1C3E6A68009FE983 /* statusFooterView.m in Sources */,
 				CC1D84B61C33FF5600EA877E /* SDImageCache.m in Sources */,
 				CC1D84BF1C33FF5600EA877E /* UIImage+MultiFormat.m in Sources */,
 				CC1D84BE1C33FF5600EA877E /* UIImage+GIF.m in Sources */,

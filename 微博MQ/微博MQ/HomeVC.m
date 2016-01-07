@@ -16,6 +16,7 @@
 #import "Status.h"
 #import "dataBase.h" 
 #import "UINavigationController+notification.h"
+#import "statusFooterView.h"
 
 typedef enum :  NSUInteger{
     kLoadDefault,//基本的加载
@@ -53,6 +54,10 @@ typedef enum :  NSUInteger{
     [self.refreshControl addTarget:self action:@selector(loadNew:) forControlEvents:UIControlEventValueChanged];
 
     self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"下拉刷新"];//设置refreshControl的标题为 下拉刷新
+    
+    
+    //注册footerView
+    [self.tableView registerNib:[UINib nibWithNibName:@"statusFooterView" bundle:[NSBundle mainBundle]]forHeaderFooterViewReuseIdentifier:@"footerView"];
 }
 
 -(NSMutableArray *)statuses
@@ -291,11 +296,6 @@ typedef enum :  NSUInteger{
 }
 
 
-
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -345,6 +345,13 @@ typedef enum :  NSUInteger{
     if (self.statuses.count - indexPath.section <= 5) {
         [self loadMore];
     }
+}
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    statusFooterView *footerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"footerView"];
+    return footerView;
 }
 
 

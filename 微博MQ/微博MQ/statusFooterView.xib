@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,27 +12,49 @@
             <rect key="frame" x="0.0" y="0.0" width="351" height="33"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvI-D9-BoM">
-                    <rect key="frame" x="25" y="0.0" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvI-D9-BoM">
+                    <rect key="frame" x="36" y="5.5" width="68" height="22"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="32" image="statusdetail_icon_retweet">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsC-ra-TcP">
-                    <rect key="frame" x="152" y="0.0" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsC-ra-TcP">
+                    <rect key="frame" x="141" y="5.5" width="68" height="22"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="5" image="statusdetail_icon_comment">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8o-7y-ZA9">
-                    <rect key="frame" x="274" y="0.0" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8o-7y-ZA9">
+                    <rect key="frame" x="247" y="5.5" width="68" height="22"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="88" image="statusdetail_icon_like">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VsC-ra-TcP" firstAttribute="centerY" secondItem="e4S-Ff-3mU" secondAttribute="centerY" id="3ZC-G8-neG"/>
+                <constraint firstItem="bvI-D9-BoM" firstAttribute="centerY" secondItem="e4S-Ff-3mU" secondAttribute="centerY" id="C9e-zX-CMy"/>
+                <constraint firstItem="VsC-ra-TcP" firstAttribute="centerX" secondItem="e4S-Ff-3mU" secondAttribute="centerX" id="INv-jH-x5p"/>
+                <constraint firstItem="bvI-D9-BoM" firstAttribute="centerX" secondItem="e4S-Ff-3mU" secondAttribute="centerX" multiplier="0.4" id="MBw-Rs-JFq"/>
+                <constraint firstItem="W8o-7y-ZA9" firstAttribute="centerX" secondItem="e4S-Ff-3mU" secondAttribute="centerX" multiplier="1.6" id="PTR-Xf-SQv"/>
+                <constraint firstItem="W8o-7y-ZA9" firstAttribute="centerY" secondItem="e4S-Ff-3mU" secondAttribute="centerY" id="z5G-VJ-Dw2"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="730.5" y="94.5"/>
+            <point key="canvasLocation" x="836.5" y="94.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="statusdetail_icon_comment" width="14" height="14"/>
+        <image name="statusdetail_icon_like" width="14" height="14"/>
+        <image name="statusdetail_icon_retweet" width="14" height="14"/>
+    </resources>
 </document>

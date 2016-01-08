@@ -10,9 +10,16 @@
 #import "StatusTableViewCell.h"
 #import "Status.h"
 #import "statusFooterView.h"
+#import "Common.h"
+#import "Account.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "Comment.h"
+#import "CommentsCell.h"
 
 
 @interface StatusDetailViewController ()
+
+@property(nonatomic, strong)NSArray *commentsArray;
 
 @end
 
@@ -26,12 +33,47 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self loadComent];//请求评论数据
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -请求评论
+-(void)loadComent{
+    NSString *commentUrl = [kBaseUrl stringByAppendingPathComponent:@"/comments/show.json"];
+    //请求的参数
+    NSMutableDictionary *params = [[Account currentAccount]requests];
+    [params setObject:self.status.statusId forKey:@"id"];
+    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
+    [manger GET:commentUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@",responseObject);
+        //解析为model
+        NSArray *resultArray = responseObject[@"comments"];
+        NSMutableArray *commentSource =[NSMutableArray array];
+        [resultArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            Comment *comment = [[Comment alloc]initWithDictionary:obj];
+            [commentSource addObject:comment];
+        }];
+        self.commentsArray = commentSource;
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        //失败原因有
+        //1.联网失败404
+        //2.服务器端出错，不满足服务器限制条件
+        //3.数据返回格式不对！
+        NSLog(@"%@",error);
+    }];
+    
+}
+
 
 #pragma mark - Table view data source
 
@@ -45,20 +87,41 @@
     if (section == 0) {
         return 1;
     }
-    return 0;
+    return self.commentsArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statusCell" forIndexPath:indexPath];
-    [cell bandingStatus:self.status];
-
-    return cell;
+    
+    if (indexPath.section == 0) {
+        
+        StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statusCell" forIndexPath:indexPath];
+        [cell bandingStatus:self.status];
+        
+        return cell;
+    }else{
+        
+        CommentsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"retwritterCell" forIndexPath:indexPath];
+        [cell bangingComments:self.commentsArray[indexPath.row]];
+        return cell;
+    }
+ 
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [StatusTableViewCell heightWithStatus:self.status];
+    if (indexPath.section == 0) {
+        
+        return [StatusTableViewCell heightWithStatus:self.status];
+    }else{
+        //评论内容
+        CommentsCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"retwritterCell"];
+        [cell bangingComments:self.commentsArray[indexPath.row]];
+        CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        return size.height + 1;
+    }
+    
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

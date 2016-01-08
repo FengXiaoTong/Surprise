@@ -25,6 +25,8 @@
 		CC1D84C21C33FF5600EA877E /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D84B11C33FF5600EA877E /* UIImageView+WebCache.m */; };
 		CC1D84C31C33FF5600EA877E /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1D84B31C33FF5600EA877E /* UIView+WebCacheOperation.m */; };
 		CC7497621C3E25D7004C6DDA /* UINavigationController+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7497611C3E25D7004C6DDA /* UINavigationController+notification.m */; };
+		CC7592C91C3F545200AFC97D /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7592C81C3F545200AFC97D /* Comment.m */; };
+		CC7592CC1C3F59D900AFC97D /* CommentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7592CB1C3F59D900AFC97D /* CommentsCell.m */; };
 		CC76FD331C3D0864004B8846 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76FD2D1C3D0864004B8846 /* SDBrowserImageView.m */; };
 		CC76FD341C3D0864004B8846 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76FD2F1C3D0864004B8846 /* SDPhotoBrowser.m */; };
 		CC76FD351C3D0864004B8846 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC76FD321C3D0864004B8846 /* SDWaitingView.m */; };
@@ -125,6 +127,10 @@
 		CC1D84B31C33FF5600EA877E /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		CC7497601C3E25D7004C6DDA /* UINavigationController+notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+notification.h"; sourceTree = "<group>"; };
 		CC7497611C3E25D7004C6DDA /* UINavigationController+notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+notification.m"; sourceTree = "<group>"; };
+		CC7592C71C3F545200AFC97D /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		CC7592C81C3F545200AFC97D /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		CC7592CA1C3F59D900AFC97D /* CommentsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsCell.h; sourceTree = "<group>"; };
+		CC7592CB1C3F59D900AFC97D /* CommentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsCell.m; sourceTree = "<group>"; };
 		CC76FD2C1C3D0864004B8846 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
 		CC76FD2D1C3D0864004B8846 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
 		CC76FD2E1C3D0864004B8846 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
@@ -469,6 +475,8 @@
 				CC86B7E71C3A7990004063AC /* Status.m */,
 				CC86B7E91C3A79A1004063AC /* User.h */,
 				CC86B7EA1C3A79A1004063AC /* User.m */,
+				CC7592C71C3F545200AFC97D /* Comment.h */,
+				CC7592C81C3F545200AFC97D /* Comment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -483,6 +491,8 @@
 				CCC2157B1C3E6A68009FE983 /* statusFooterView.m */,
 				CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */,
 				CCC215821C3EA69A009FE983 /* StatusDetailHeaderView.xib */,
+				CC7592CA1C3F59D900AFC97D /* CommentsCell.h */,
+				CC7592CB1C3F59D900AFC97D /* CommentsCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -693,6 +703,7 @@
 				CC1D84C21C33FF5600EA877E /* UIImageView+WebCache.m in Sources */,
 				CC1D84BD1C33FF5600EA877E /* UIButton+WebCache.m in Sources */,
 				CCE01B6A1C328BF9007CF40B /* UITableView+index.m in Sources */,
+				CC7592C91C3F545200AFC97D /* Comment.m in Sources */,
 				CC79CE641C31746800FEB53B /* AFURLSessionManager.m in Sources */,
 				CC79CE621C31746800FEB53B /* AFURLRequestSerialization.m in Sources */,
 				CC86B7E81C3A7990004063AC /* Status.m in Sources */,
@@ -712,6 +723,7 @@
 				CCCADAB51C3B9A6C00C26D62 /* FMDatabaseQueue.m in Sources */,
 				CC7497621C3E25D7004C6DDA /* UINavigationController+notification.m in Sources */,
 				CC79CE601C31746800FEB53B /* AFSecurityPolicy.m in Sources */,
+				CC7592CC1C3F59D900AFC97D /* CommentsCell.m in Sources */,
 				CC79CE411C3126B300FEB53B /* MainViewController.m in Sources */,
 				CCCADAB31C3B9A6C00C26D62 /* FMDatabaseAdditions.m in Sources */,
 				CC79CE471C312F5E00FEB53B /* LoginViewController.m in Sources */,

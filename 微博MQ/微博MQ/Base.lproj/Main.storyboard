@@ -456,7 +456,7 @@
                                     <outlet property="times" destination="jFQ-Vg-YRQ" id="jKe-Nd-Xv9"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="retwritterCell" rowHeight="72" id="FrE-fb-QHb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="retwritterCell" rowHeight="72" id="FrE-fb-QHb" customClass="CommentsCell">
                                 <rect key="frame" x="0.0" y="218.5" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FrE-fb-QHb" id="A4m-7n-8Ll">
@@ -500,6 +500,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="icon" destination="bCq-eG-kcn" id="B5T-c9-Qty"/>
+                                    <outlet property="name" destination="Vfq-VY-0cX" id="Sac-Bi-fiR"/>
+                                    <outlet property="textStr" destination="7GN-4m-jgl" id="cCL-PK-EJL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

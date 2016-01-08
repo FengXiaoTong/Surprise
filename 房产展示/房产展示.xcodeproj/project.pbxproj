@@ -15,6 +15,9 @@
 		CC10A2311C3F927F005CE94A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC10A22F1C3F927F005CE94A /* LaunchScreen.storyboard */; };
 		CC10A23C1C3F927F005CE94A /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A23B1C3F927F005CE94A /* ____Tests.m */; };
 		CC10A2471C3F927F005CE94A /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A2461C3F927F005CE94A /* ____UITests.m */; };
+		CC10A25C1C3FA845005CE94A /* ZFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A25B1C3FA845005CE94A /* ZFTableViewController.m */; };
+		CC10A25F1C3FA85D005CE94A /* SFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A25E1C3FA85D005CE94A /* SFTableViewController.m */; };
+		CC10A2621C3FA86B005CE94A /* GRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A2611C3FA86B005CE94A /* GRTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		CC10A2421C3F927F005CE94A /* 房产展示UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "房产展示UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC10A2461C3F927F005CE94A /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		CC10A2481C3F927F005CE94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC10A25A1C3FA845005CE94A /* ZFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTableViewController.h; sourceTree = "<group>"; };
+		CC10A25B1C3FA845005CE94A /* ZFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTableViewController.m; sourceTree = "<group>"; };
+		CC10A25D1C3FA85D005CE94A /* SFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTableViewController.h; sourceTree = "<group>"; };
+		CC10A25E1C3FA85D005CE94A /* SFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTableViewController.m; sourceTree = "<group>"; };
+		CC10A2601C3FA86B005CE94A /* GRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTableViewController.h; sourceTree = "<group>"; };
+		CC10A2611C3FA86B005CE94A /* GRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +129,6 @@
 				CC10A2321C3F927F005CE94A /* Info.plist */,
 				CC10A2241C3F927F005CE94A /* AppDelegate.h */,
 				CC10A2251C3F927F005CE94A /* AppDelegate.m */,
-				CC10A22A1C3F927F005CE94A /* Main.storyboard */,
 				CC10A2221C3F927F005CE94A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -154,8 +162,15 @@
 		CC10A2551C3F932E005CE94A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC10A22A1C3F927F005CE94A /* Main.storyboard */,
 				CC10A2271C3F927F005CE94A /* ViewController.h */,
 				CC10A2281C3F927F005CE94A /* ViewController.m */,
+				CC10A25A1C3FA845005CE94A /* ZFTableViewController.h */,
+				CC10A25B1C3FA845005CE94A /* ZFTableViewController.m */,
+				CC10A25D1C3FA85D005CE94A /* SFTableViewController.h */,
+				CC10A25E1C3FA85D005CE94A /* SFTableViewController.m */,
+				CC10A2601C3FA86B005CE94A /* GRTableViewController.h */,
+				CC10A2611C3FA86B005CE94A /* GRTableViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -319,6 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC10A2291C3F927F005CE94A /* ViewController.m in Sources */,
+				CC10A25C1C3FA845005CE94A /* ZFTableViewController.m in Sources */,
+				CC10A2621C3FA86B005CE94A /* GRTableViewController.m in Sources */,
+				CC10A25F1C3FA85D005CE94A /* SFTableViewController.m in Sources */,
 				CC10A2261C3F927F005CE94A /* AppDelegate.m in Sources */,
 				CC10A2231C3F927F005CE94A /* main.m in Sources */,
 			);

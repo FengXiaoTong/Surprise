@@ -63,12 +63,19 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if (section == 0) {
+        return 0.1;
+    }
     return 30.f;
 }
 
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    if (section == 0) {
+        return nil;
+    }
+    
     statusFooterView *footerView = [[[NSBundle mainBundle]loadNibNamed:@"StatusDetailHeaderView" owner:nil options:nil] objectAtIndex:0];
     [footerView bangingStatus:self.status];
     return footerView;

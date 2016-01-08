@@ -20,6 +20,8 @@
 @interface StatusDetailViewController ()
 
 @property(nonatomic, strong)NSArray *commentsArray;
+@property (nonatomic, strong)NSArray *retwitterArray;
+@property (nonatomic)NSInteger sectionSelectedIndex;
 
 @end
 
@@ -35,7 +37,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self loadComent];//请求评论数据
-    
+    self.sectionSelectedIndex = 2;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +77,39 @@
 }
 
 
+//请求微博评论列表的数据
+-(void)loadRetwitter
+{
+    NSString *urlString = [kBaseUrl stringByAppendingPathComponent:@"statuses/repost_timeline.json"];
+    NSMutableDictionary *dic = [[Account currentAccount]requests];
+    [dic setObject:self.status.statusId forKey:@"id"];
+    
+    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
+    
+    [manger GET:urlString parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        NSArray *resultArray = responseObject[@"reposts"];
+        NSMutableArray *retwitterArray = [NSMutableArray array];
+        
+        [resultArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            
+            Status *status = [[Status alloc] initStatusWithDictionary:obj];
+            [retwitterArray addObject:status];
+        }];
+        
+        self.retwitterArray = retwitterArray;//更新数据
+
+        [self.tableView reloadData];//刷新UI
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -87,7 +122,22 @@
     if (section == 0) {
         return 1;
     }
-    return self.commentsArray.count;
+    switch (self.sectionSelectedIndex) {
+        case 2:
+        {
+            return self.commentsArray.count;
+        }
+            break;
+            case 3:
+        {
+            return self.retwitterArray.count;
+        }
+            
+        default:
+            return 0;
+            break;
+    }
+    
 }
 
 
@@ -102,7 +152,23 @@
     }else{
         
         CommentsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"retwritterCell" forIndexPath:indexPath];
-        [cell bangingComments:self.commentsArray[indexPath.row]];
+        switch (self.sectionSelectedIndex) {
+            case 1:
+            {
+                [cell bandingStatus:self.retwitterArray[indexPath.row]];
+            }
+                break;
+            case 2:
+            {
+                [cell bangingComments:self.commentsArray[indexPath.row]];
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+        
         return cell;
     }
  
@@ -116,7 +182,25 @@
     }else{
         //评论内容
         CommentsCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"retwritterCell"];
-        [cell bangingComments:self.commentsArray[indexPath.row]];
+        switch (self.sectionSelectedIndex) {
+            case 1:
+            {
+                //如果选择的是转发微博列表，那么绑定的就是转发微博的数据
+                [cell bandingStatus:self.retwitterArray[indexPath.row]];
+            }
+                break;
+            case 2:
+            {
+                //绑定评论数据
+                [cell bangingComments:self.commentsArray[indexPath.row]];
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+        
         CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
         return size.height + 1;
     }
@@ -151,6 +235,7 @@
     [footerView.likeBtn addTarget:self action:@selector(headerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
     footerView.likeBtn.tag = 3;
     
+    [footerView selected:self.sectionSelectedIndex];
     return footerView;
     
 }
@@ -159,7 +244,22 @@
 -(void)headerButtonPress:(UIButton *)sender{
     statusFooterView *headerView =(statusFooterView *) [self.tableView headerViewForSection:1];
     [headerView selected:sender.tag];
-    
+    self.sectionSelectedIndex = sender.tag;//标记选择的是第几个按钮
+    switch (sender.tag) {
+        case 1:
+        {
+            [self loadRetwitter];
+        }
+            break;
+        case 2:
+        {
+            [self loadComent];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 /*

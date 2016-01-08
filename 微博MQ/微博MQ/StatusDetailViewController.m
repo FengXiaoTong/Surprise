@@ -9,6 +9,7 @@
 #import "StatusDetailViewController.h"
 #import "StatusTableViewCell.h"
 #import "Status.h"
+#import "statusFooterView.h"
 
 
 @interface StatusDetailViewController ()
@@ -36,12 +37,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 1;
+    if (section == 0) {
+        return 1;
+    }
+    return 0;
 }
 
 
@@ -57,6 +61,19 @@
     return [StatusTableViewCell heightWithStatus:self.status];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30.f;
+}
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    statusFooterView *footerView = [[[NSBundle mainBundle]loadNibNamed:@"StatusDetailHeaderView" owner:nil options:nil] objectAtIndex:0];
+    [footerView bangingStatus:self.status];
+    return footerView;
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

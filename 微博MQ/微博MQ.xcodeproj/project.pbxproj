@@ -53,6 +53,7 @@
 		CCC2157D1C3E6A68009FE983 /* statusFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2157B1C3E6A68009FE983 /* statusFooterView.m */; };
 		CCC2157E1C3E6A68009FE983 /* statusFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */; };
 		CCC215811C3E96F4009FE983 /* StatusDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC215801C3E96F4009FE983 /* StatusDetailViewController.m */; };
+		CCC215831C3EA69A009FE983 /* StatusDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC215821C3EA69A009FE983 /* StatusDetailHeaderView.xib */; };
 		CCCADAA21C3B72DB00C26D62 /* status.db in Resources */ = {isa = PBXBuildFile; fileRef = CCCADAA11C3B72DB00C26D62 /* status.db */; };
 		CCCADAA51C3B734400C26D62 /* dataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCADAA41C3B734400C26D62 /* dataBase.m */; };
 		CCCADAB21C3B9A6C00C26D62 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CCCADAA81C3B9A6C00C26D62 /* FMDatabase.m */; };
@@ -181,6 +182,7 @@
 		CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = statusFooterView.xib; sourceTree = "<group>"; };
 		CCC2157F1C3E96F4009FE983 /* StatusDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusDetailViewController.h; sourceTree = "<group>"; };
 		CCC215801C3E96F4009FE983 /* StatusDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusDetailViewController.m; sourceTree = "<group>"; };
+		CCC215821C3EA69A009FE983 /* StatusDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusDetailHeaderView.xib; sourceTree = "<group>"; };
 		CCCADAA11C3B72DB00C26D62 /* status.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = status.db; sourceTree = SOURCE_ROOT; };
 		CCCADAA31C3B734400C26D62 /* dataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dataBase.h; sourceTree = "<group>"; };
 		CCCADAA41C3B734400C26D62 /* dataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dataBase.m; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 				CCC2157A1C3E6A5A009FE983 /* statusFooterView.h */,
 				CCC2157B1C3E6A68009FE983 /* statusFooterView.m */,
 				CCC2157C1C3E6A68009FE983 /* statusFooterView.xib */,
+				CCC215821C3EA69A009FE983 /* StatusDetailHeaderView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC215831C3EA69A009FE983 /* StatusDetailHeaderView.xib in Resources */,
 				CCC2157E1C3E6A68009FE983 /* statusFooterView.xib in Resources */,
 				CC9ED8941C2E7E7500225379 /* LaunchScreen.storyboard in Resources */,
 				CC9ED8911C2E7E7500225379 /* Assets.xcassets in Resources */,

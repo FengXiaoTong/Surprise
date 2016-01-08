@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *retwitterBtn;
 @property (weak, nonatomic) IBOutlet UIButton *comment;
 @property (weak, nonatomic) IBOutlet UIButton *likeBtn;
+@property (weak, nonatomic) IBOutlet UIView *selectedView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftConstraint;
 
 -(void)bangingStatus:(Status *)status;
 

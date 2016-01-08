@@ -38,4 +38,14 @@
     return self;
 }
 
+-(NSString *)commentText{
+    if (!self.reply_comment) {
+        return self.text;
+    }else{
+        return [NSString stringWithFormat:@"回复@%@ %@",self.reply_comment.user.name, self.text];
+    }
+}
+
+
+
 @end

@@ -31,8 +31,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 -(void)bandingStatus:(Status *)status{
@@ -40,6 +38,8 @@
     self.name.text = status.user.name;
     self.textStr.text = status.text;
 }
+
+
 
 
 @end

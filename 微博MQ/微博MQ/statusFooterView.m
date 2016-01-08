@@ -30,4 +30,43 @@
     
 }
 
+
+//根据索引，设置按钮的选中状态
+-(void)selected:(NSInteger)index
+{
+    switch (index) {
+        case 1:
+        {
+            [self.retwitterBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [self.comment setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [self.likeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            self.leftConstraint.constant = self.retwitterBtn.center.x - 5;//移动指示方块到选中的View下面
+        }
+            break;
+            
+        case 2:
+        {
+            [self.retwitterBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [self.comment setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [self.likeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            self.leftConstraint.constant = self.comment.center.x -5;
+        }
+            break;
+            
+        case 3:
+        {
+            [self.retwitterBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [self.comment setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+            [self.likeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            self.leftConstraint.constant = self.
+            likeBtn.center.x - 5;//减去小方块的一半
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
 @end

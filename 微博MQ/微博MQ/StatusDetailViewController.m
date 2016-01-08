@@ -141,7 +141,24 @@
     
     statusFooterView *footerView = [[[NSBundle mainBundle]loadNibNamed:@"StatusDetailHeaderView" owner:nil options:nil] objectAtIndex:0];
     [footerView bangingStatus:self.status];
+    //给按钮添加点击事件
+    [footerView.retwitterBtn addTarget:self action:@selector(headerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
+    footerView.retwitterBtn.tag = 1;
+    
+    [footerView.comment addTarget:self action:@selector(headerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
+    footerView.comment.tag = 2;
+    
+    [footerView.likeBtn addTarget:self action:@selector(headerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
+    footerView.likeBtn.tag = 3;
+    
     return footerView;
+    
+}
+
+//section header 上的按钮点击，出发的事件
+-(void)headerButtonPress:(UIButton *)sender{
+    statusFooterView *headerView =(statusFooterView *) [self.tableView headerViewForSection:1];
+    [headerView selected:sender.tag];
     
 }
 

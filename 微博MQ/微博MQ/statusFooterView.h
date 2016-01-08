@@ -17,4 +17,6 @@
 
 -(void)bangingStatus:(Status *)status;
 
+-(void)selected:(NSInteger)index;
+
 @end

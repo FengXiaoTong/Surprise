@@ -6,8 +6,6 @@
 //  Copyright © 2015年 com.qingyun. All rights reserved.
 //
 
-
-
 #import "HomeVC.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "Account.h"

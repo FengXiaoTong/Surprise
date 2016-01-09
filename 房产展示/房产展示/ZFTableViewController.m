@@ -7,6 +7,10 @@
 //
 
 #import "ZFTableViewController.h"
+#import "ZFModel.h"
+#import "ZFTableViewCell.h"
+#import "AFNetworking.h"
+#import "common.h"
 
 @interface ZFTableViewController ()
 
@@ -17,11 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+
+    [self requsetData];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,27 +31,68 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)requsetData{
+    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];//创建管理者
+    
+    manger.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];//请求的返回格式为text/html
+    
+    NSDictionary *params =@{@"HEAD_INFO" : @"{\"commandcode\":108,\"REQUEST_BODY\":{\"city\":\"昆明\",\"desc\":\"0\" ,\"p\":1,\"lat\":24.973079315636,\"lng\":102.69840055824}}"};
+    
+    [manger GET:QbaseUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        NSArray *listArr = responseObject[@"RESPONSE_BODY"][@"list"];// 取出需要的内容数组
+        
+        //将从网络获得的数组转化成ZFmodel模型
+        NSMutableArray *models = [NSMutableArray array];
+             _datas = [NSMutableArray array];
+        for (NSDictionary *dic in listArr) {
+            ZFModel *model = [ZFModel modelWithDictionary:dic];
+            [models addObject:model];
+        }
+        _datas = models;
+    
+        [self.tableView reloadData];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return  1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+//    return _datas.count;
+    return self.datas.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    ZFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ZFcell" forIndexPath:indexPath];
+    
+    ZFModel *model = _datas[indexPath.row];
+    
+    cell.zfModel = model;
     
     return cell;
 }
-*/
+
+
+//请求数据
+//HEAD_INFO={"commandcode":108,"REQUEST_BODY":{"city":"昆明","desc":"0" ,"p":1,"lat":24.973079315636,"lng":102.69840055824}}
+
+
 
 /*
 // Override to support conditional editing of the table view.

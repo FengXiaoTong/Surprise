@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZFTableViewController : UITableViewController
+@interface ZFTableViewController : UIViewController
 
 @property(nonatomic, strong)NSMutableArray *datas;
 

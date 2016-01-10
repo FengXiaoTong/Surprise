@@ -12,7 +12,8 @@
 #import "AFNetworking.h"
 #import "common.h"
 
-@interface ZFTableViewController ()
+@interface ZFTableViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -41,7 +42,7 @@
     
     [manger GET:QbaseUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
         NSArray *listArr = responseObject[@"RESPONSE_BODY"][@"list"];// 取出需要的内容数组
         
         //将从网络获得的数组转化成ZFmodel模型

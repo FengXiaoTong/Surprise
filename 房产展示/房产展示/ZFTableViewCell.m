@@ -8,9 +8,9 @@
 
 #import "ZFTableViewCell.h"
 #import "ZFModel.h"
-#import "common.h"
 #import "UIImageView+WebCache.h"
 
+#define imageUrl @"http://www.fungpu.com/houseapp/"
 
 @interface ZFTableViewCell ()
 
@@ -34,14 +34,14 @@
     _housetype.text = zfModel.housetype;
     _community.text = zfModel.community;
     _simpleadd.text = zfModel.simpleadd;
-    //    _price.text = [NSString stringWithFormat:@"%@/月",zfModel.price];
+        _price.text = [NSString stringWithFormat:@"%@/月",zfModel.price];//等价于下面的两句，都是讲请求的数据转化为string类型，然后赋值使用！
 
-    NSString *price = [NSString stringWithFormat:@"%@/月",zfModel.price];
-    _price.text = price;
+//    NSString *price = [NSString stringWithFormat:@"%@/月",zfModel.price];
+//    _price.text = price;
     
-    NSString *picURlStr = [QbaseUrl stringByAppendingPathComponent:zfModel.iconurl];
-//    UIImage *image = _iconurl.image;
-//    [self.imageView.image sd_setImageWithURL:[NSURL URLWithString:picURlStr]];
+    NSString *picURlStr = [imageUrl stringByAppendingPathComponent:zfModel.iconurl];
+
+    [self.iconurl sd_setImageWithURL:[NSURL URLWithString:picURlStr]];//第三方异步加载图片！
 }
 
 

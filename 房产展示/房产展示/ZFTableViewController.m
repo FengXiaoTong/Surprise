@@ -11,10 +11,25 @@
 #import "ZFTableViewCell.h"
 #import "AFNetworking.h"
 #import "common.h"
+#import "XQTableViewController.h"
+#import "TJViewController.h"
+#import "QYSelectedMenuModel.h"
+#import "QYMainModel.h"
+#import "QYDropDownMenu.h"
+
 
 @interface ZFTableViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) QYDropDownMenu *dropDownMenu;//菜单
 
+@property(nonatomic, strong)NSArray *array1;
+@property(nonatomic, strong)NSArray *array2;
+@property(nonatomic, strong)NSArray *array3;
+
+
+@property (nonatomic, strong) NSArray *selectedArray1;//区域选中
+@property (nonatomic, strong) NSArray *selectedArray2;//价格选中
+@property (nonatomic, strong) NSMutableArray *selectedArray3;//更多选中
 @end
 
 @implementation ZFTableViewController
@@ -33,6 +48,8 @@
 }
 
 
+//请求数据
+//HEAD_INFO={"commandcode":108,"REQUEST_BODY":{"city":"昆明","desc":"0" ,"p":1,"lat":24.973079315636,"lng":102.69840055824}}
 -(void)requsetData{
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];//创建管理者
     
@@ -47,12 +64,12 @@
         
         //将从网络获得的数组转化成ZFmodel模型
         NSMutableArray *models = [NSMutableArray array];
-             _datas = [NSMutableArray array];
+             _ZFdatas = [NSMutableArray array];
         for (NSDictionary *dic in listArr) {
             ZFModel *model = [ZFModel modelWithDictionary:dic];
             [models addObject:model];
         }
-        _datas = models;
+        _ZFdatas = models;
     
         [self.tableView reloadData];
         
@@ -74,7 +91,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
 //    return _datas.count;
-    return self.datas.count;
+    return self.ZFdatas.count;
 }
 
 
@@ -82,52 +99,54 @@
     
     ZFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ZFcell" forIndexPath:indexPath];
     
-    ZFModel *model = _datas[indexPath.row];
+    ZFModel *model = _ZFdatas[indexPath.row];
     
     cell.zfModel = model;
     
     return cell;
 }
 
-
-//请求数据
-//HEAD_INFO={"commandcode":108,"REQUEST_BODY":{"city":"昆明","desc":"0" ,"p":1,"lat":24.973079315636,"lng":102.69840055824}}
-
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIStoryboard *stotyb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    XQTableViewController *xq = [stotyb instantiateViewControllerWithIdentifier:@"XQViewController"];
+    [self.navigationController pushViewController:xq animated:YES ];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (IBAction)btnClick:(UIButton *)sender {
+    
+    switch (sender.tag) {
+        case 101://区域
+        {
+            _dropDownMenu.datas = _array1;
+            _dropDownMenu.menuType = QYDropDownMenuTypeDoubleColumnSingleSelection;
+            _dropDownMenu.selectedRows = _selectedArray1;
+        }
+            break;
+        case 102://价格
+        {
+            _dropDownMenu.datas = _array2;
+            _dropDownMenu.menuType = QYDropDownMenuTypeSingleColumn;
+            _dropDownMenu.selectedRows = _selectedArray2;
+        }
+            break;
+        case 103://更多
+        {
+            _dropDownMenu.datas = _array3;
+            _dropDownMenu.menuType = QYDropDownMenuTypeDoubleColumnMutSelection;
+            _dropDownMenu.selectedRows = _selectedArray3;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+
+
 
 /*
 #pragma mark - Navigation

@@ -55,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4909.5" y="389.5"/>
+            <point key="canvasLocation" x="-6173.5" y="244.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RYq-MF-ilx">
@@ -75,7 +75,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YrT-gG-opF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4334.5" y="389.5"/>
+            <point key="canvasLocation" x="-5598.5" y="244.5"/>
         </scene>
         <!--租房-->
         <scene sceneID="0Cg-Je-zXM">
@@ -95,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fk-eB-kqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3845.5" y="390.5"/>
+            <point key="canvasLocation" x="-5109.5" y="245.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="U5h-TJ-IQO">
@@ -112,15 +112,23 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmE-ma-5Hr">
                                 <rect key="frame" x="0.0" y="68" width="375" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-AK-6or">
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-AK-6or">
                                         <rect key="frame" x="42" y="10" width="30" height="30"/>
                                         <animations/>
                                         <state key="normal" title="区域"/>
+                                        <connections>
+                                            <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="SFv-4k-l44"/>
+                                            <segue destination="CgL-EF-yJO" kind="show" id="C3b-nQ-hGY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-be-qp1">
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-be-qp1">
                                         <rect key="frame" x="292" y="8" width="30" height="30"/>
                                         <animations/>
                                         <state key="normal" title="更多"/>
+                                        <connections>
+                                            <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="nqq-hr-vNL"/>
+                                            <segue destination="CgL-EF-yJO" kind="show" id="y96-uq-e70"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWd-Yi-EWW">
                                         <rect key="frame" x="122" y="11" width="2" height="31"/>
@@ -132,10 +140,14 @@
                                         <animations/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTq-Dq-avM">
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTq-Dq-avM">
                                         <rect key="frame" x="171" y="10" width="30" height="30"/>
                                         <animations/>
                                         <state key="normal" title="售价"/>
+                                        <connections>
+                                            <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="LTM-QE-GCe"/>
+                                            <segue destination="CgL-EF-yJO" kind="show" id="PXP-Rn-Chl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -250,7 +262,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhg-Qz-MgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3385.5" y="390.5"/>
+            <point key="canvasLocation" x="-4649.5" y="245.5"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="oTr-sT-eig">
+            <objects>
+                <tableViewController storyboardIdentifier="XQViewController" id="Str-j5-SRa" customClass="XQTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lkF-Pt-6Q1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UhL-tc-cWe">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UhL-tc-cWe" id="rsD-PX-10P">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Str-j5-SRa" id="5Ng-x5-m4V"/>
+                            <outlet property="delegate" destination="Str-j5-SRa" id="GKy-lS-8B3"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9I-LN-cTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4178.5" y="753.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iAp-9E-vaN">
+            <objects>
+                <viewController id="CgL-EF-yJO" customClass="TJViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kiw-3G-KC7"/>
+                        <viewControllerLayoutGuide type="bottom" id="EM9-p7-eLK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qrf-M3-vzW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r00-yQ-wth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4178.5" y="9.5"/>
         </scene>
         <!--个人中心-->
         <scene sceneID="ggW-FE-Qky">
@@ -402,7 +466,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTT-MH-rGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3377.5" y="1235.5"/>
+            <point key="canvasLocation" x="-4649.5" y="1090.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="g3M-ms-lrT">
@@ -435,7 +499,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7J-tZ-pG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3385.5" y="-418.5"/>
+            <point key="canvasLocation" x="-4649.5" y="-563.5"/>
         </scene>
         <!--售房-->
         <scene sceneID="k06-qJ-xZD">
@@ -455,7 +519,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcL-yG-3LO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3845.5" y="-418.5"/>
+            <point key="canvasLocation" x="-5109.5" y="-563.5"/>
         </scene>
         <!--个人-->
         <scene sceneID="VJQ-c3-FvW">
@@ -476,7 +540,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6R-eJ-3b8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3845.5" y="1235.5"/>
+            <point key="canvasLocation" x="-5109.5" y="1090.5"/>
         </scene>
     </scenes>
     <resources>
@@ -490,4 +554,7 @@
         <image name="浏览历史" width="32" height="23"/>
         <image name="登陆注册" width="31" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="y96-uq-e70"/>
+    </inferredMetricsTieBreakers>
 </document>

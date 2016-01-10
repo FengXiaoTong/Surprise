@@ -44,6 +44,15 @@
 		CCC2B7D21C41216D00204BE9 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7C01C41216D00204BE9 /* UIImageView+HighlightedWebCache.m */; };
 		CCC2B7D31C41216D00204BE9 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7C21C41216D00204BE9 /* UIImageView+WebCache.m */; };
 		CCC2B7D41C41216D00204BE9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7C41C41216D00204BE9 /* UIView+WebCacheOperation.m */; };
+		CCF8BAF31C42644600430227 /* XQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAF21C42644600430227 /* XQTableViewController.m */; };
+		CCF8BAF61C4286C800430227 /* TJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAF51C4286C800430227 /* TJViewController.m */; };
+		CCF8BAFB1C4291EF00430227 /* QYMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAF81C4291EF00430227 /* QYMainModel.m */; };
+		CCF8BAFC1C4291EF00430227 /* QYSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAFA1C4291EF00430227 /* QYSubModel.m */; };
+		CCF8BAFF1C42922900430227 /* SiftZLP.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCF8BAFD1C42922900430227 /* SiftZLP.plist */; };
+		CCF8BB001C42922900430227 /* SiftZMore.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCF8BAFE1C42922900430227 /* SiftZMore.plist */; };
+		CCF8BB031C4292FB00430227 /* QYDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BB021C4292FB00430227 /* QYDropDownMenu.m */; };
+		CCF8BB061C42940700430227 /* QYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BB051C42940700430227 /* QYTableViewCell.m */; };
+		CCF8BB091C42946800430227 /* QYSelectedMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BB081C42946800430227 /* QYSelectedMenuModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +150,22 @@
 		CCC2B7C21C41216D00204BE9 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		CCC2B7C31C41216D00204BE9 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		CCC2B7C41C41216D00204BE9 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		CCF8BAF11C42644600430227 /* XQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQTableViewController.h; sourceTree = "<group>"; };
+		CCF8BAF21C42644600430227 /* XQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQTableViewController.m; sourceTree = "<group>"; };
+		CCF8BAF41C4286C800430227 /* TJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJViewController.h; sourceTree = "<group>"; };
+		CCF8BAF51C4286C800430227 /* TJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJViewController.m; sourceTree = "<group>"; };
+		CCF8BAF71C4291EF00430227 /* QYMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYMainModel.h; sourceTree = "<group>"; };
+		CCF8BAF81C4291EF00430227 /* QYMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYMainModel.m; sourceTree = "<group>"; };
+		CCF8BAF91C4291EF00430227 /* QYSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYSubModel.h; sourceTree = "<group>"; };
+		CCF8BAFA1C4291EF00430227 /* QYSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYSubModel.m; sourceTree = "<group>"; };
+		CCF8BAFD1C42922900430227 /* SiftZLP.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SiftZLP.plist; sourceTree = "<group>"; };
+		CCF8BAFE1C42922900430227 /* SiftZMore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SiftZMore.plist; sourceTree = "<group>"; };
+		CCF8BB011C4292FB00430227 /* QYDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYDropDownMenu.h; sourceTree = "<group>"; };
+		CCF8BB021C4292FB00430227 /* QYDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYDropDownMenu.m; sourceTree = "<group>"; };
+		CCF8BB041C42940700430227 /* QYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYTableViewCell.h; sourceTree = "<group>"; };
+		CCF8BB051C42940700430227 /* QYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYTableViewCell.m; sourceTree = "<group>"; };
+		CCF8BB071C42946800430227 /* QYSelectedMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYSelectedMenuModel.h; sourceTree = "<group>"; };
+		CCF8BB081C42946800430227 /* QYSelectedMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYSelectedMenuModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +230,8 @@
 		CC10A2211C3F927F005CE94A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCF8BAFD1C42922900430227 /* SiftZLP.plist */,
+				CCF8BAFE1C42922900430227 /* SiftZMore.plist */,
 				CC10A22D1C3F927F005CE94A /* Assets.xcassets */,
 				CC10A22F1C3F927F005CE94A /* LaunchScreen.storyboard */,
 				CC10A2321C3F927F005CE94A /* Info.plist */,
@@ -240,6 +267,10 @@
 				CC10A2281C3F927F005CE94A /* ViewController.m */,
 				CC10A2691C3FE7FF005CE94A /* ZFTableViewController.h */,
 				CC10A26A1C3FE7FF005CE94A /* ZFTableViewController.m */,
+				CCF8BAF11C42644600430227 /* XQTableViewController.h */,
+				CCF8BAF21C42644600430227 /* XQTableViewController.m */,
+				CCF8BAF41C4286C800430227 /* TJViewController.h */,
+				CCF8BAF51C4286C800430227 /* TJViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +281,10 @@
 				CC10A22A1C3F927F005CE94A /* Main.storyboard */,
 				CC10A26C1C3FE9BA005CE94A /* ZFTableViewCell.h */,
 				CC10A26D1C3FE9BA005CE94A /* ZFTableViewCell.m */,
+				CCF8BB011C4292FB00430227 /* QYDropDownMenu.h */,
+				CCF8BB021C4292FB00430227 /* QYDropDownMenu.m */,
+				CCF8BB041C42940700430227 /* QYTableViewCell.h */,
+				CCF8BB051C42940700430227 /* QYTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -259,6 +294,12 @@
 			children = (
 				CC10A26F1C3FEC81005CE94A /* ZFModel.h */,
 				CC10A2701C3FEC81005CE94A /* ZFModel.m */,
+				CCF8BAF71C4291EF00430227 /* QYMainModel.h */,
+				CCF8BAF81C4291EF00430227 /* QYMainModel.m */,
+				CCF8BAF91C4291EF00430227 /* QYSubModel.h */,
+				CCF8BAFA1C4291EF00430227 /* QYSubModel.m */,
+				CCF8BB071C42946800430227 /* QYSelectedMenuModel.h */,
+				CCF8BB081C42946800430227 /* QYSelectedMenuModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -461,6 +502,8 @@
 				CC10A2311C3F927F005CE94A /* LaunchScreen.storyboard in Resources */,
 				CC10A22E1C3F927F005CE94A /* Assets.xcassets in Resources */,
 				CC10A22C1C3F927F005CE94A /* Main.storyboard in Resources */,
+				CCF8BAFF1C42922900430227 /* SiftZLP.plist in Resources */,
+				CCF8BB001C42922900430227 /* SiftZMore.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,17 +533,22 @@
 				CC10A2291C3F927F005CE94A /* ViewController.m in Sources */,
 				CC10A26B1C3FE7FF005CE94A /* ZFTableViewController.m in Sources */,
 				CCC2B79A1C40BC3500204BE9 /* AFNetworkReachabilityManager.m in Sources */,
+				CCF8BAF31C42644600430227 /* XQTableViewController.m in Sources */,
 				CCC2B7D11C41216D00204BE9 /* UIImage+WebP.m in Sources */,
 				CCC2B7C61C41216D00204BE9 /* NSData+ImageContentType.m in Sources */,
+				CCF8BAF61C4286C800430227 /* TJViewController.m in Sources */,
 				CC10A26E1C3FE9BA005CE94A /* ZFTableViewCell.m in Sources */,
 				CCC2B7A21C40ED0500204BE9 /* NSArray+Log.m in Sources */,
 				CCC2B7C91C41216D00204BE9 /* SDWebImageDecoder.m in Sources */,
 				CCC2B79C1C40BC3500204BE9 /* AFURLConnectionOperation.m in Sources */,
 				CCC2B7CE1C41216D00204BE9 /* UIButton+WebCache.m in Sources */,
 				CCC2B7CC1C41216D00204BE9 /* SDWebImageManager.m in Sources */,
+				CCF8BAFB1C4291EF00430227 /* QYMainModel.m in Sources */,
+				CCF8BB091C42946800430227 /* QYSelectedMenuModel.m in Sources */,
 				CCC2B7991C40BC3500204BE9 /* AFHTTPSessionManager.m in Sources */,
 				CCC2B7D31C41216D00204BE9 /* UIImageView+WebCache.m in Sources */,
 				CCC2B79D1C40BC3500204BE9 /* AFURLRequestSerialization.m in Sources */,
+				CCF8BB061C42940700430227 /* QYTableViewCell.m in Sources */,
 				CC10A2711C3FEC81005CE94A /* ZFModel.m in Sources */,
 				CC10A2261C3F927F005CE94A /* AppDelegate.m in Sources */,
 				CC10A2231C3F927F005CE94A /* main.m in Sources */,
@@ -514,7 +562,9 @@
 				CCC2B7C51C41216D00204BE9 /* MKAnnotationView+WebCache.m in Sources */,
 				CCC2B7D01C41216D00204BE9 /* UIImage+MultiFormat.m in Sources */,
 				CCC2B7D41C41216D00204BE9 /* UIView+WebCacheOperation.m in Sources */,
+				CCF8BAFC1C4291EF00430227 /* QYSubModel.m in Sources */,
 				CCC2B7C81C41216D00204BE9 /* SDWebImageCompat.m in Sources */,
+				CCF8BB031C4292FB00430227 /* QYDropDownMenu.m in Sources */,
 				CCC2B79E1C40BC3500204BE9 /* AFURLResponseSerialization.m in Sources */,
 				CCC2B7971C40BC3500204BE9 /* AFHTTPRequestOperation.m in Sources */,
 			);

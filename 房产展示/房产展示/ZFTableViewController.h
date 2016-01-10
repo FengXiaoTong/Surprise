@@ -10,6 +10,6 @@
 
 @interface ZFTableViewController : UIViewController
 
-@property(nonatomic, strong)NSMutableArray *datas;
+@property(nonatomic, strong)NSMutableArray *ZFdatas;
 
 @end

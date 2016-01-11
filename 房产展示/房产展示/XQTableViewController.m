@@ -38,7 +38,9 @@
     manger.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
 //    NSDictionary *paras = @{@"HEAD_INFO" : @"{\"commandcode\":109,\"REQUEST_BODY\":{\"nid\":\"DCW001028\"}}"}; 由于每个租房的nid都不同，所以为了方便请求，选择字符串拼接！！！
     
-    NSString *urlStr = [NSString stringWithFormat:@"{\"commandcode\":%d,\"REQUEST_BODY\":{\"nid\":\"%@\"}}",109,_model[@"nid"]];
+//    NSString *urlStr = [NSString stringWithFormat:@"{\"commandcode\":%d,\"REQUEST_BODY\":{\"nid\":\"%@\"}}",109,self.model[@"nid"]];//记清楚，这里你定义的model是从前面模型数组里取出来赋值给的 模型，不是字典，所有不能用[@""]取值
+    
+        NSString *urlStr = [NSString stringWithFormat:@"{\"commandcode\":%d,\"REQUEST_BODY\":{\"nid\":\"%@\"}}",109,self.model.nid];// model是模型，模型取值，直接打点取值！！！
     NSDictionary *paras = @{@"HEAD_INFO" :urlStr};
     
     [manger GET:QbaseUrl parameters:paras success:^(AFHTTPRequestOperation *operation, id responseObject) {

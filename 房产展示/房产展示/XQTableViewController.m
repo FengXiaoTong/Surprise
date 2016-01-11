@@ -9,9 +9,13 @@
 #import "XQTableViewController.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "common.h"
+#import "ZFTableViewController.h"
+#import "ZFModel.h"
 
 @interface XQTableViewController ()
-
+@property (nonatomic, strong)NSArray *nids;
+@property (nonatomic, strong)NSArray *xqdatas;
+@property (nonatomic, strong)ZFModel *model;
 @end
 
 @implementation XQTableViewController
@@ -32,10 +36,14 @@
 {
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
     manger.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    NSDictionary *paras = @{@"HEAD_INFO" : @"{\"commandcode\":109,\"REQUEST_BODY\":{\"nid\":\"CZ1404000003\"}}"};
+//    NSDictionary *paras = @{@"HEAD_INFO" : @"{\"commandcode\":109,\"REQUEST_BODY\":{\"nid\":\"DCW001028\"}}"}; 由于每个租房的nid都不同，所以为了方便请求，选择字符串拼接！！！
+    
+    NSString *urlStr = [NSString stringWithFormat:@"{\"commandcode\":%d,\"REQUEST_BODY\":{\"nid\":\"%@\"}}",109,_model[@"nid"]];
+    NSDictionary *paras = @{@"HEAD_INFO" :urlStr};
     
     [manger GET:QbaseUrl parameters:paras success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@",responseObject);
+        NSArray *xqArray = responseObject[@"RESPONSE_BODY"][@"list"];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         

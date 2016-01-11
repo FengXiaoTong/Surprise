@@ -21,16 +21,15 @@
 
 @interface ZFTableViewController ()<UITableViewDataSource, UITableViewDelegate,QYDropDownMenuDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property(nonatomic, strong)NSArray *array1;
 @property(nonatomic, strong)NSArray *array2;
 @property(nonatomic, strong)NSArray *array3;
 
-
 @property (nonatomic, strong) QYDropDownMenu *dropDownMenu;//菜单
-@property (nonatomic, strong) NSArray *selectedArray1;//区域选中
-@property (nonatomic, strong) NSArray *selectedArray2;//价格选中
-@property (nonatomic, strong) NSMutableArray *selectedArray3;//更多选中
+@property (nonatomic, strong)NSArray *selectedArray1;//区域 选中
+@property (nonatomic, strong)NSArray *selectedArray2;//价格 选中
+@property (nonatomic, strong)NSMutableArray *selectedArray3;//更多 选中
+@property (nonatomic, strong)NSString *nid;
 @end
 
 @implementation ZFTableViewController
@@ -47,7 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+#pragma mark -- 从网络请求租房信息
 //请求数据
 //HEAD_INFO={"commandcode":108,"REQUEST_BODY":{"city":"昆明","desc":"0" ,"p":1,"lat":24.973079315636,"lng":102.69840055824}}
 -(void)requsetData{
@@ -61,6 +60,7 @@
         
 //        NSLog(@"%@",responseObject);
         NSArray *listArr = responseObject[@"RESPONSE_BODY"][@"list"];// 取出需要的内容数组
+//        NSLog(@"%@",listArr);
         
         //将从网络获得的数组转化成ZFmodel模型
         NSMutableArray *models = [NSMutableArray array];
@@ -79,7 +79,6 @@
     }];
     
 }
-
 
 #pragma mark - Table view data source
 
@@ -111,9 +110,13 @@
     UIStoryboard *stotyb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     XQTableViewController *xq = [stotyb instantiateViewControllerWithIdentifier:@"XQViewController"];
     [self.navigationController pushViewController:xq animated:YES ];
+    
+    ZFModel *zfmodel = [self.ZFdatas objectAtIndex:indexPath.row];//根据点击的indexPath.row 从转化的模型数组self.ZFdatas里面取出对应的模型。（核心是取出模型，另外记住次方法！）
+    [self setValue:zfmodel forKey:@"model"];
+    
 }
 
-
+#pragma mark 点击按钮实现的功能
 - (IBAction)btnClick:(UIButton *)sender {
     
     [self addDropDownMenu];
@@ -159,6 +162,7 @@
     return models;
 }
 
+#pragma mark -- 网络请求条件数据
 -(void)loadTJ{
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
     manger.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
@@ -182,17 +186,13 @@
         //更多数据
         _array3 = [self getArrayFromFile:[[NSBundle mainBundle] pathForResource:@"SiftZMore" ofType:@"plist"]];
         
-        
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);
     }];
     
-    
-    
 }
 
-
+#pragma mark -- 点击选中主菜单
 -(void)didSelectedMenuMainTableViewRow:(NSInteger)mainRow subTableView:(NSInteger)subRow{
     NSLog(@"mainRow:%ld,subRow:%ld",mainRow,subRow);
     QYSelectedMenuModel *selectedMenuModel = [QYSelectedMenuModel modelWithMainRow:mainRow subRow:subRow];
@@ -225,6 +225,7 @@
     
 }
 
+#pragma mark  --添加菜单
 -(void)addDropDownMenu{
     QYDropDownMenu *menu = [[QYDropDownMenu alloc] initWithFrame:CGRectMake(0, 127, self.view.frame.size.width, 540)];
     [self.view addSubview:menu];
@@ -235,8 +236,5 @@
     //设置代理
     menu.delegate = self;
 }
-
-
-
 
 @end

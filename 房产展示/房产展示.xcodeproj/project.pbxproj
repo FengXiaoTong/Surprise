@@ -18,6 +18,8 @@
 		CC10A26E1C3FE9BA005CE94A /* ZFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A26D1C3FE9BA005CE94A /* ZFTableViewCell.m */; };
 		CC10A2711C3FEC81005CE94A /* ZFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A2701C3FEC81005CE94A /* ZFModel.m */; };
 		CC7544771C433A8A00283189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7544751C433A8A00283189 /* Main.storyboard */; };
+		CC75447C1C438FED00283189 /* XQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75447B1C438FED00283189 /* XQModel.m */; };
+		CC75447F1C43901F00283189 /* XQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75447E1C43901F00283189 /* XQTableViewCell.m */; };
 		CCC2B7971C40BC3500204BE9 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7851C40BC3500204BE9 /* AFHTTPRequestOperation.m */; };
 		CCC2B7981C40BC3500204BE9 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7871C40BC3500204BE9 /* AFHTTPRequestOperationManager.m */; };
 		CCC2B7991C40BC3500204BE9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7891C40BC3500204BE9 /* AFHTTPSessionManager.m */; };
@@ -95,6 +97,10 @@
 		CC10A26F1C3FEC81005CE94A /* ZFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFModel.h; sourceTree = "<group>"; };
 		CC10A2701C3FEC81005CE94A /* ZFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFModel.m; sourceTree = "<group>"; };
 		CC7544761C433A8A00283189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC75447A1C438FED00283189 /* XQModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQModel.h; sourceTree = "<group>"; };
+		CC75447B1C438FED00283189 /* XQModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQModel.m; sourceTree = "<group>"; };
+		CC75447D1C43901F00283189 /* XQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQTableViewCell.h; sourceTree = "<group>"; };
+		CC75447E1C43901F00283189 /* XQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQTableViewCell.m; sourceTree = "<group>"; };
 		CCC2B7821C40989500204BE9 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		CCC2B7841C40BC3500204BE9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		CCC2B7851C40BC3500204BE9 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -285,6 +291,8 @@
 				CCF8BB021C4292FB00430227 /* QYDropDownMenu.m */,
 				CCF8BB041C42940700430227 /* QYTableViewCell.h */,
 				CCF8BB051C42940700430227 /* QYTableViewCell.m */,
+				CC75447D1C43901F00283189 /* XQTableViewCell.h */,
+				CC75447E1C43901F00283189 /* XQTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -300,6 +308,8 @@
 				CCF8BAFA1C4291EF00430227 /* QYSubModel.m */,
 				CCF8BB071C42946800430227 /* QYSelectedMenuModel.h */,
 				CCF8BB081C42946800430227 /* QYSelectedMenuModel.m */,
+				CC75447A1C438FED00283189 /* XQModel.h */,
+				CC75447B1C438FED00283189 /* XQModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -550,6 +560,7 @@
 				CCC2B79D1C40BC3500204BE9 /* AFURLRequestSerialization.m in Sources */,
 				CCF8BB061C42940700430227 /* QYTableViewCell.m in Sources */,
 				CC10A2711C3FEC81005CE94A /* ZFModel.m in Sources */,
+				CC75447C1C438FED00283189 /* XQModel.m in Sources */,
 				CC10A2261C3F927F005CE94A /* AppDelegate.m in Sources */,
 				CC10A2231C3F927F005CE94A /* main.m in Sources */,
 				CCC2B7D21C41216D00204BE9 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -561,6 +572,7 @@
 				CCC2B79B1C40BC3500204BE9 /* AFSecurityPolicy.m in Sources */,
 				CCC2B7C51C41216D00204BE9 /* MKAnnotationView+WebCache.m in Sources */,
 				CCC2B7D01C41216D00204BE9 /* UIImage+MultiFormat.m in Sources */,
+				CC75447F1C43901F00283189 /* XQTableViewCell.m in Sources */,
 				CCC2B7D41C41216D00204BE9 /* UIView+WebCacheOperation.m in Sources */,
 				CCF8BAFC1C4291EF00430227 /* QYSubModel.m in Sources */,
 				CCC2B7C81C41216D00204BE9 /* SDWebImageCompat.m in Sources */,

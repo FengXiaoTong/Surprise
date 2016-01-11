@@ -10,7 +10,6 @@
 		CC10A2231C3F927F005CE94A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A2221C3F927F005CE94A /* main.m */; };
 		CC10A2261C3F927F005CE94A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A2251C3F927F005CE94A /* AppDelegate.m */; };
 		CC10A2291C3F927F005CE94A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A2281C3F927F005CE94A /* ViewController.m */; };
-		CC10A22C1C3F927F005CE94A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC10A22A1C3F927F005CE94A /* Main.storyboard */; };
 		CC10A22E1C3F927F005CE94A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC10A22D1C3F927F005CE94A /* Assets.xcassets */; };
 		CC10A2311C3F927F005CE94A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC10A22F1C3F927F005CE94A /* LaunchScreen.storyboard */; };
 		CC10A23C1C3F927F005CE94A /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A23B1C3F927F005CE94A /* ____Tests.m */; };
@@ -18,6 +17,7 @@
 		CC10A26B1C3FE7FF005CE94A /* ZFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A26A1C3FE7FF005CE94A /* ZFTableViewController.m */; };
 		CC10A26E1C3FE9BA005CE94A /* ZFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A26D1C3FE9BA005CE94A /* ZFTableViewCell.m */; };
 		CC10A2711C3FEC81005CE94A /* ZFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC10A2701C3FEC81005CE94A /* ZFModel.m */; };
+		CC7544771C433A8A00283189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7544751C433A8A00283189 /* Main.storyboard */; };
 		CCC2B7971C40BC3500204BE9 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7851C40BC3500204BE9 /* AFHTTPRequestOperation.m */; };
 		CCC2B7981C40BC3500204BE9 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7871C40BC3500204BE9 /* AFHTTPRequestOperationManager.m */; };
 		CCC2B7991C40BC3500204BE9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7891C40BC3500204BE9 /* AFHTTPSessionManager.m */; };
@@ -79,7 +79,6 @@
 		CC10A2251C3F927F005CE94A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CC10A2271C3F927F005CE94A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CC10A2281C3F927F005CE94A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CC10A22B1C3F927F005CE94A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC10A22D1C3F927F005CE94A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC10A2301C3F927F005CE94A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC10A2321C3F927F005CE94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		CC10A26D1C3FE9BA005CE94A /* ZFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTableViewCell.m; sourceTree = "<group>"; };
 		CC10A26F1C3FEC81005CE94A /* ZFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFModel.h; sourceTree = "<group>"; };
 		CC10A2701C3FEC81005CE94A /* ZFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFModel.m; sourceTree = "<group>"; };
+		CC7544761C433A8A00283189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCC2B7821C40989500204BE9 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		CCC2B7841C40BC3500204BE9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		CCC2B7851C40BC3500204BE9 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		CC10A2551C3F932E005CE94A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CC10A22A1C3F927F005CE94A /* Main.storyboard */,
+				CC7544751C433A8A00283189 /* Main.storyboard */,
 				CC10A26C1C3FE9BA005CE94A /* ZFTableViewCell.h */,
 				CC10A26D1C3FE9BA005CE94A /* ZFTableViewCell.m */,
 				CCF8BB011C4292FB00430227 /* QYDropDownMenu.h */,
@@ -500,8 +500,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC10A2311C3F927F005CE94A /* LaunchScreen.storyboard in Resources */,
+				CC7544771C433A8A00283189 /* Main.storyboard in Resources */,
 				CC10A22E1C3F927F005CE94A /* Assets.xcassets in Resources */,
-				CC10A22C1C3F927F005CE94A /* Main.storyboard in Resources */,
 				CCF8BAFF1C42922900430227 /* SiftZLP.plist in Resources */,
 				CCF8BB001C42922900430227 /* SiftZMore.plist in Resources */,
 			);
@@ -602,20 +602,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CC10A22A1C3F927F005CE94A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CC10A22B1C3F927F005CE94A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CC10A22F1C3F927F005CE94A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CC10A2301C3F927F005CE94A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7544751C433A8A00283189 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7544761C433A8A00283189 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

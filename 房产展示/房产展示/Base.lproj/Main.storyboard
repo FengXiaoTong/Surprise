@@ -118,7 +118,6 @@
                                         <state key="normal" title="区域"/>
                                         <connections>
                                             <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="SFv-4k-l44"/>
-                                            <segue destination="CgL-EF-yJO" kind="show" id="C3b-nQ-hGY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-be-qp1">
@@ -127,7 +126,6 @@
                                         <state key="normal" title="更多"/>
                                         <connections>
                                             <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="nqq-hr-vNL"/>
-                                            <segue destination="CgL-EF-yJO" kind="show" id="y96-uq-e70"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWd-Yi-EWW">
@@ -146,7 +144,6 @@
                                         <state key="normal" title="售价"/>
                                         <connections>
                                             <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="LTM-QE-GCe"/>
-                                            <segue destination="CgL-EF-yJO" kind="show" id="PXP-Rn-Chl"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -554,7 +551,4 @@
         <image name="浏览历史" width="32" height="23"/>
         <image name="登陆注册" width="31" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="y96-uq-e70"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -5,9 +5,9 @@
 //  Created by qingyun on 16/1/10.
 //  Copyright © 2016年 com.qingyun. All rights reserved.
 //
-
-#import <UIKit/UIKit.h>
-
-@interface TJViewController : UIViewController
-
-@end
+//
+//#import <UIKit/UIKit.h>
+//
+//@interface TJViewController : UIViewController
+//
+//@end

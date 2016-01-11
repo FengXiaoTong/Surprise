@@ -1,14 +1,14 @@
 //
-//  XQTableViewCell.m
+//  XQTableViewCell1.m
 //  房产展示
 //
 //  Created by qingyun on 16/1/11.
 //  Copyright © 2016年 com.qingyun. All rights reserved.
 //
 
-#import "XQTableViewCell.h"
+#import "XQTableViewCell1.h"
 
-@implementation XQTableViewCell
+@implementation XQTableViewCell1
 
 - (void)awakeFromNib {
     // Initialization code
@@ -19,5 +19,8 @@
 
     // Configure the view for the selected state
 }
+
+
+
 
 @end

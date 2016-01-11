@@ -12,13 +12,14 @@
 #import "ZFTableViewController.h"
 #import "ZFModel.h"
 #import "XQModel.h"
-#import "XQTableViewCell.h"
+#import "XQTableViewCell1.h"
 #import "XQTableViewCell2.h"
 
 @interface XQTableViewController ()
 @property (nonatomic, strong)NSArray *nids;
 @property (nonatomic, strong)NSArray *xqdatas;
 @property (nonatomic, strong)ZFModel *model;
+
 @end
 
 @implementation XQTableViewController
@@ -72,8 +73,7 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
@@ -87,8 +87,8 @@
     
     if (indexPath.row == 0) {
         
-        XQTableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"XQcell1" forIndexPath:indexPath];
-        
+        XQTableViewCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"XQcell1" forIndexPath:indexPath];
+    
          return cell1;
         
     }else if (indexPath.row == 1) {

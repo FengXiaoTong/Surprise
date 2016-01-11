@@ -17,6 +17,7 @@
 #import "QYMainModel.h"
 #import "QYSubModel.h"
 #import "QYDropDownMenu.h"
+#import "UINavigationController+notification.h"
 
 
 @interface ZFTableViewController ()<UITableViewDataSource, UITableViewDelegate,QYDropDownMenuDelegate>
@@ -39,12 +40,18 @@
     [super viewDidLoad];
     
     [self requsetData];
-    [self loadTJ];
+     [self loadTJ];
     
-//    self.refreshControl =[[UIRefreshControl alloc]init];
-//    [self.refreshControl addTarget:self action:@selector(loadNew:) forControlEvents:UIControlEventValueChanged];
-//    
-//    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"下拉刷新"];
+    _refreshControl = [[UIRefreshControl alloc]init];
+    
+    [_refreshControl addTarget:self action:@selector(loadNew:) forControlEvents:UIControlEventValueChanged];
+    
+    _refreshControl.attributedTitle= [self refreshControlTitleIWithString:@"下拉刷新"];
+    [self.tableView addSubview:_refreshControl];
+    [self.navigationController showNotification:[NSString stringWithFormat:@"有套新的房源"]];
+    [self endrefresh];//这个结束刷新应该放到什么地方呢？
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,7 +75,7 @@
 //单独抽出一个停止刷新的方法
 -(void)endrefresh{
     [self.refreshControl endRefreshing];
-    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"正在刷新"];
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"刷新结束"];
 }
 
 
@@ -98,15 +105,8 @@
         }
         _ZFdatas = models;
     
-        _refreshControl = [[UIRefreshControl alloc]init];
-        
-        [_refreshControl addTarget:self action:@selector(loadNew:) forControlEvents:UIControlEventValueChanged];
-        
-        _refreshControl.attributedTitle= [self refreshControlTitleIWithString:@"下拉刷新"];
-        [self.tableView addSubview:_refreshControl];
-        [self endrefresh];//这个结束刷新应该放到什么地方呢？
         [self.tableView reloadData];
-        
+        [self endrefresh];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -220,6 +220,7 @@
         _array2 = [self getArrayFromFile:[[NSBundle mainBundle] pathForResource:@"SiftZLP" ofType:@"plist"]];
         //更多数据
         _array3 = [self getArrayFromFile:[[NSBundle mainBundle] pathForResource:@"SiftZMore" ofType:@"plist"]];
+        [self endrefresh];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);

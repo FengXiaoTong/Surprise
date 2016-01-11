@@ -21,6 +21,14 @@
 }
 
 
+//重写scrollView的set方法
+-(void)setXqScrollView:(UIScrollView *)xqScrollView
+{
+    UIScrollView *newScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 375, 150)];
+    
+    
+    _xqScrollView = newScrollView;
+}
 
 
 @end

@@ -287,22 +287,10 @@
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAw-9c-5Nm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-Q1-s2t">
-                                                    <rect key="frame" x="375" y="0.0" width="375" height="150"/>
-                                                    <animations/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-PR-pgw">
-                                                    <rect key="frame" x="750" y="0.0" width="375" height="150"/>
-                                                    <animations/>
-                                                </imageView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Atx-To-0XY">
                                                     <rect key="frame" x="168" y="94" width="39" height="37"/>
                                                     <animations/>
                                                 </pageControl>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wts-J2-bNx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
-                                                    <animations/>
-                                                </imageView>
                                             </subviews>
                                             <animations/>
                                         </scrollView>
@@ -312,9 +300,6 @@
                                 <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <connections>
-                                    <outlet property="imageView1" destination="Wts-J2-bNx" id="FNT-o0-lcI"/>
-                                    <outlet property="imageView2" destination="CUS-Q1-s2t" id="B6Y-Tr-AEJ"/>
-                                    <outlet property="imageView3" destination="uOH-PR-pgw" id="tPo-LE-dC5"/>
                                     <outlet property="xqPageControl" destination="Atx-To-0XY" id="8Sd-5C-dJm"/>
                                     <outlet property="xqScrollView" destination="qAw-9c-5Nm" id="TMh-d0-u8M"/>
                                 </connections>

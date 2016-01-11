@@ -115,7 +115,9 @@
                                     <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-AK-6or">
                                         <rect key="frame" x="42" y="10" width="30" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="区域"/>
+                                        <state key="normal" title="区域">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="SFv-4k-l44"/>
                                         </connections>
@@ -123,7 +125,9 @@
                                     <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-be-qp1">
                                         <rect key="frame" x="292" y="8" width="30" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="更多"/>
+                                        <state key="normal" title="更多">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="nqq-hr-vNL"/>
                                         </connections>
@@ -141,7 +145,9 @@
                                     <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTq-Dq-avM">
                                         <rect key="frame" x="171" y="10" width="30" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="售价"/>
+                                        <state key="normal" title="售价">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="LTM-QE-GCe"/>
                                         </connections>

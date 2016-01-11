@@ -165,10 +165,10 @@
     NSDictionary *params = @{@"HEAD_INFO" :@"{\"commandcode\":101,\"REQUEST_BODY\":{\"city\":\"昆明\"}}"};
     
     [manger GET:QbaseUrl parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
         
         NSArray *array = responseObject[@"RESPONSE_BODY"][@"list"];
-        NSLog(@"%@",array);
+//        NSLog(@"%@",array);
         //把网络获取的数据转化成模型
         NSMutableArray *models = [NSMutableArray array];
         for (NSDictionary *dict in array) {

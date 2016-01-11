@@ -20,6 +20,8 @@
 		CC7544771C433A8A00283189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7544751C433A8A00283189 /* Main.storyboard */; };
 		CC75447C1C438FED00283189 /* XQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75447B1C438FED00283189 /* XQModel.m */; };
 		CC75447F1C43901F00283189 /* XQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75447E1C43901F00283189 /* XQTableViewCell.m */; };
+		CC7544821C439D5E00283189 /* XQTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7544811C439D5E00283189 /* XQTableViewCell2.m */; };
+		CC7544851C43B49B00283189 /* UINavigationController+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7544841C43B49B00283189 /* UINavigationController+notification.m */; };
 		CCC2B7971C40BC3500204BE9 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7851C40BC3500204BE9 /* AFHTTPRequestOperation.m */; };
 		CCC2B7981C40BC3500204BE9 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7871C40BC3500204BE9 /* AFHTTPRequestOperationManager.m */; };
 		CCC2B7991C40BC3500204BE9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7891C40BC3500204BE9 /* AFHTTPSessionManager.m */; };
@@ -101,6 +103,10 @@
 		CC75447B1C438FED00283189 /* XQModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQModel.m; sourceTree = "<group>"; };
 		CC75447D1C43901F00283189 /* XQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQTableViewCell.h; sourceTree = "<group>"; };
 		CC75447E1C43901F00283189 /* XQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQTableViewCell.m; sourceTree = "<group>"; };
+		CC7544801C439D5E00283189 /* XQTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQTableViewCell2.h; sourceTree = "<group>"; };
+		CC7544811C439D5E00283189 /* XQTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQTableViewCell2.m; sourceTree = "<group>"; };
+		CC7544831C43B49B00283189 /* UINavigationController+notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+notification.h"; sourceTree = "<group>"; };
+		CC7544841C43B49B00283189 /* UINavigationController+notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+notification.m"; sourceTree = "<group>"; };
 		CCC2B7821C40989500204BE9 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		CCC2B7841C40BC3500204BE9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		CCC2B7851C40BC3500204BE9 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
@@ -293,6 +299,8 @@
 				CCF8BB051C42940700430227 /* QYTableViewCell.m */,
 				CC75447D1C43901F00283189 /* XQTableViewCell.h */,
 				CC75447E1C43901F00283189 /* XQTableViewCell.m */,
+				CC7544801C439D5E00283189 /* XQTableViewCell2.h */,
+				CC7544811C439D5E00283189 /* XQTableViewCell2.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -317,6 +325,8 @@
 		CC10A2571C3F933A005CE94A /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CC7544831C43B49B00283189 /* UINavigationController+notification.h */,
+				CC7544841C43B49B00283189 /* UINavigationController+notification.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -549,6 +559,7 @@
 				CCF8BAF61C4286C800430227 /* TJViewController.m in Sources */,
 				CC10A26E1C3FE9BA005CE94A /* ZFTableViewCell.m in Sources */,
 				CCC2B7A21C40ED0500204BE9 /* NSArray+Log.m in Sources */,
+				CC7544851C43B49B00283189 /* UINavigationController+notification.m in Sources */,
 				CCC2B7C91C41216D00204BE9 /* SDWebImageDecoder.m in Sources */,
 				CCC2B79C1C40BC3500204BE9 /* AFURLConnectionOperation.m in Sources */,
 				CCC2B7CE1C41216D00204BE9 /* UIButton+WebCache.m in Sources */,
@@ -575,6 +586,7 @@
 				CC75447F1C43901F00283189 /* XQTableViewCell.m in Sources */,
 				CCC2B7D41C41216D00204BE9 /* UIView+WebCacheOperation.m in Sources */,
 				CCF8BAFC1C4291EF00430227 /* QYSubModel.m in Sources */,
+				CC7544821C439D5E00283189 /* XQTableViewCell2.m in Sources */,
 				CCC2B7C81C41216D00204BE9 /* SDWebImageCompat.m in Sources */,
 				CCF8BB031C4292FB00430227 /* QYDropDownMenu.m in Sources */,
 				CCC2B79E1C40BC3500204BE9 /* AFURLResponseSerialization.m in Sources */,

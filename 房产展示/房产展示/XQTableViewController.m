@@ -11,6 +11,9 @@
 #import "common.h"
 #import "ZFTableViewController.h"
 #import "ZFModel.h"
+#import "XQModel.h"
+#import "XQTableViewCell.h"
+#import "XQTableViewCell2.h"
 
 @interface XQTableViewController ()
 @property (nonatomic, strong)NSArray *nids;
@@ -31,7 +34,21 @@
  
 }
 
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]) {
+        
+    }
+    return self;
+}
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        
+    }
+    return self;
+}
+
+#pragma mark -- 从网络请求租房详细信息
 -(void)loadXQ
 {
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
@@ -44,8 +61,8 @@
     NSDictionary *paras = @{@"HEAD_INFO" :urlStr};
     
     [manger GET:QbaseUrl parameters:paras success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@",responseObject);
-        NSArray *xqArray = responseObject[@"RESPONSE_BODY"][@"list"];
+//        NSLog(@"%@",responseObject);
+       
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -57,23 +74,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return 2;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (indexPath.row == 0) {
+        
+        XQTableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"XQcell1" forIndexPath:indexPath];
+        
+         return cell1;
+        
+    }else if (indexPath.row == 1) {
+              XQTableViewCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"XQcell2" forIndexPath:indexPath];
+        
+            return cell2;
+        }
     
-    return cell;
+    return nil;
 }
-*/
+
 
 
 /*

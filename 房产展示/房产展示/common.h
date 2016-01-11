@@ -9,6 +9,6 @@
 #ifndef common_h
 #define common_h
 #define QbaseUrl @"http://www.fungpu.com/houseapp/apprq.do"
-
+#define kAppSCreenBounds [UIScreen mainScreen].bounds
 
 #endif /* common_h */

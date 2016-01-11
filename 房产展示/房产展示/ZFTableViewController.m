@@ -30,6 +30,7 @@
 @property (nonatomic, strong)NSArray *selectedArray2;//价格 选中
 @property (nonatomic, strong)NSMutableArray *selectedArray3;//更多 选中
 @property (nonatomic, strong)NSString *nid;
+@property (nonatomic, strong)UIRefreshControl *refreshControl;//创建刷新控制器属性
 @end
 
 @implementation ZFTableViewController
@@ -39,12 +40,38 @@
     
     [self requsetData];
     [self loadTJ];
+    
+//    self.refreshControl =[[UIRefreshControl alloc]init];
+//    [self.refreshControl addTarget:self action:@selector(loadNew:) forControlEvents:UIControlEventValueChanged];
+//    
+//    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"下拉刷新"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - custom
+
+-(NSAttributedString *)refreshControlTitleIWithString:(NSString *)title{
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:17], NSForegroundColorAttributeName : [UIColor grayColor]};
+    
+    NSAttributedString *string = [[NSAttributedString alloc] initWithString:title attributes:attributes];
+    return string;
+}
+
+-(void)loadNew:(UIRefreshControl *)sender{
+    NSLog(@"这就算刷新了");
+}
+
+//单独抽出一个停止刷新的方法
+-(void)endrefresh{
+    [self.refreshControl endRefreshing];
+    self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"正在刷新"];
+}
+
+
 
 #pragma mark -- 从网络请求租房信息
 //请求数据
@@ -71,7 +98,15 @@
         }
         _ZFdatas = models;
     
+        _refreshControl = [[UIRefreshControl alloc]init];
+        
+        [_refreshControl addTarget:self action:@selector(loadNew:) forControlEvents:UIControlEventValueChanged];
+        
+        _refreshControl.attributedTitle= [self refreshControlTitleIWithString:@"下拉刷新"];
+        [self.tableView addSubview:_refreshControl];
+        [self endrefresh];//这个结束刷新应该放到什么地方呢？
         [self.tableView reloadData];
+        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -111,7 +146,7 @@
     XQTableViewController *xq = [stotyb instantiateViewControllerWithIdentifier:@"XQViewController"];
     [self.navigationController pushViewController:xq animated:YES ];
     
-    ZFModel *zfmodel = [self.ZFdatas objectAtIndex:indexPath.row];//根据点击的indexPath.row 从转化的模型数组self.ZFdatas里面取出对应的模型。（核心是取出模型，另外记住次方法！）
+    ZFModel *zfmodel = [self.ZFdatas objectAtIndex:indexPath.row];//根据点击的indexPath.row 从转化的模型数组self.ZFdatas里面取出对应的模型。（核心是取出模型，另外记住此方法！）
     [xq setValue:zfmodel forKey:@"model"];
     
 }

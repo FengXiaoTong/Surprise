@@ -277,16 +277,20 @@
                         <animations/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XQcell1" rowHeight="86" id="UhL-tc-cWe" customClass="XQTableViewCell1">
-                                <rect key="frame" x="0.0" y="49.5" width="375" height="86"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XQcell1" rowHeight="149" id="UhL-tc-cWe" customClass="XQTableViewCell1">
+                                <rect key="frame" x="0.0" y="49.5" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UhL-tc-cWe" id="rsD-PX-10P">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="148.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAw-9c-5Nm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide1-960" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-Jo-k8J">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                    <animations/>
+                                                </imageView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Atx-To-0XY">
                                                     <rect key="frame" x="168" y="94" width="39" height="37"/>
                                                     <animations/>
@@ -304,11 +308,11 @@
                                     <outlet property="xqScrollView" destination="qAw-9c-5Nm" id="TMh-d0-u8M"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XQcell2" rowHeight="533" id="rXa-fg-UZ2" customClass="XQTableViewCell2">
-                                <rect key="frame" x="0.0" y="135.5" width="375" height="533"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XQcell2" rowHeight="530" id="rXa-fg-UZ2" customClass="XQTableViewCell2">
+                                <rect key="frame" x="0.0" y="198.5" width="375" height="530"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rXa-fg-UZ2" id="M36-0n-cyF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="532.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="529.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQU-wW-iJP">
@@ -738,6 +742,7 @@
     </scenes>
     <resources>
         <image name="Default" width="640" height="960"/>
+        <image name="guide1-960" width="640" height="960"/>
         <image name="关于我们" width="32" height="32"/>
         <image name="底部导航-个人未点击" width="30" height="30"/>
         <image name="底部导航-二手未点击" width="30" height="30"/>

@@ -27,14 +27,14 @@
 {
     _XQmodel = XQmodel;
     _title.text = [NSString stringWithFormat:@"%@",XQmodel.desc];
-    _price.text = [NSString stringWithFormat:@"价格：%@元/月",self.ZFmodel.price];
-//    NSString *str = [NSString stringWithFormat:@"%@",XQmodel.floor];
-//   _floor.text = str;
-    _rType.text = self.ZFmodel.housetype;
-//    _area.text  = XQmodel.area;
+    _price.text = [NSString stringWithFormat:@"价格：%@",self.ZFmodel.price];
+
+    _floor.text = [NSString stringWithFormat:@"楼层:     %d",[XQmodel.floor intValue]];
+    _rType.text = [NSString stringWithFormat:@"房型：%@",self.ZFmodel.housetype];
+    _area.text  = [NSString stringWithFormat:@"面积： %d㎡",[XQmodel.area intValue]];
     _toward.text = [NSString stringWithFormat:@"朝向：%@",XQmodel.toward];
     _fitment.text = [NSString stringWithFormat:@"装修：%@",XQmodel.fitment];
-//    _year.text = XQmodel.config;
+    _year.text = [NSString stringWithFormat:@"年代：%@",XQmodel.config ];
     _com.text = [NSString stringWithFormat:@"小区：%@",XQmodel.com];
     _address.text = [NSString stringWithFormat:@"地址：%@",XQmodel.address];
     _desc.text = [NSString stringWithFormat:@"描述：%@",XQmodel.desc];
@@ -44,7 +44,7 @@
     _environmental.text = [NSString stringWithFormat:@"周边环境：%@",XQmodel.environmental];
     _facility.text = [NSString stringWithFormat:@"交通情况：%@",XQmodel.facility];
     _name.text = [NSString stringWithFormat:@"姓名：%@",XQmodel.name];
-//    _mob.text = XQmodel.mob;
+    _mob.text = [NSString stringWithFormat:@"电话：%d",[XQmodel.mob intValue]];
     
 }
 

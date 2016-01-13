@@ -65,7 +65,7 @@
     [manger GET:QbaseUrl parameters:paras success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        NSLog(@"%@",responseObject);
         NSArray *xqArr = responseObject[@"RESPONSE_BODY"][@"list"];//看清楚数据结构！#35
-        NSLog(@"%@",xqArr);
+//        NSLog(@"%@",xqArr);
         _xqdatas = [NSMutableArray array];//初始化数组，占个指针地址，保证不为空
         NSMutableArray *models = [NSMutableArray array];
         for (NSDictionary *dic in xqArr) {

@@ -12,7 +12,7 @@
 
 @property(nonatomic, strong)NSString *camera;
 @property(nonatomic, strong)NSString *iconurl;
-@property(nonatomic, strong)NSString *temprownumber;
+@property(nonatomic, strong)NSNumber *temprownumber;
 @property(nonatomic, strong)NSNumber *price;
 @property(nonatomic, strong)NSString *title;
 @property(nonatomic, strong)NSString *nid;

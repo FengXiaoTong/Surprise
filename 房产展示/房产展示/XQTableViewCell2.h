@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZFModel.h"
+#import "XQModel.h"
 
 @interface XQTableViewCell2 : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *title;//标题
@@ -16,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *area;//面积
 @property (weak, nonatomic) IBOutlet UILabel *toward;//朝向
 @property (weak, nonatomic) IBOutlet UILabel *fitment;//装修
-@property (weak, nonatomic) IBOutlet UILabel *year;//楼层
+@property (weak, nonatomic) IBOutlet UILabel *year;//年代
 @property (weak, nonatomic) IBOutlet UILabel *com;//小区
 @property (weak, nonatomic) IBOutlet UILabel *address;//地址
 @property (weak, nonatomic) IBOutlet UILabel *desc;//详细描述
@@ -27,8 +29,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *facility;//交通状况
 @property (weak, nonatomic) IBOutlet UILabel *name;//名字
 @property (weak, nonatomic) IBOutlet UILabel *mob;//电话
-//@property (nonatomic, strong) HouseDetail *model;
-//@property (nonatomic, strong)  house *houseModel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentWidth;//约束
+@property (weak, nonatomic) IBOutlet UIImageView *ZJImageView;
+@property (weak, nonatomic) IBOutlet UIButton *callButton;
+
+@property (nonatomic, strong)ZFModel *ZFmodel;
+@property (nonatomic, strong)XQModel *XQmodel;
+
 
 @end

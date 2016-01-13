@@ -10,6 +10,6 @@
 
 @interface ZFTableViewController : UIViewController
 
-@property(nonatomic, strong)NSMutableArray *ZFdatas;
+@property(nonatomic, strong)NSMutableArray *ZFdatas;//请求的租房数据信息！
 
 @end

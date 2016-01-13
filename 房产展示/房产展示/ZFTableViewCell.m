@@ -34,7 +34,7 @@
     _housetype.text = zfModel.housetype;
     _community.text = zfModel.community;
     _simpleadd.text = zfModel.simpleadd;
-        _price.text = [NSString stringWithFormat:@"%@/月",zfModel.price];//等价于下面的两句，都是讲请求的数据转化为string类型，然后赋值使用！
+    _price.text = [NSString stringWithFormat:@"%@/月",zfModel.price];//等价于下面的两句，都是讲请求的数据转化为string类型，然后赋值使用！
 
 //    NSString *price = [NSString stringWithFormat:@"%@/月",zfModel.price];
 //    _price.text = price;

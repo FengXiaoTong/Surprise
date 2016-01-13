@@ -16,8 +16,8 @@
 #import "XQTableViewCell2.h"
 
 @interface XQTableViewController ()
-@property (nonatomic, strong)NSArray *nids;
-@property (nonatomic, strong)NSArray *xqdatas;
+
+@property (nonatomic, strong)NSMutableArray *xqdatas;//请求的详细数据信息！！！
 @property (nonatomic, strong)ZFModel *model;
 
 @end
@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.sectionHeaderHeight = 0;
     [self loadXQ];
 }
 
@@ -62,8 +63,16 @@
     NSDictionary *paras = @{@"HEAD_INFO" :urlStr};
     
     [manger GET:QbaseUrl parameters:paras success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"%@",responseObject);
-       
+        NSLog(@"%@",responseObject);
+        NSArray *xqArr = responseObject[@"RESPONSE_BODY"][@"list"];//看清楚数据结构！#35
+        _xqdatas = [NSMutableArray array];//初始化数组，占个指针地址，保证不为空
+        NSMutableArray *models = [NSMutableArray array];
+        for (NSDictionary *xqDic in xqArr) {
+            XQModel *xqmodel = [XQModel modelWithDictionary:xqDic];
+            [models addObject:xqmodel];
+        }
+        _xqdatas = models;
+        [self.tableView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -94,6 +103,9 @@
     }else if (indexPath.row == 1) {
               XQTableViewCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"XQcell2" forIndexPath:indexPath];
         
+        XQModel *model = _xqdatas[indexPath.row ];
+        cell2.XQmodel = model;
+        
             return cell2;
         }
     
@@ -110,7 +122,7 @@
     
     else
     
-        return 530;
+        return 660;
 }
 
 

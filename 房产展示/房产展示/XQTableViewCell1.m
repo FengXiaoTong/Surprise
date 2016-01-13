@@ -38,7 +38,8 @@
         NSUInteger imageCount = AllImg.count; //获取图片数量
         //scrollerView里面的View的宽度即contentSize
         newScrollView.contentSize = CGSizeMake(375 * imageCount, 150);
-        
+    
+    [newScrollView addSubview: _xqImageView];
         _xqScrollView = newScrollView;
   
 
@@ -62,7 +63,7 @@
         [_xqImageView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
         [self.xqImageView addSubview:imgView];
     }
-    return;
+    
    
 }
 

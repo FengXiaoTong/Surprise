@@ -21,6 +21,8 @@
 
 
 @interface ZFTableViewController ()<UITableViewDataSource, UITableViewDelegate,QYDropDownMenuDelegate>
+@property (nonatomic, strong) UISearchController *search;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic, strong)NSArray *array1;
 @property(nonatomic, strong)NSArray *array2;
@@ -39,7 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setUpBarButtonItem];//创建搜索框
     [self requsetData];
      [self loadTJ];
     
@@ -58,6 +60,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setUpBarButtonItem
+{
+    //搜索条
+    _search = [[UISearchController alloc]initWithSearchResultsController:nil];
+    _search.dimsBackgroundDuringPresentation = NO;
+    _search.hidesNavigationBarDuringPresentation = NO;
+    //_search.searchBar.text = @"请输入搜索的小区";
+    self.navigationItem.titleView = _search.searchBar;
 }
 
 #pragma mark - custom

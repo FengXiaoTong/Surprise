@@ -9,8 +9,9 @@
 #import "ZFTableViewCell.h"
 #import "ZFModel.h"
 #import "UIImageView+WebCache.h"
+#import "common.h"
 
-#define imageUrl @"http://www.fungpu.com/houseapp/"
+
 
 @interface ZFTableViewCell ()
 
@@ -39,7 +40,7 @@
 //    NSString *price = [NSString stringWithFormat:@"%@/月",zfModel.price];
 //    _price.text = price;
     
-    NSString *picURlStr = [imageUrl stringByAppendingPathComponent:zfModel.iconurl];
+    NSString *picURlStr = [ImageUrl stringByAppendingPathComponent:zfModel.iconurl];
 
     [self.iconurl sd_setImageWithURL:[NSURL URLWithString:picURlStr]];//第三方异步加载图片！
 }

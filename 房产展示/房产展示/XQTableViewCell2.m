@@ -7,6 +7,8 @@
 //
 
 #import "XQTableViewCell2.h"
+#import "UIImageView+WebCache.h"
+#import "common.h"
 
 @implementation XQTableViewCell2
 
@@ -46,6 +48,12 @@
     _name.text = [NSString stringWithFormat:@"姓名：%@",XQmodel.name];
     _mob.text = [NSString stringWithFormat:@"电话：%d",[XQmodel.mob intValue]];
     
+    //判断 如果图片的url信息不是空的，不是什么都没有， 不是不存在。那么就显示
+    if (![XQmodel.iconurl isKindOfClass:[NSNull class]] || ![XQmodel.iconurl isEqualToString:@""] || !XQmodel.iconurl) {
+        NSString *URLstr = [ImageUrl stringByAppendingPathComponent:XQmodel.iconurl];
+        
+        [self.ZJImageView sd_setImageWithURL:[NSURL URLWithString:URLstr]];
+    }
 }
 
 @end

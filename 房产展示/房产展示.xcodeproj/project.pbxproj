@@ -478,6 +478,7 @@
 		CC10A2161C3F927F005CE94A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = com.qingyun;
 				TargetAttributes = {

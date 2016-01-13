@@ -287,7 +287,7 @@
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAw-9c-5Nm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="guide1-960" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-Jo-k8J">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-Jo-k8J">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                                     <animations/>
                                                 </imageView>
@@ -741,7 +741,6 @@
     </scenes>
     <resources>
         <image name="Default" width="640" height="960"/>
-        <image name="guide1-960" width="640" height="960"/>
         <image name="关于我们" width="32" height="32"/>
         <image name="底部导航-个人未点击" width="30" height="30"/>
         <image name="底部导航-二手未点击" width="30" height="30"/>

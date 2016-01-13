@@ -16,7 +16,7 @@
 @property(nonatomic, strong)NSString *entertainment;//休闲娱乐
 @property(nonatomic, strong)NSString *business;//周边商圈
 @property(nonatomic, strong)NSString *iconurl;//经纪人头像
-@property(nonatomic, strong)NSString *image;//室内照片
+@property(nonatomic, strong)NSArray *image;//室内照片
 @property(nonatomic, strong)NSNumber *mob;//联系电话
 @property(nonatomic, strong)NSString *lng;//经度
 @property(nonatomic, strong)NSString *person;//个人/中介

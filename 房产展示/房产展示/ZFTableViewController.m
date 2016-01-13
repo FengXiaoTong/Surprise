@@ -62,6 +62,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -- 添加搜索框
+//添加搜索框
 - (void)setUpBarButtonItem
 {
     //搜索条

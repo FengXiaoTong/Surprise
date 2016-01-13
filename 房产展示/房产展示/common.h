@@ -9,6 +9,11 @@
 #ifndef common_h
 #define common_h
 #define QbaseUrl @"http://www.fungpu.com/houseapp/apprq.do"
+#define ImageUrl @"http://www.fungpu.com/houseapp"
 #define kAppSCreenBounds [UIScreen mainScreen].bounds
+
+#define ScrollViewW @self.scrollView.frame.size.width
+#define ScrollViewH @self.scrollView.frame.size.height
+
 
 #endif /* common_h */

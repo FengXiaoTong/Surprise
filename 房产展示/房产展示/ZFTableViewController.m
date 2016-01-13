@@ -32,6 +32,7 @@
 @property (nonatomic, strong)NSMutableArray *selectedArray3;//更多 选中
 @property (nonatomic, strong)NSString *nid;
 @property (nonatomic, strong)UIRefreshControl *refreshControl;//创建刷新控制器属性
+@property (nonatomic, strong)UIView *menuView;
 @end
 
 @implementation ZFTableViewController
@@ -154,10 +155,17 @@
 #pragma mark 点击按钮实现的功能
 - (IBAction)btnClick:(UIButton *)sender {
     
-    [self addDropDownMenu];
+//    [self addDropDownMenu];
     switch (sender.tag) {
         case 101://区域
         {
+            sender.selected = !sender.selected;
+            if (sender.selected) {
+                [self menuView];
+            }else{
+                [self.dropDownMenu removeFromSuperview];
+                self.menuView = nil;
+            }
             _dropDownMenu.datas = _array1;
             _dropDownMenu.menuType = QYDropDownMenuTypeDoubleColumnSingleSelection;
             _dropDownMenu.selectedRows = _selectedArray1;
@@ -165,6 +173,13 @@
             break;
         case 102://价格
         {
+            sender.selected = !sender.selected;
+            if (sender.selected) {
+                [self menuView];
+            }else{
+                [self.dropDownMenu removeFromSuperview];
+                self.menuView = nil;
+            }
             _dropDownMenu.datas = _array2;
             _dropDownMenu.menuType = QYDropDownMenuTypeSingleColumn;
             _dropDownMenu.selectedRows = _selectedArray2;
@@ -172,6 +187,13 @@
             break;
         case 103://更多
         {
+            sender.selected = !sender.selected;
+            if (sender.selected) {
+                [self menuView];
+            }else{
+                [self.dropDownMenu removeFromSuperview];
+                self.menuView = nil;
+            }
             _dropDownMenu.datas = _array3;
             _dropDownMenu.menuType = QYDropDownMenuTypeDoubleColumnMutSelection;
             _dropDownMenu.selectedRows = _selectedArray3;
@@ -183,6 +205,7 @@
     }
     
 }
+
 
 
 #pragma mark 单表单选双表多选
@@ -262,15 +285,33 @@
 }
 
 #pragma mark  --添加菜单
--(void)addDropDownMenu{
-    QYDropDownMenu *menu = [[QYDropDownMenu alloc] initWithFrame:CGRectMake(0, 127, self.view.frame.size.width, 540)];
-    [self.view addSubview:menu];
-    _dropDownMenu = menu;
-    //设置数据
-    menu.datas = _array1;
-    menu.menuType = QYDropDownMenuTypeDoubleColumnSingleSelection;
-    //设置代理
-    menu.delegate = self;
+//和下面的方法其实是类似的，只是需要判断的话，就要用下面的懒加载
+//-(void)addDropDownMenu{
+//   
+//    QYDropDownMenu *menu = [[QYDropDownMenu alloc] initWithFrame:CGRectMake(0, 127, self.view.frame.size.width, 540)];
+//    [self.view addSubview:menu];
+//    _dropDownMenu = menu;
+//    //设置数据
+//    menu.datas = _array1;
+//    menu.menuType = QYDropDownMenuTypeDoubleColumnSingleSelection;
+//    //设置代理
+//    menu.delegate = self;
+//}
+
+- (UIView *)menuView
+{
+    if (_menuView == nil) {
+        _menuView = [[QYDropDownMenu alloc] initWithFrame:CGRectMake(0, 120, self.view.frame.size.width, self.view.frame.size.height)];
+        [self.view addSubview:_menuView];
+        _dropDownMenu = (QYDropDownMenu *)_menuView;
+        //设置数据
+        _dropDownMenu.datas = _array1;
+        _dropDownMenu.menuType = QYDropDownMenuTypeDoubleColumnSingleSelection;
+        //设置代理
+        _dropDownMenu.delegate = self;
+    }
+    return _menuView;
 }
+
 
 @end

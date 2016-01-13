@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XQModel.h"
 
 @interface XQTableViewController : UITableViewController
-
 
 
 @end

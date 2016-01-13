@@ -99,13 +99,13 @@
         //将从网络获得的数组转化成ZFmodel模型
         NSMutableArray *models = [NSMutableArray array];
              _ZFdatas = [NSMutableArray array];
-        for (NSDictionary *dic in listArr) {
-            ZFModel *model = [ZFModel modelWithDictionary:dic];
-            [models addObject:model];
+        for (NSDictionary *dic in listArr) {//遍历数组中的字典
+            ZFModel *model = [ZFModel modelWithDictionary:dic];//字典转换成ZFModel 模型
+            [models addObject:model];//将字典转化好的模型 放在一个存放模型的数组！
         }
-        _ZFdatas = models;
+        _ZFdatas = models;//赋值
     
-        [self.tableView reloadData];
+        [self.tableView reloadData];//数据弄好之后，刷新UI界面
         [self endrefresh];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -135,7 +135,7 @@
     
     ZFModel *model = _ZFdatas[indexPath.row];
     
-    cell.zfModel = model;
+    cell.zfModel = model;//cell.ZFModel 属性，肯定是在ZFTableViewCell里面 啊！！！
     
     return cell;
 }
@@ -147,7 +147,7 @@
     [self.navigationController pushViewController:xq animated:YES ];
     
     ZFModel *zfmodel = [self.ZFdatas objectAtIndex:indexPath.row];//根据点击的indexPath.row 从转化的模型数组self.ZFdatas里面取出对应的模型。（核心是取出模型，另外记住此方法！）
-    [xq setValue:zfmodel forKey:@"model"];
+    [xq setValue:zfmodel forKey:@"model"];//用KVC将取出的zfmodel赋值给model
     
 }
 

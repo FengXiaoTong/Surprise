@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.sectionHeaderHeight = 0;
+    
     [self loadXQ];
 }
 
@@ -63,12 +63,13 @@
     NSDictionary *paras = @{@"HEAD_INFO" :urlStr};
     
     [manger GET:QbaseUrl parameters:paras success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
         NSArray *xqArr = responseObject[@"RESPONSE_BODY"][@"list"];//看清楚数据结构！#35
+        NSLog(@"%@",xqArr);
         _xqdatas = [NSMutableArray array];//初始化数组，占个指针地址，保证不为空
         NSMutableArray *models = [NSMutableArray array];
-        for (NSDictionary *xqDic in xqArr) {
-            XQModel *xqmodel = [XQModel modelWithDictionary:xqDic];
+        for (NSDictionary *dic in xqArr) {
+            XQModel *xqmodel = [XQModel modelWithDictionary:dic];
             [models addObject:xqmodel];
         }
         _xqdatas = models;
@@ -103,10 +104,12 @@
     }else if (indexPath.row == 1) {
               XQTableViewCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"XQcell2" forIndexPath:indexPath];
         
-        XQModel *model = _xqdatas[indexPath.row ];
-        cell2.XQmodel = model;
+        XQModel *model = _xqdatas.firstObject;//取出cell想对应的模型
+//        [cell2 setupXQmodel:model];//将cell对应的model赋值给cell。这个是重写model的set方法！！！
         
-            return cell2;
+        cell2.XQmodel = model;//将cell对应的model赋值给cell 这个是属性方法
+        
+        return cell2;
         }
     
     return nil;

@@ -22,7 +22,6 @@
 @property(nonatomic, strong)NSString *cid;
 
 
-
 -(instancetype)initWithDictionary:(NSDictionary *)dict;
 
 +(instancetype)modelWithDictionary:(NSDictionary *)dict;

@@ -32,8 +32,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ZJImageView;
 @property (weak, nonatomic) IBOutlet UIButton *callButton;
 
-@property (nonatomic, strong)ZFModel *ZFmodel;
+@property (nonatomic, strong)ZFModel *ZFmodel;  
 @property (nonatomic, strong)XQModel *XQmodel;
+//-(void)setupXQmodel:(XQModel *)XQmodel;
+
+
 
 
 @end

@@ -126,7 +126,7 @@
     
     else
     
-        return 660;
+        return 840;
 }
 
 

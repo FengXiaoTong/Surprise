@@ -22,7 +22,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *price;
 
-
 @property (nonatomic, strong)ZFModel *zfModel;
 
 @end

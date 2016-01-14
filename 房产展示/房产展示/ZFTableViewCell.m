@@ -30,7 +30,6 @@
 {
     _zfModel = zfModel;
     
-//    _iconurl.image = [UIImage imageNamed:zfModel.iconurl];
     _title.text = zfModel.title;
     _housetype.text = zfModel.housetype;
     _community.text = zfModel.community;

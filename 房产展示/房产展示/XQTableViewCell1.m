@@ -7,14 +7,8 @@
 //
 
 #import "XQTableViewCell1.h"
-#import "common.h"
-#import "XQModel.h"
-#import "UIImageView+WebCache.h"
-
 
 @interface XQTableViewCell1 ()
-
-@property (nonatomic, strong)XQModel *XQmodel;
 
 @end
 
@@ -39,17 +33,24 @@
         //scrollerView里面的View的宽度即contentSize
         newScrollView.contentSize = CGSizeMake(375 * imageCount, 150);
     
-    [newScrollView addSubview: _xqImageView];
-        _xqScrollView = newScrollView;
-  
+//        for (int i = 0; i < imageCount; i++) {
+//             UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(i * 375, 0, 375, 150)];
+//             NSString *urlStr = [ImageUrl stringByAppendingPathComponent:self.XQmodel.image[i]];
+//          [imgView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+//          [self.xqImageView addSubview:imgView];
+//    }
+    
+    [newScrollView addSubview: self.xqImageView];
 
+    _xqScrollView = newScrollView;
+ 
 }
 
 -(void)setXQmodel:(XQModel *)XQmodel
 {
     _XQmodel = XQmodel;
-    
-
+    NSArray *AllImg = _XQmodel.image;
+    NSUInteger imageCount = AllImg.count;
 }
 
 
@@ -60,10 +61,9 @@
     for (int i = 0; i < imageCount; i++) {
         UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(i * 375, 0, 375, 150)];
         NSString *urlStr = [ImageUrl stringByAppendingPathComponent:self.XQmodel.image[i]];
-        [_xqImageView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
+        [imgView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
         [self.xqImageView addSubview:imgView];
     }
-    
    
 }
 

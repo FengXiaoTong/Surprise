@@ -18,7 +18,7 @@
 @interface XQTableViewController ()
 
 @property (nonatomic, strong)NSMutableArray *xqdatas;//请求的详细数据信息！！！
-@property (nonatomic, strong)ZFModel *model;
+@property (nonatomic, strong)ZFModel *model;//这个模型接收的是从ZFTableView传过来的模型 （KVC）
 
 @end
 
@@ -98,18 +98,19 @@
     if (indexPath.row == 0) {
         
         XQTableViewCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"XQcell1" forIndexPath:indexPath];
-    
+        XQModel *model1 = _xqdatas.firstObject;
+        cell1.XQmodel = model1;
          return cell1;
         
     }else if (indexPath.row == 1) {
               XQTableViewCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"XQcell2" forIndexPath:indexPath];
         
-        XQModel *model = _xqdatas.firstObject;//取出cell想对应的模型
+        XQModel *xqmodel = _xqdatas.firstObject;//取出cell想对应的模型
 //        [cell2 setupXQmodel:model];//将cell对应的model赋值给cell。这个是重写model的set方法！！！
-        
-        cell2.XQmodel = model;//将cell对应的model赋值给cell 这个是属性方法
-        
-        return cell2;
+
+        cell2.XQmodel = xqmodel;//将cell对应的model赋值给cell 这个是属性方法
+        cell2.ZFmodel = self.model;
+        return cell2 ;
         }
     
     return nil;

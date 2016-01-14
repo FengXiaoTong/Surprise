@@ -22,17 +22,19 @@
     // Configure the view for the selected state
 }
 
-
+-(void)setZFmodel:(ZFModel *)ZFmodel
+{
+    _ZFmodel = ZFmodel;
+    _price.text = [NSString stringWithFormat:@"价格：%d元/月",[ZFmodel.price intValue]];
+    _rType.text = [NSString stringWithFormat:@"户型：%@",ZFmodel.housetype];
+}
 
 //-(void)setupXQmodel:(XQModel *)XQmodel
 -(void)setXQmodel:(XQModel *)XQmodel
 {
     _XQmodel = XQmodel;
     _title.text = [NSString stringWithFormat:@"%@",XQmodel.desc];
-    _price.text = [NSString stringWithFormat:@"价格：%@",self.ZFmodel.price];
-
     _floor.text = [NSString stringWithFormat:@"楼层:     %d",[XQmodel.floor intValue]];
-    _rType.text = [NSString stringWithFormat:@"房型：%@",self.ZFmodel.housetype];
     _area.text  = [NSString stringWithFormat:@"面积： %d㎡",[XQmodel.area intValue]];
     _toward.text = [NSString stringWithFormat:@"朝向：%@",XQmodel.toward];
     _fitment.text = [NSString stringWithFormat:@"装修：%@",XQmodel.fitment];

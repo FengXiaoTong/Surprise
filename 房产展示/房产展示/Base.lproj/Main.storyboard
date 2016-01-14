@@ -289,20 +289,18 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U08-tG-u0O">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
-                                                    <subviews>
-                                                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="L4L-tT-sPi">
-                                                            <rect key="frame" x="168" y="105" width="39" height="37"/>
-                                                            <animations/>
-                                                            <color key="pageIndicatorTintColor" red="0.2335434847" green="1" blue="0.3412785156" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="currentPageIndicatorTintColor" red="1" green="0.2101524441" blue="0.25791479779999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </pageControl>
-                                                    </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                             <animations/>
                                         </scrollView>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RJM-zG-bF0">
+                                            <rect key="frame" x="140" y="100" width="100" height="37"/>
+                                            <animations/>
+                                            <color key="pageIndicatorTintColor" red="0.2335434847" green="1" blue="0.3412785156" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="currentPageIndicatorTintColor" red="1" green="0.2101524441" blue="0.25791479779999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </pageControl>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -310,7 +308,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="xqContentView" destination="U08-tG-u0O" id="vQb-3h-J1M"/>
-                                    <outlet property="xqPageControl" destination="L4L-tT-sPi" id="fHu-h3-Wsb"/>
+                                    <outlet property="xqPageControl" destination="RJM-zG-bF0" id="Qfw-gT-cTn"/>
                                     <outlet property="xqScrollView" destination="qAw-9c-5Nm" id="TMh-d0-u8M"/>
                                 </connections>
                             </tableViewCell>

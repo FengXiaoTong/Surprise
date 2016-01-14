@@ -161,7 +161,7 @@
     [self.navigationController pushViewController:xq animated:YES ];
     
     ZFModel *zfmodel = [self.ZFdatas objectAtIndex:indexPath.row];//根据点击的indexPath.row 从转化的模型数组self.ZFdatas里面取出对应的模型。（核心是取出模型，另外记住此方法！）
-    [xq setValue:zfmodel forKey:@"model"];//用KVC将取出的zfmodel赋值给model
+    [xq setValue:zfmodel forKey:@"model"];//用KVC将取出的zfmodel赋值给model  一种传值方法！！！
     
 }
 

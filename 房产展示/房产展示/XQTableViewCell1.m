@@ -22,22 +22,6 @@
 
 }
 
-//重写scrollView的set方法
-//-(void)setXqScrollView:(UIScrollView *)xqScrollView
-//{
-//        UIScrollView *newScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 375, 150)];
-//        newScrollView.pagingEnabled = YES;
-//        NSArray *AllImg = _XQmodel.image; //获取图片数组
-//        NSUInteger imageCount = AllImg.count; //获取图片数量
-//        //scrollerView里面的View的宽度即contentSize的宽
-//        newScrollView.contentSize = CGSizeMake(375 * imageCount, 150);
-//    
-//    [newScrollView addSubview: self.xqContentView];
-//    newScrollView.backgroundColor = [UIColor blueColor];
-//
-//    _xqScrollView = newScrollView;
-// 
-//}
 
 -(void)setXQmodel:(XQModel *)XQmodel
 {
@@ -45,32 +29,21 @@
     NSArray *AllImages = _XQmodel.image;//获取图片数组
     NSUInteger imageCount = AllImages.count;//获取图片数组内容个数
   
-    //scrollerView里面的View的宽度即contentSize
-    CGFloat ImgContentViewW = 375 * imageCount;
-    self.xqContentView.frame = CGRectMake(0, 0, ImgContentViewW, 150);
+    //给xqContentView设置frame
+    self.xqContentView.frame = CGRectMake(0, 0, 375 * imageCount, 150);
+//    self.xqScrollView.pagingEnabled = YES;
+//    self.xqScrollView.contentOffset = CGPointMake(-375, 0);
+
   
     for (int i = 0; i < imageCount; i++) {
         UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(375 * i, 0, 375, 150)];
         NSString *urlStr = [ImageUrl stringByAppendingPathComponent:XQmodel.image[i]];
         [imgView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
         [self.xqScrollView addSubview:imgView];
+    
     }
 }
 
-
-//-(void)setXqContentView:(UIView *)xqContentView
-//{
-//    NSArray *AllImg = _XQmodel.image;
-//    NSUInteger imageCount = AllImg.count;
-//    
-//    for (int i = 0; i < imageCount; i++) {
-//        UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(i * 375, 0, 375, 150)];
-//        NSString *urlStr = [ImageUrl stringByAppendingPathComponent:self.XQmodel.image[i]];
-//        [imgView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
-//        [self.xqContentView addSubview:imgView];
-//    }
-//
-//}
 
 
 @end

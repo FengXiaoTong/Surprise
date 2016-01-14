@@ -276,7 +276,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XQcell1" rowHeight="149" id="UhL-tc-cWe" customClass="XQTableViewCell1">
                                 <rect key="frame" x="0.0" y="49.5" width="375" height="149"/>
@@ -288,13 +287,16 @@
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAw-9c-5Nm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-Jo-k8J">
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U08-tG-u0O">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                                     <animations/>
-                                                </imageView>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Atx-To-0XY">
                                                     <rect key="frame" x="168" y="94" width="39" height="37"/>
                                                     <animations/>
+                                                    <color key="pageIndicatorTintColor" red="0.2335434847" green="1" blue="0.3412785156" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="currentPageIndicatorTintColor" red="1" green="0.2101524441" blue="0.25791479779999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 </pageControl>
                                             </subviews>
                                             <animations/>
@@ -305,7 +307,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="xqImageView" destination="SgJ-Jo-k8J" id="JLp-53-1dx"/>
+                                    <outlet property="xqContentView" destination="U08-tG-u0O" id="vQb-3h-J1M"/>
                                     <outlet property="xqPageControl" destination="Atx-To-0XY" id="8Sd-5C-dJm"/>
                                     <outlet property="xqScrollView" destination="qAw-9c-5Nm" id="TMh-d0-u8M"/>
                                 </connections>

@@ -26,7 +26,7 @@
 {
     _ZFmodel = ZFmodel;
     _price.text = [NSString stringWithFormat:@"价格：%d元/月",[ZFmodel.price intValue]];
-    _rType.text = [NSString stringWithFormat:@"户型：%@",ZFmodel.housetype];
+    _rType.text = [NSString stringWithFormat:@"户型： %@",ZFmodel.housetype];
 }
 
 //-(void)setupXQmodel:(XQModel *)XQmodel

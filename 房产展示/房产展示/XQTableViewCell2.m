@@ -56,6 +56,7 @@
         
         [self.ZJImageView sd_setImageWithURL:[NSURL URLWithString:URLstr]];
     }
+   
 }
 
 @end

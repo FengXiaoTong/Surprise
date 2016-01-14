@@ -39,21 +39,22 @@
 
     self.xqScrollView.delegate = self;
     
-    
     //设置pageControll
     self.xqPageControl.frame = CGRectMake(140,100,100,37);
     _xqPageControl.numberOfPages = imageCount;//原点个数就等于图片数量
     //设置pageControl的圆点颜色
     _xqPageControl.pageIndicatorTintColor = [UIColor redColor];//其余为红色
     _xqPageControl.currentPageIndicatorTintColor = [UIColor greenColor];//当前图片为绿色
-    
-    [_xqPageControl addTarget:self action:@selector(pageControlClick:) forControlEvents:UIControlEventTouchUpInside];//添加点击事件
-    
+      [_xqPageControl addTarget:self action:@selector(pageControlClick:) forControlEvents:UIControlEventTouchUpInside];//添加点击事件
+
     for (int i = 0; i < imageCount; i++) {
         UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(375 * i, 0, 375, 150)];
+        
+    if (![XQmodel.image[i] isKindOfClass:[NSNull class]] || ![XQmodel.image[i] isEqualToString:@""] || !XQmodel.image[i]){
         NSString *urlStr = [ImageUrl stringByAppendingPathComponent:XQmodel.image[i]];
         [imgView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
         [self.xqScrollView addSubview:imgView];
+            }
         
     }
     
@@ -67,12 +68,12 @@
 
 #pragma mark  -UIScrollViewDelegate
 
+//scrollView已经结束减速（滑动）更改当前页码
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     //更改pageControl当前页码
     _xqPageControl.currentPage = _xqScrollView.contentOffset.x/375;
-    
-    
+
 }
 
 

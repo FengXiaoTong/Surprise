@@ -424,7 +424,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0c-hB-n8A">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-Small-40@2x.png " translatesAutoresizingMaskIntoConstraints="NO" id="l0c-hB-n8A">
                                             <rect key="frame" x="15" y="560" width="100" height="100"/>
                                             <animations/>
                                         </imageView>
@@ -744,6 +744,7 @@
     </scenes>
     <resources>
         <image name="Default" width="640" height="960"/>
+        <image name="Icon-Small-40@2x.png " width="80" height="80"/>
         <image name="关于我们" width="32" height="32"/>
         <image name="底部导航-个人未点击" width="30" height="30"/>
         <image name="底部导航-二手未点击" width="30" height="30"/>

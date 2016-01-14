@@ -11,14 +11,6 @@
 #import "UIImageView+WebCache.h"
 #import "common.h"
 
-
-
-@interface ZFTableViewCell ()
-
-
-
-@end
-
 @implementation ZFTableViewCell
 
 - (void)awakeFromNib {
@@ -41,7 +33,7 @@
     
     NSString *picURlStr = [ImageUrl stringByAppendingPathComponent:zfModel.iconurl];
 
-    [self.iconurl sd_setImageWithURL:[NSURL URLWithString:picURlStr]];//第三方异步加载图片！
+    [self.iconurl sd_setImageWithURL:[NSURL URLWithString:picURlStr]];//第三方库 （异步加载图片）！
 }
 
 

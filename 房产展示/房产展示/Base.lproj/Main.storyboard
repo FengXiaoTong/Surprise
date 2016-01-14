@@ -254,12 +254,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdq-oK-6De">
-                        <barButtonItem key="leftBarButtonItem" title="昆明" id="C0w-p3-Yxq"/>
-                        <barButtonItem key="rightBarButtonItem" title="地图" id="5h1-VE-qxo"/>
+                        <barButtonItem key="leftBarButtonItem" title="昆明" id="C0w-p3-Yxq">
+                            <connections>
+                                <action selector="chooseCity:" destination="gMU-jj-zeZ" id="rNn-XT-Plz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="地图" id="5h1-VE-qxo">
+                            <connections>
+                                <action selector="mapShow:" destination="gMU-jj-zeZ" id="GSl-iR-rPs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="ZFleftbar" destination="C0w-p3-Yxq" id="wTH-ad-RNe"/>
+                        <outlet property="ZFrightbar" destination="5h1-VE-qxo" id="cMW-N5-jlM"/>
                         <outlet property="tableView" destination="1KG-EV-Ek8" id="7sK-8Z-JdM"/>
                     </connections>
                 </viewController>

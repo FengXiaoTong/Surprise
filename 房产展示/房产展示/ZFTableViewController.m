@@ -35,6 +35,8 @@
 @property (nonatomic, strong)NSString *nid;
 @property (nonatomic, strong)UIRefreshControl *refreshControl;//创建刷新控制器属性
 @property (nonatomic, strong)UIView *menuView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *ZFleftbar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *ZFrightbar;
 @end
 
 @implementation ZFTableViewController
@@ -93,7 +95,13 @@
     self.refreshControl.attributedTitle = [self refreshControlTitleIWithString:@"刷新结束"];
 }
 
+//左边选择城市
+- (IBAction)chooseCity:(id)sender {
+}
 
+//右边选择地图
+- (IBAction)mapShow:(id)sender {
+}
 
 #pragma mark -- 从网络请求租房信息
 //请求数据

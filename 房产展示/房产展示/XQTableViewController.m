@@ -18,7 +18,7 @@
 @interface XQTableViewController ()
 
 @property (nonatomic, strong)NSMutableArray *xqdatas;//请求的详细数据信息！！！
-@property (nonatomic, strong)ZFModel *model;//这个模型接收的是从ZFTableView传过来的模型 （KVC）
+@property (nonatomic, strong)ZFModel *model;//这个模型接收的是从ZFTableView传过来的模型 （KVC传值）
 
 @end
 

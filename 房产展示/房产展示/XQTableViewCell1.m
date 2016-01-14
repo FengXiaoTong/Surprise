@@ -8,7 +8,7 @@
 
 #import "XQTableViewCell1.h"
 
-@interface XQTableViewCell1 ()
+@interface XQTableViewCell1 ()<UIScrollViewDelegate>
 
 @end
 
@@ -31,19 +31,35 @@
   
     //给xqContentView设置frame
     self.xqContentView.frame = CGRectMake(0, 0, 375 * imageCount, 150);
-//    self.xqScrollView.pagingEnabled = YES;
-//    self.xqScrollView.contentOffset = CGPointMake(-375, 0);
 
+    self.xqScrollView.delegate = self;
   
     for (int i = 0; i < imageCount; i++) {
         UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(375 * i, 0, 375, 150)];
         NSString *urlStr = [ImageUrl stringByAppendingPathComponent:XQmodel.image[i]];
         [imgView sd_setImageWithURL:[NSURL URLWithString:urlStr]];
         [self.xqScrollView addSubview:imgView];
-    
+        [self.xqScrollView
+         setContentOffset:CGPointMake(375 *i, 0) animated:YES];
     }
+    
 }
 
+-(void)setXqPageControl:(UIPageControl *)xqPageControl
+{
+    _xqPageControl.numberOfPages = _XQmodel.image.count;
+    //设置pageControl的圆点颜色
+    _xqPageControl.pageIndicatorTintColor = [UIColor redColor];
+    _xqPageControl.currentPageIndicatorTintColor = [UIColor blueColor];
+    
+    [_xqPageControl addTarget:self action:@selector(pageControlClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)pageControlClick:(UIPageControl *)pageControl
+{
+   
+    _xqScrollView.contentOffset = CGPointMake(375 * pageControl.currentPage, 0);
+}
 
 
 @end

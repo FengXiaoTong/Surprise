@@ -49,7 +49,6 @@
 		CCC2B7D31C41216D00204BE9 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7C21C41216D00204BE9 /* UIImageView+WebCache.m */; };
 		CCC2B7D41C41216D00204BE9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B7C41C41216D00204BE9 /* UIView+WebCacheOperation.m */; };
 		CCF8BAF31C42644600430227 /* XQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAF21C42644600430227 /* XQTableViewController.m */; };
-		CCF8BAF61C4286C800430227 /* TJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAF51C4286C800430227 /* TJViewController.m */; };
 		CCF8BAFB1C4291EF00430227 /* QYMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAF81C4291EF00430227 /* QYMainModel.m */; };
 		CCF8BAFC1C4291EF00430227 /* QYSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8BAFA1C4291EF00430227 /* QYSubModel.m */; };
 		CCF8BAFF1C42922900430227 /* SiftZLP.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCF8BAFD1C42922900430227 /* SiftZLP.plist */; };
@@ -164,8 +163,6 @@
 		CCC2B7C41C41216D00204BE9 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		CCF8BAF11C42644600430227 /* XQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQTableViewController.h; sourceTree = "<group>"; };
 		CCF8BAF21C42644600430227 /* XQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQTableViewController.m; sourceTree = "<group>"; };
-		CCF8BAF41C4286C800430227 /* TJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJViewController.h; sourceTree = "<group>"; };
-		CCF8BAF51C4286C800430227 /* TJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJViewController.m; sourceTree = "<group>"; };
 		CCF8BAF71C4291EF00430227 /* QYMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYMainModel.h; sourceTree = "<group>"; };
 		CCF8BAF81C4291EF00430227 /* QYMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYMainModel.m; sourceTree = "<group>"; };
 		CCF8BAF91C4291EF00430227 /* QYSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYSubModel.h; sourceTree = "<group>"; };
@@ -281,8 +278,6 @@
 				CC10A26A1C3FE7FF005CE94A /* ZFTableViewController.m */,
 				CCF8BAF11C42644600430227 /* XQTableViewController.h */,
 				CCF8BAF21C42644600430227 /* XQTableViewController.m */,
-				CCF8BAF41C4286C800430227 /* TJViewController.h */,
-				CCF8BAF51C4286C800430227 /* TJViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -557,7 +552,6 @@
 				CCF8BAF31C42644600430227 /* XQTableViewController.m in Sources */,
 				CCC2B7D11C41216D00204BE9 /* UIImage+WebP.m in Sources */,
 				CCC2B7C61C41216D00204BE9 /* NSData+ImageContentType.m in Sources */,
-				CCF8BAF61C4286C800430227 /* TJViewController.m in Sources */,
 				CC10A26E1C3FE9BA005CE94A /* ZFTableViewCell.m in Sources */,
 				CCC2B7A21C40ED0500204BE9 /* NSArray+Log.m in Sources */,
 				CC7544851C43B49B00283189 /* UINavigationController+notification.m in Sources */,

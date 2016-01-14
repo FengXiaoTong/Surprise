@@ -61,7 +61,7 @@
     
 }
 
-//为什么pageControl加不上点击方法呢？
+//为什么pageControl加不上点击方法呢？pageControl 点击事件可以实现，点击的地方超过一半即可实现
 -(void)pageControlClick:(UIPageControl *)pageControl
 {
     //根据pageControl的当前页数，可以知道_xqScrollView偏移了多少

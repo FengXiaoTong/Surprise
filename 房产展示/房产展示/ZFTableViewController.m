@@ -12,7 +12,6 @@
 #import "AFNetworking.h"
 #import "common.h"
 #import "XQTableViewController.h"
-#import "TJViewController.h"
 #import "QYSelectedMenuModel.h"
 #import "QYMainModel.h"
 #import "QYSubModel.h"

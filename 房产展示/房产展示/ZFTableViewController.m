@@ -17,6 +17,7 @@
 #import "QYSubModel.h"
 #import "QYDropDownMenu.h"
 #import "UINavigationController+notification.h"
+#import "MapViewController.h"
 
 
 @interface ZFTableViewController ()<UITableViewDataSource, UITableViewDelegate,QYDropDownMenuDelegate>
@@ -100,6 +101,14 @@
 
 //右边选择地图
 - (IBAction)mapShow:(id)sender {
+    
+    //求你了，记住这个方法，不用story去连接！
+    UIStoryboard *stotyb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];//先找到Main storyboard，（获得特定的storyBorad）！
+    MapViewController *mvc = [stotyb instantiateViewControllerWithIdentifier:@"MapView"];//返回指定的标识符为MapView的 ViewController！ 🐔跳转到指定试图控制器页面
+    
+//    MapViewController *vc = [stotyb instantiateInitialViewController];//返回初始化场景的controller
+    
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 
 #pragma mark -- 从网络请求租房信息

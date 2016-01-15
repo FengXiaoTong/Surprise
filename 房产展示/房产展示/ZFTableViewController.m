@@ -97,6 +97,7 @@
 
 //左边选择城市
 - (IBAction)chooseCity:(id)sender {
+    
 }
 
 //右边选择地图
@@ -109,6 +110,7 @@
 //    MapViewController *vc = [stotyb instantiateInitialViewController];//返回初始化场景的controller
     
     [self.navigationController pushViewController:mvc animated:YES];
+    
 }
 
 #pragma mark -- 从网络请求租房信息

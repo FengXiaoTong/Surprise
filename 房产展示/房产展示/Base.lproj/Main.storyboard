@@ -716,10 +716,28 @@
                     <view key="view" contentMode="scaleToFill" id="7mB-L4-CVd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZbN-zV-dYc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="dwP-Zh-f9c" id="4YE-mi-a7n"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZbN-zV-dYc" firstAttribute="top" secondItem="7mB-L4-CVd" secondAttribute="top" id="Fe4-c6-aoH"/>
+                            <constraint firstAttribute="trailing" secondItem="ZbN-zV-dYc" secondAttribute="trailing" id="h5I-bZ-fzI"/>
+                            <constraint firstItem="ZbN-zV-dYc" firstAttribute="leading" secondItem="7mB-L4-CVd" secondAttribute="leading" id="jbd-sO-EZV"/>
+                            <constraint firstItem="XgR-pm-nbv" firstAttribute="top" secondItem="ZbN-zV-dYc" secondAttribute="bottom" id="nWH-Qu-YOh"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="ZbN-zV-dYc" id="PtF-UY-AlW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2P-tj-5yA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

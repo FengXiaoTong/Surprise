@@ -109,62 +109,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmE-ma-5Hr">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I3n-2T-7aU">
                                 <rect key="frame" x="0.0" y="68" width="375" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-AK-6or">
-                                        <rect key="frame" x="42" y="10" width="30" height="30"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmE-ma-5Hr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i8-AK-6or">
+                                                <rect key="frame" x="42" y="10" width="30" height="30"/>
+                                                <animations/>
+                                                <state key="normal" title="区域">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="SFv-4k-l44"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-be-qp1">
+                                                <rect key="frame" x="292" y="8" width="30" height="30"/>
+                                                <animations/>
+                                                <state key="normal" title="更多">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="nqq-hr-vNL"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWd-Yi-EWW">
+                                                <rect key="frame" x="122" y="11" width="2" height="31"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUH-Bv-ruT">
+                                                <rect key="frame" x="244" y="11" width="2" height="30"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTq-Dq-avM">
+                                                <rect key="frame" x="171" y="10" width="30" height="30"/>
+                                                <animations/>
+                                                <state key="normal" title="售价">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="LTM-QE-GCe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <animations/>
-                                        <state key="normal" title="区域">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="SFv-4k-l44"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXf-be-qp1">
-                                        <rect key="frame" x="292" y="8" width="30" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="更多">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="nqq-hr-vNL"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWd-Yi-EWW">
-                                        <rect key="frame" x="122" y="11" width="2" height="31"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="eUH-Bv-ruT" firstAttribute="top" secondItem="hmE-ma-5Hr" secondAttribute="top" constant="11" id="8gn-UX-UkP"/>
+                                            <constraint firstAttribute="bottom" secondItem="eUH-Bv-ruT" secondAttribute="bottom" constant="9" id="I15-h1-odm"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUH-Bv-ruT">
-                                        <rect key="frame" x="244" y="11" width="2" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTq-Dq-avM">
-                                        <rect key="frame" x="171" y="10" width="30" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="售价">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnClick:" destination="gMU-jj-zeZ" eventType="touchUpInside" id="LTM-QE-GCe"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstItem="eUH-Bv-ruT" firstAttribute="top" secondItem="hmE-ma-5Hr" secondAttribute="top" constant="11" id="8gn-UX-UkP"/>
-                                    <constraint firstAttribute="bottom" secondItem="eUH-Bv-ruT" secondAttribute="bottom" constant="9" id="I15-h1-odm"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ArH-1S-OnL">
                                 <rect key="frame" x="0.0" y="118" width="375" height="2"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPb-6s-KVj">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPb-6s-KVj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="4"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.40662188300000002" green="0.8532483555" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -244,13 +250,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1KG-EV-Ek8" firstAttribute="leading" secondItem="nl5-4X-tTF" secondAttribute="leading" id="26i-I1-okq"/>
-                            <constraint firstAttribute="trailing" secondItem="hmE-ma-5Hr" secondAttribute="trailing" id="9Rc-Ah-rah"/>
                             <constraint firstItem="1KG-EV-Ek8" firstAttribute="top" secondItem="ArH-1S-OnL" secondAttribute="bottom" constant="6" id="9wS-9s-jLr"/>
-                            <constraint firstItem="hmE-ma-5Hr" firstAttribute="top" secondItem="XPb-6s-KVj" secondAttribute="bottom" id="AIx-Nb-IS2"/>
-                            <constraint firstItem="hmE-ma-5Hr" firstAttribute="leading" secondItem="nl5-4X-tTF" secondAttribute="leading" id="DT3-96-mb3"/>
                             <constraint firstAttribute="trailing" secondItem="1KG-EV-Ek8" secondAttribute="trailing" id="aIp-gA-fLj"/>
                             <constraint firstItem="RwK-K2-irq" firstAttribute="top" secondItem="1KG-EV-Ek8" secondAttribute="bottom" id="bEx-fm-2km"/>
-                            <constraint firstItem="ArH-1S-OnL" firstAttribute="top" secondItem="hmE-ma-5Hr" secondAttribute="bottom" id="j3d-hI-drN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pdq-oK-6De">
@@ -716,10 +718,26 @@
                     <view key="view" contentMode="scaleToFill" id="7mB-L4-CVd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ee1-7r-daK" customClass="BMKMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ee1-7r-daK" firstAttribute="leading" secondItem="7mB-L4-CVd" secondAttribute="leading" id="Akm-UC-nU0"/>
+                            <constraint firstAttribute="trailing" secondItem="Ee1-7r-daK" secondAttribute="trailing" id="m7U-rz-3SO"/>
+                            <constraint firstItem="XgR-pm-nbv" firstAttribute="top" secondItem="Ee1-7r-daK" secondAttribute="bottom" id="o1p-gM-rcA"/>
+                            <constraint firstItem="Ee1-7r-daK" firstAttribute="top" secondItem="lul-u6-ga3" secondAttribute="bottom" id="rWg-AC-o5h"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ee1-7r-daK" id="ELp-rR-RUJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2P-tj-5yA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

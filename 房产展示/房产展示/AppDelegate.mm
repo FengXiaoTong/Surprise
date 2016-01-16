@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <BaiduMapAPI_Base/BMKMapManager.h>
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong)BMKMapManager *mapManager;//整个地图使用期间该对象不能被释放
 
 @end
 
@@ -16,7 +19,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    _mapManager = [[BMKMapManager alloc]init];
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [_mapManager start:@"1I2zXvkp27RNHMe6L3drVP0B"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
     return YES;
 }
 

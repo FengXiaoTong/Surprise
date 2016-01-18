@@ -18,17 +18,37 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //实例化window
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor greenColor];
     
+    //创建UITabBarController作为试图的根试图控制器
     UITabBarController *tabVC = [[UITabBarController alloc]init];
     tabVC.view.backgroundColor = [UIColor blueColor];
+    [self.window setRootViewController:tabVC];
     
+    //管理添加tabVC的子视图
+    //1.home 首页
     UIViewController *home = [[UIViewController alloc]init];
     home.view.backgroundColor = [UIColor redColor];
     [tabVC addChildViewController:home];
     
-    [self.window setRootViewController:tabVC];
+    //2.message 信息
+    UIViewController *message = [[UIViewController alloc]init];
+    message.view.backgroundColor = [UIColor yellowColor];
+    [tabVC addChildViewController:message];
+    
+    //3.discover 发现
+    UIViewController *discover = [[UIViewController alloc]init];
+    discover.view.backgroundColor = [UIColor grayColor];
+    [tabVC addChildViewController:discover];
+    
+    //4.profile 我
+    UIViewController *profile = [[UIViewController alloc]init];
+    profile.view.backgroundColor = [UIColor purpleColor];
+    [tabVC addChildViewController:profile];
+    
+    
     
     [self.window makeKeyAndVisible];
     

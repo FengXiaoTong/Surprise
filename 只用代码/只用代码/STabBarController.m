@@ -7,6 +7,7 @@
 //
 
 #import "STabBarController.h"
+#import "UIImage+SOriginal.h"
 
 @interface STabBarController ()
 
@@ -34,6 +35,7 @@
     home.view.backgroundColor = [UIColor redColor];
     home.tabBarItem.title = @"首页";
     home.tabBarItem.image = [UIImage imageNamed:@"tabbar_home"];
+    home.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_home_selected"];
     [self addChildViewController:home];
     
     //2.message 信息

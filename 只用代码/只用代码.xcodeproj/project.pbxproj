@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCA169641C4D01CC0029617D /* UIImage+SOriginal.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA169631C4D01CC0029617D /* UIImage+SOriginal.m */; };
 		CCF83D151C4C97AE00517E82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF83D141C4C97AE00517E82 /* main.m */; };
 		CCF83D181C4C97AE00517E82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF83D171C4C97AE00517E82 /* AppDelegate.m */; };
 		CCF83D1E1C4C97AE00517E82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF83D1C1C4C97AE00517E82 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CCA169621C4D01CC0029617D /* UIImage+SOriginal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SOriginal.h"; sourceTree = "<group>"; };
+		CCA169631C4D01CC0029617D /* UIImage+SOriginal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SOriginal.m"; sourceTree = "<group>"; };
 		CCF83D101C4C97AE00517E82 /* 只用代码.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "只用代码.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF83D141C4C97AE00517E82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCF83D161C4C97AE00517E82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				CCF83D171C4C97AE00517E82 /* AppDelegate.m */,
 				CCF83D851C4CD3B100517E82 /* STabBarController.h */,
 				CCF83D861C4CD3B100517E82 /* STabBarController.m */,
+				CCA169621C4D01CC0029617D /* UIImage+SOriginal.h */,
+				CCA169631C4D01CC0029617D /* UIImage+SOriginal.m */,
 				CCF83D1C1C4C97AE00517E82 /* Main.storyboard */,
 				CCF83D1F1C4C97AE00517E82 /* Assets.xcassets */,
 				CCF83D211C4C97AE00517E82 /* LaunchScreen.storyboard */,
@@ -273,6 +278,7 @@
 			files = (
 				CCF83D181C4C97AE00517E82 /* AppDelegate.m in Sources */,
 				CCF83D151C4C97AE00517E82 /* main.m in Sources */,
+				CCA169641C4D01CC0029617D /* UIImage+SOriginal.m in Sources */,
 				CCF83D871C4CD3B100517E82 /* STabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +507,7 @@
 				CCF83D3F1C4C97AE00517E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCF83D401C4C97AE00517E82 /* Build configuration list for PBXNativeTarget "只用代码Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +516,7 @@
 				CCF83D421C4C97AE00517E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCF83D431C4C97AE00517E82 /* Build configuration list for PBXNativeTarget "只用代码UITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +525,7 @@
 				CCF83D451C4C97AE00517E82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

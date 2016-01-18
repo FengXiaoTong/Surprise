@@ -22,10 +22,9 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor greenColor];
     
-    //创建UITabBarController作为试图的根试图控制器
+    //创建UITabBarController
     UITabBarController *tabVC = [[UITabBarController alloc]init];
     tabVC.view.backgroundColor = [UIColor blueColor];
-    [self.window setRootViewController:tabVC];
     
     //管理添加tabVC的子视图
     //1.home 首页
@@ -48,11 +47,13 @@
     profile.view.backgroundColor = [UIColor purpleColor];
     [tabVC addChildViewController:profile];
     
+    //设置tabVC作为试图的根试图控制器
+    [self.window setRootViewController:tabVC];
+   // NSLog(@"%@",application.keyWindow);此时是没有值的，是null
     
-    
+    //显示窗口 makeKeyAndVisible的底层实现：1.application.keyWindow = self.window   2.self.window.hidden = NO;
     [self.window makeKeyAndVisible];
-    
-    
+   // NSLog(@"%@",application.keyWindow); 走过[self.window makeKeyAndVisible]之后才有值，所以说2是makeKeyAndVisible的底层实现
     
     return YES;
 }

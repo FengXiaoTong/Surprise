@@ -88,6 +88,10 @@
     return nil;
 }
 
+#pragma mark --定位
+
+
+
 #pragma mark ---网络请求昆明在地图上的位置信息
 //HEAD_INFO={"commandcode":122,"REQUEST_BODY":{"city":"昆明","minlat":24.651335,"maxlat":25.303114,"minlng":102.489643
 -(void)loadJWdatas{

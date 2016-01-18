@@ -43,6 +43,7 @@
     message.view.backgroundColor = [UIColor yellowColor];
     message.tabBarItem.title = @"信息";
     message.tabBarItem.image = [UIImage imageNamed:@"tabbar_message_center"];
+    message.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_message_center_selected"];
     [self addChildViewController:message];
     
     //3.discover 发现
@@ -50,6 +51,7 @@
     discover.view.backgroundColor = [UIColor grayColor];
     discover.tabBarItem.title = @"发现";
     discover.tabBarItem.image = [UIImage imageNamed:@"tabbar_discover"];
+    discover.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_discover_selected"];
     [self addChildViewController:discover];
     
     
@@ -58,6 +60,7 @@
     profile.view.backgroundColor = [UIColor purpleColor];
     profile.tabBarItem.title = @"我";
     profile.tabBarItem.image = [UIImage imageNamed:@"tabbar_profile"];
+    profile.tabBarItem.selectedImage = [UIImage imageWithOriginalName:@"tabbar_profile_selected"];
     [self addChildViewController:profile];
 }
 

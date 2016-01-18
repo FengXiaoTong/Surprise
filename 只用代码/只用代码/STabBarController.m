@@ -29,10 +29,16 @@
 
 
 //什么时候调用：当第一次使用这个类或者子类的时候调用   作用：初始化类
+//只要一个类遵守UIAppearance，那么就能获取全局的外观，UIView
 +(void)initialize{
     
     //获取所有的tabBarItem
     UITabBarItem *item = [UITabBarItem appearance];
+    
+    NSMutableDictionary *atts = [NSMutableDictionary dictionary];
+    atts[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    //[atts setObject:[UIColor orangeColor] forKey:NSForegroundColorAttributeName];等价于上面的
+    [item setTitleTextAttributes:atts forState:UIControlStateSelected];
 }
 
 
@@ -77,11 +83,6 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = image;
     vc.tabBarItem.selectedImage = selectedImage;
-    
-    NSMutableDictionary *atts = [NSMutableDictionary dictionary];
-    atts[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    //[atts setObject:[UIColor orangeColor] forKey:NSForegroundColorAttributeName];等价于上面的
-    [vc.tabBarItem setTitleTextAttributes:atts forState:UIControlStateSelected];
     vc.tabBarItem.badgeValue = @"15";
     [self addChildViewController:vc];
 

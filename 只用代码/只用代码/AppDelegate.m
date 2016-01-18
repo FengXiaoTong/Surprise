@@ -16,9 +16,12 @@
 @implementation AppDelegate
 
 
+//知识点补充： UITabBarController控制器的View在一创建的时候就会加载View 走 view didload方法
+//只有UIViewController控制器的View才使用懒加载方法！
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+   
     //实例化window
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor greenColor];

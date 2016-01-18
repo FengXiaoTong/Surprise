@@ -22,7 +22,11 @@
     self.window.backgroundColor = [UIColor greenColor];
     
     UITabBarController *tabVC = [[UITabBarController alloc]init];
-    //tabVC.view.backgroundColor = [UIColor blueColor];
+    tabVC.view.backgroundColor = [UIColor blueColor];
+    
+    UIViewController *home = [[UIViewController alloc]init];
+    home.view.backgroundColor = [UIColor redColor];
+    [tabVC addChildViewController:home];
     
     [self.window setRootViewController:tabVC];
     

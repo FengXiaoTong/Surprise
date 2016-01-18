@@ -14,6 +14,7 @@
 		CCF83D231C4C97AE00517E82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF83D211C4C97AE00517E82 /* LaunchScreen.storyboard */; };
 		CCF83D2E1C4C97AE00517E82 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF83D2D1C4C97AE00517E82 /* ____Tests.m */; };
 		CCF83D391C4C97AE00517E82 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF83D381C4C97AE00517E82 /* ____UITests.m */; };
+		CCF83D871C4CD3B100517E82 /* STabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF83D861C4CD3B100517E82 /* STabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		CCF83D341C4C97AE00517E82 /* 只用代码UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "只用代码UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF83D381C4C97AE00517E82 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		CCF83D3A1C4C97AE00517E82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF83D851C4CD3B100517E82 /* STabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STabBarController.h; sourceTree = "<group>"; };
+		CCF83D861C4CD3B100517E82 /* STabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 			children = (
 				CCF83D161C4C97AE00517E82 /* AppDelegate.h */,
 				CCF83D171C4C97AE00517E82 /* AppDelegate.m */,
+				CCF83D851C4CD3B100517E82 /* STabBarController.h */,
+				CCF83D861C4CD3B100517E82 /* STabBarController.m */,
 				CCF83D1C1C4C97AE00517E82 /* Main.storyboard */,
 				CCF83D1F1C4C97AE00517E82 /* Assets.xcassets */,
 				CCF83D211C4C97AE00517E82 /* LaunchScreen.storyboard */,
@@ -197,6 +202,7 @@
 		CCF83D081C4C97AE00517E82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = S;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = com.qingyun;
 				TargetAttributes = {
@@ -267,6 +273,7 @@
 			files = (
 				CCF83D181C4C97AE00517E82 /* AppDelegate.m in Sources */,
 				CCF83D151C4C97AE00517E82 /* main.m in Sources */,
+				CCF83D871C4CD3B100517E82 /* STabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

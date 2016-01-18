@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "STabBarController.h"
 
 @interface AppDelegate ()
 
@@ -22,30 +23,9 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor greenColor];
     
-    //创建UITabBarController
-    UITabBarController *tabVC = [[UITabBarController alloc]init];
+    //创建STabBarController
+    STabBarController *tabVC = [[STabBarController alloc]init];
     tabVC.view.backgroundColor = [UIColor blueColor];
-    
-    //管理添加tabVC的子视图
-    //1.home 首页
-    UIViewController *home = [[UIViewController alloc]init];
-    home.view.backgroundColor = [UIColor redColor];
-    [tabVC addChildViewController:home];
-    
-    //2.message 信息
-    UIViewController *message = [[UIViewController alloc]init];
-    message.view.backgroundColor = [UIColor yellowColor];
-    [tabVC addChildViewController:message];
-    
-    //3.discover 发现
-    UIViewController *discover = [[UIViewController alloc]init];
-    discover.view.backgroundColor = [UIColor grayColor];
-    [tabVC addChildViewController:discover];
-    
-    //4.profile 我
-    UIViewController *profile = [[UIViewController alloc]init];
-    profile.view.backgroundColor = [UIColor purpleColor];
-    [tabVC addChildViewController:profile];
     
     //设置tabVC作为试图的根试图控制器
     [self.window setRootViewController:tabVC];

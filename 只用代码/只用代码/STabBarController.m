@@ -32,8 +32,11 @@
 //只要一个类遵守UIAppearance，那么就能获取全局的外观，UIView
 +(void)initialize{
     
-    //获取所有的tabBarItem
-    UITabBarItem *item = [UITabBarItem appearance];
+    //获取所有的tabBarItem,连系统的也一起获取，然后都改了
+//    UITabBarItem *item = [UITabBarItem appearance];
+    
+    //获取当前这个类STabBarController下面所有的tabBarItem，只改自己的，不改别人的（系统的）！
+    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
     
     NSMutableDictionary *atts = [NSMutableDictionary dictionary];
     atts[NSForegroundColorAttributeName] = [UIColor orangeColor];

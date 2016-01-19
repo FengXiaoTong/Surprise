@@ -35,7 +35,7 @@
     //获取所有的tabBarItem,连系统的也一起获取，然后都改了
 //    UITabBarItem *item = [UITabBarItem appearance];
     
-    //获取当前这个类STabBarController下面所有的tabBarItem，只改自己的，不改别人的（系统的）！
+    //获取当前这个类STabBarController下面所有的tabBarItem，self --->STabBarController  只改自己的，不改别人的（系统的）！
     UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
     
     NSMutableDictionary *atts = [NSMutableDictionary dictionary];

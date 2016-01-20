@@ -93,10 +93,10 @@
 //#pragma mark - IFlySpeechSynthesizerDelegate
 
 //合成结束，必须要实现此代理
-//-(void)onCompleted:(IFlySpeechError *)error
-//{
-//    
-//}
+-(void)onCompleted:(IFlySpeechError *)error
+{
+    
+}
 
 
 ////开始播放

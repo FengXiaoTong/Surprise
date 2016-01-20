@@ -31,7 +31,7 @@
     
     [super viewDidLoad];
     //通过appid连接讯飞语音服务器，换成你申请的appid
-    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@,timeout=%@",@"569dac3e",@"20000"];
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",@"569dac3e"];
      //所有服务启动前，需要确保执行createUtility
     [IFlySpeechUtility createUtility:initString];
     
@@ -93,10 +93,10 @@
 //#pragma mark - IFlySpeechSynthesizerDelegate
 
 //合成结束，必须要实现此代理
--(void)onCompleted:(IFlySpeechError *)error
-{
-    
-}
+//-(void)onCompleted:(IFlySpeechError *)error
+//{
+//    
+//}
 
 
 ////开始播放

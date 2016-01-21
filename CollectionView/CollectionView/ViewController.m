@@ -21,10 +21,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    //代码布局collectionView
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+//    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;//横着翻页 默认是竖着翻页，所以不设置也罢！
+    layout.headerReferenceSize = CGSizeMake(30, 30);
+    layout.sectionInset = UIEdgeInsetsMake(5, 15, 20, 25);
+    layout.itemSize = CGSizeMake(100, 100);
+    layout.minimumInteritemSpacing = 10;
+    layout.minimumLineSpacing = 10;
+    layout.footerReferenceSize = CGSizeMake(30, 30);
     
-    
+    self.collPicView.collectionViewLayout = layout;
     self.collPicView.delegate = self;
     self.collPicView.dataSource = self;
+    self.collPicView.pagingEnabled = YES;
+    //section的多选
+    self.collPicView.allowsMultipleSelection = NO;
+    
 }
 
 
@@ -87,6 +100,14 @@
         return footer;
         
     }
+}
+
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row %2 == 0) {
+        return CGSizeMake(200, 200);
+    }
+    return CGSizeMake(100, 100);
 }
 
 - (void)didReceiveMemoryWarning {

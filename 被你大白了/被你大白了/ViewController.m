@@ -54,10 +54,10 @@
     //启动合成会话
     [_iFlySpeechSynthesizer startSpeaking:@"您好，我是科大讯飞的小雅"];
     
-    //隐藏键盘，点击空白处
-    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
-    tapGr.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer:tapGr];
+//    //隐藏键盘，点击空白处
+//    UITapGestureRecognizer *tapGr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+//    tapGr.cancelsTouchesInView = NO;
+//    [self.view addGestureRecognizer:tapGr];
     
     //重新集成
     _iflyRecognizerView = [[IFlyRecognizerView alloc]initWithCenter:self.view.center];
@@ -74,20 +74,20 @@
 }
 
 
-//取消键盘：textField 失去第一响应
--(void)viewTapped:(UITapGestureRecognizer*)tapGr
-{
-    [self.textField resignFirstResponder];
-}
-
-
-
-- (IBAction)Click:(UIButton *)sender {
-    
-    //启动合成会话
-    [_iFlySpeechSynthesizer startSpeaking:self.textField.text];
-    
-}
+////取消键盘：textField 失去第一响应
+//-(void)viewTapped:(UITapGestureRecognizer*)tapGr
+//{
+//    [self.textField resignFirstResponder];
+//}
+//
+//
+//
+//- (IBAction)Click:(UIButton *)sender {
+//    
+//    //启动合成会话
+//    [_iFlySpeechSynthesizer startSpeaking:self.textField.text];
+//    
+//}
 
 
 
@@ -142,13 +142,13 @@
 
 -(void)onResult:(NSArray *)resultArray isLast:(BOOL)isLast
 {
-    
+    NSLog(@"%@",resultArray);
 }
 
 
 -(void)onError:(IFlySpeechError *)error
 {
-    
+    NSLog(@"%@",error);
 }
 
 

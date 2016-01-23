@@ -13,14 +13,16 @@
 
 -(void)showNotification:(NSString *)string
 {
-    UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kAppSCreenBounds.size.width, 44)];
+    UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(0, 30, kAppSCreenBounds.size.width, 44)];
     label1.text = string;
     label1.backgroundColor = [UIColor orangeColor];
     label1.textColor = [UIColor whiteColor];
     label1.textAlignment = NSTextAlignmentCenter;
     
+     //把label作为navigationViewController的subView，并且在navigationBar的上面
+    [self.view insertSubview:label1 belowSubview:self.navigationBar];
     //把label作为navigationViewController的subView，并且在navigationBar的下面
-    [self.view insertSubview:label1 aboveSubview:self.navigationBar];
+//    [self.view insertSubview:label1 aboveSubview:self.navigationBar];
     [UIView animateWithDuration:0.4 animations:^{
         
         label1.frame = CGRectOffset(label1.frame, 0, 44);

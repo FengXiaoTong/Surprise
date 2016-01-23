@@ -53,7 +53,7 @@
     
     _refreshControl.attributedTitle= [self refreshControlTitleIWithString:@"下拉刷新"];
     [self.tableView addSubview:_refreshControl];
-    [self.navigationController showNotification:[NSString stringWithFormat:@"有套新的房源"]];
+    [self.navigationController showNotification:[NSString stringWithFormat:@"有新的房源"]];
     [self endrefresh];//这个结束刷新应该放到什么地方呢？
 
     

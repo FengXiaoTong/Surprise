@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @property (nonatomic, strong) IFlySpeechSynthesizer *iFlySpeechSynthesizer;
+@property (weak, nonatomic) IBOutlet UILabel *YthingLabel;
 
 @end
 
@@ -142,7 +143,7 @@
 
 -(void)onResult:(NSArray *)resultArray isLast:(BOOL)isLast
 {
-    NSLog(@"%@",resultArray);
+    _YthingLabel.text = resultArray.lastObject;
 }
 
 

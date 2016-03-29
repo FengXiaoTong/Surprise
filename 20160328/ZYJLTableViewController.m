@@ -9,7 +9,7 @@
 #import "ZYJLTableViewController.h"
 #import "ZYTabBarController.h"
 
-@interface ZYJLTableViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ZYJLTableViewController ()
 
 @end
 
@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,12 +30,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return 7;
 }
 
 /*

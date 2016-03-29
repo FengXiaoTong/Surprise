@@ -8,6 +8,7 @@
 
 #import "ZYTabBarController.h"
 #import "UIImage+ZYOriginal.h"
+#import "ZYJLTableViewController.h"
 
 @interface ZYTabBarController ()
 
@@ -43,8 +44,9 @@
     First.view.backgroundColor = [UIColor redColor];
     
     //2.创建简历
-    UIViewController *message = [[UIViewController alloc]init];
-     [self setOneViewController:message image:[UIImage imageNamed:@"" ] selectedImage:[UIImage imageWithOriginalName:@""] title:@"简历"];
+      UIViewController *message = [[UIViewController alloc]init];
+//    ZYJLTableViewController * message = [[ZYJLTableViewController alloc]init];
+    [self setOneViewController:message image:[UIImage imageNamed:@"" ] selectedImage:[UIImage imageWithOriginalName:@""] title:@"简历"];
       message.view.backgroundColor = [UIColor blueColor];
     
     //3.创建发现
@@ -58,13 +60,14 @@
     Mine.view.backgroundColor = [UIColor greenColor];
 }
 
-
+//封装一个底层的
 -(void)setOneViewController:(UIViewController *)vc image:(UIImage *)image selectedImage:(UIImage *)selectedImage title:(NSString *)title
 {
     UINavigationController *navc = [[UINavigationController alloc]initWithRootViewController:vc];
     navc.tabBarItem.title = title;
     navc.tabBarItem.image = image;
     navc.tabBarItem.selectedImage = selectedImage;
+    vc.navigationItem.title = title;
 //    vc.tabBarItem.badgeValue = @"15";  消息数提醒
     [self addChildViewController:navc];
 

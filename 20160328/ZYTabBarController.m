@@ -27,7 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-//9.0之后，appearanceWhenContainedIn方法不再使用 ！新的appearance方法，修改所以外观属性，（基本方法不变）参数变为NSArray class.
+//Xcode9.0之后，appearanceWhenContainedIn方法不再使用 ！新的appearance方法，修改所以外观属性，（基本方法不变）参数变为NSArray class.
 +(void)initialize
 {
     UITabBarItem *item = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
@@ -44,10 +44,10 @@
     First.view.backgroundColor = [UIColor redColor];
     
     //2.创建简历
-      UIViewController *message = [[UIViewController alloc]init];
-//    ZYJLTableViewController * message = [[ZYJLTableViewController alloc]init];
+//      UIViewController *message = [[UIViewController alloc]init];
+    ZYJLTableViewController * message = [[ZYJLTableViewController alloc]init];
     [self setOneViewController:message image:[UIImage imageNamed:@"" ] selectedImage:[UIImage imageWithOriginalName:@""] title:@"简历"];
-      message.view.backgroundColor = [UIColor blueColor];
+//      message.view.backgroundColor = [UIColor blueColor];
     
     //3.创建发现
     UIViewController *discover= [[UIViewController alloc]init];
@@ -72,6 +72,5 @@
     [self addChildViewController:navc];
 
 }
-
 
 @end

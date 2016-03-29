@@ -10,15 +10,16 @@
 #import "ZYTabBarController.h"
 
 @interface ZYJLTableViewController ()
-
+@property(nonatomic, strong)NSArray* datas;
 @end
 
 @implementation ZYJLTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+- (void)viewDidLoad{
+      [super viewDidLoad];
+      self.tableView.delegate = self;
+      self.tableView.dataSource = self;
+      self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain ];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,10 +27,18 @@
 
 }
 
+-(NSArray *)datas
+{
+    if (_datas == nil) {
+        _datas = @[@"简历名称",@"求职意向",@"工作经历",@"教育背景",@"项目经验",@"自我描述",@"其他"];
+    }
+    return _datas;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+    
     return 1;
 }
 
@@ -38,58 +47,60 @@
     return 7;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if ( cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+                           }
+    cell.textLabel.text = self.datas[indexPath.row];
+     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath: indexPath animated:YES];   //点击效果动画消失
+    switch (indexPath.row) {
+        case 0:{
+            [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+            
+            break;
+        } case 1:{
+            [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+            
+            break;
+        } case 2:{
+            [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+            
+            break;
+        } case 3:{
+            [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+            
+            break;
+        }case 4:{
+            [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+            
+            break;
+        }case 5:{
+            [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+            
+            break;
+        }case 6:{
+            [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+            
+            break;
+        }
+            
+    }
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 160;
+                                            }
+        return 40;
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

@@ -18,9 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor blueColor];
+//    self.window.backgroundColor = [UIColor blueColor];
     ZYTabBarController *newVC = [[ ZYTabBarController alloc]init];
-    newVC.view.backgroundColor = [UIColor redColor];
+    newVC.view.backgroundColor = [UIColor whiteColor];
     
     [self.window setRootViewController:newVC];
     [self.window makeKeyAndVisible];

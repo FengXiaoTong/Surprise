@@ -87,7 +87,7 @@
 		A5371A851CA918060094460E = {
 			isa = PBXGroup;
 			children = (
-				A5BBD7A51CAA16AC008164AB /* Class */,
+				A5BBD7A51CAA16AC008164AB /* Selfm */,
 				A5BBD7A41CAA1685008164AB /* Third */,
 				A5BBD7A31CAA1675008164AB /* Main */,
 				A5371A901CA918060094460E /* 20160328 */,
@@ -164,13 +164,13 @@
 			name = Third;
 			sourceTree = "<group>";
 		};
-		A5BBD7A51CAA16AC008164AB /* Class */ = {
+		A5BBD7A51CAA16AC008164AB /* Selfm */ = {
 			isa = PBXGroup;
 			children = (
 				A5371ACA1CA938CA0094460E /* UIImage+ZYOriginal.h */,
 				A5371ACB1CA938CA0094460E /* UIImage+ZYOriginal.m */,
 			);
-			name = Class;
+			name = Selfm;
 			sourceTree = "<group>";
 		};
 		A5BBD7A61CAA16DC008164AB /* 简历 */ = {
@@ -189,6 +189,13 @@
 			children = (
 				A5BBD7BB1CAA2A80008164AB /* ZYJLTableViewController.h */,
 				A5BBD7BC1CAA2A80008164AB /* ZYJLTableViewController.m */,
+				A5BBD7C41CAA7C26008164AB /* 简历预览 */,
+				A5BBD7C31CAA7C24008164AB /* 简历名称 */,
+				A5BBD7C21CAA7C23008164AB /* 求职意向 */,
+				A5BBD7C11CAA7C21008164AB /* 工作经历 */,
+				A5BBD7C01CAA7C1F008164AB /* 教育背景 */,
+				A5BBD7BF1CAA7C1D008164AB /* 项目经验 */,
+				A5BBD7BE1CAA7C1A008164AB /* 自我描述 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -340,6 +347,55 @@
 			children = (
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		A5BBD7BE1CAA7C1A008164AB /* 自我描述 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "自我描述";
+			sourceTree = "<group>";
+		};
+		A5BBD7BF1CAA7C1D008164AB /* 项目经验 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "项目经验";
+			sourceTree = "<group>";
+		};
+		A5BBD7C01CAA7C1F008164AB /* 教育背景 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "教育背景";
+			sourceTree = "<group>";
+		};
+		A5BBD7C11CAA7C21008164AB /* 工作经历 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "工作经历";
+			sourceTree = "<group>";
+		};
+		A5BBD7C21CAA7C23008164AB /* 求职意向 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "求职意向";
+			sourceTree = "<group>";
+		};
+		A5BBD7C31CAA7C24008164AB /* 简历名称 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "简历名称";
+			sourceTree = "<group>";
+		};
+		A5BBD7C41CAA7C26008164AB /* 简历预览 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "简历预览";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
